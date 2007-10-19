@@ -3,7 +3,7 @@
 # by Arne Johannessen
 # mailto:joar0011@hs-karlsruhe.de
 
-# last modified 2007-10-15 by joar0011
+# $Id$
 
 
 <IfModule mod_autoindex.c>
@@ -21,4 +21,7 @@
 
 <IfModule mod_alias.c>
 	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/manuskript' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/BlueJ' http://www.bluej.org/
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/SubEthaEdit 2.2' http://www.codingmonkeys.de/subethaedit/old.de.html
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/TextWrangler 2.1' http://www.barebones.com/products/textwrangler/download_2_1_3.shtml
 </IfModule>
