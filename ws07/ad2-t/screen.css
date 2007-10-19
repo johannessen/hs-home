@@ -1,6 +1,6 @@
 /* www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t
  * Standard (Screen) Stylesheet
- * Version 1.0
+ * Version 1.1
  * CSS layer 2
  *
  * by Arne Johannessen
@@ -125,6 +125,18 @@ A[type="application/pdf"]:after {
 	background-color: #eee;
 	border: none;
 	border-left: 6px solid #bbb;
+}
+#menu LI UL {
+	font-size: .84em;
+	padding-bottom: 1ex;
+	background: #eee;
+}
+#menu LI UL A, #menu LI UL A:hover, #menu LI UL STRONG, #menu LI HR {
+	border-left-color: #eee;
+	border-left-width: 20px;
+}
+#menu LI HR {
+	height: 0;
 }
 
 
