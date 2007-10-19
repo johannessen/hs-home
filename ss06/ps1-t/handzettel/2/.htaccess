@@ -1,0 +1,22 @@
+# ~joar0011/ss06/ps1-t/handzettel/2
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-05-03 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'im Tutorium an der Tafel besprochener Code' Fibonacci.java
+	AddDescription 'Klasse zur Erzeugung der graphischen Ausgabe' SpiralenGrafik.java
+	
+	# create a link
+	AddDescription '-> http://www.mathematische-basteleien.de/spirale.htm' 'mehr Spiralen'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'mehr Spiralen'
+	<IfModule mod_alias.c>
+		Redirect permanent '/~joar0011/ss06/ps1-t/handzettel/2/mehr Spiralen' http://www.mathematische-basteleien.de/spirale.htm
+	</IfModule>
+</IfModule>

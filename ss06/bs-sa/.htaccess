@@ -1,0 +1,11 @@
+# ~joar0011/ss06/bs-sa
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-06-05 by joar0011
+
+
+<IfModule mod_mime.c>
+	AddType "text/html;charset=us-ascii" html
+</IfModule>

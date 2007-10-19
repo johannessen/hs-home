@@ -1,0 +1,59 @@
+# virtual directory ~/joar0011/ main configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2007-10-15 by joar0011
+
+
+<IfModule mod_alias.c>
+	Redirect permanent /~joar0011/Utils.java http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/src/Utils.java
+	Redirect permanent /~joar0011/tutorium http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/
+	Redirect permanent /~joar0011/Tutorium http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/
+	Redirect permanent /~joar0011/Kino http://www.home.hs-karlsruhe.de/~joar0011/ss06/bs-sa/Kino
+	Redirect permanent /~joar0011/ss06/ps1-t/Handzettel1.pdf http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/handzettel/1/Handzettel1.pdf
+	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel1.pdf http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/handzettel/1/Handzettel1.pdf
+	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel2/ http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/handzettel/2/
+	Redirect permanent /~joar0011/ss06/ps1-t/src/handzettel/ http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/handzettel/
+	
+	Redirect permanent /~joar0011/ps1 "http://www.home.hs-karlsruhe.de/~joar0011/ws05/ps1-%fcb"
+	Redirect permanent /~joar0011/dynamik http://www.home.hs-karlsruhe.de/~joar0011/ss05/klimatologie
+	Redirect permanent /~joar0011/thematisch http://www.home.hs-karlsruhe.de/~joar0011/ss05/kk-sa1
+	Redirect permanent /~joar0011/java "http://www.home.hs-karlsruhe.de/~joar0011/ws05/ps1-%fcb"
+	Redirect permanent /~joar0011/sa3-mdi1 http://www.home.hs-karlsruhe.de/~joar0011/ws05/mdi1/sa3
+	Redirect gone /~joar0011/ws05/mdi1/sa3
+</IfModule>
+
+
+
+<IfModule mod_autoindex.c>
+	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks -NameWidth -SuppressDescription -SuppressHTMLPreamble
+	IndexIgnore images
+	AddIcon (DIR,/~joar0011/images/GenericFolder.png) ^^DIRECTORY^^
+	AddIcon /icons/blank.gif ^^BLANKICON^^
+	AddIcon /~joar0011/images/back.gif ..
+	AddIconByType (PDF,/~joar0011/images/pdf.png) application/pdf
+	AddIcon /~joar0011/images/java.png .java
+	AddIcon /~joar0011/images/class.png .class
+	AddIcon /~joar0011/images/jar.png .jar
+	AddIconByType (HTM,/~joar0011/images/html.png) text/html
+	AddIconByType (CSS,/~joar0011/images/css.png) text/css
+	AddIcon /~joar0011/images/GenericCode.png .c .cpp .cc .m .r .h .js .pl .p .rb .php
+	AddIcon /~joar0011/images/GenericCompressed.png .zip .sit .tgz .gz .bin .hqx .tar .dmg .sitx
+	AddIconByType (IMG,/~joar0011/images/GenericImage.png) image/*
+	AddIconByType (SND,/~joar0011/images/GenericAudio.png) audio/*
+	AddIconByType (VID,/~joar0011/images/GenericVideo.png) video/*
+	AddIconByType (TXT,/~joar0011/images/txt.png) text/*
+	DefaultIcon /~joar0011/images/GenericDocument.png
+</IfModule>
+
+
+
+#<IfModule mod_autoindex.c>
+#	# Create some descriptions
+#	IndexOptions -SuppressDescription
+#	
+#	AddDescription 'Sommersemester 2005' ss05
+#	AddDescription 'Wintersemester 2005/06' ws05
+#	AddDescription 'Sommersemester 2006' ss06
+#	AddDescription 'Wintersemester 2006/07' ws06
+#</IfModule>

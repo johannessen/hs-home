@@ -1,0 +1,23 @@
+# ~joar0011/ws06/ps2-t/handzettel
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-11-13 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Interpolieren fuer Topographie' Interpol.java
+	AddDescription 'Handzettel 4 "Template"' 4
+	AddDescription 'Handzettel 5 "ProgressBar"' 5
+	
+	# create a link
+	AddDescription '-> /~joar0011/ss06/ps1-t/handzettel/' '1 bis 3'
+	AddIcon /~joar0011/images/GenericURLIcon.png '1 bis 3'
+	<IfModule mod_alias.c>
+		Redirect permanent '/~joar0011/ws06/ps2-t/handzettel/1 bis 3' http://www.home.hs-karlsruhe.de/~joar0011/ss06/ps1-t/handzettel/
+	</IfModule>
+</IfModule>

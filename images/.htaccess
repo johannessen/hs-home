@@ -1,0 +1,31 @@
+# joar0011/images
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-05-03 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some previews
+	IndexOptions -SuppressDescription
+	
+	AddDescription '<IMG SRC="back.gif" WIDTH="32" HEIGHT="32" ALT="">'  back.gif
+	AddDescription '<IMG SRC="class.png" WIDTH="32" HEIGHT="32" ALT="">' class.png
+	AddDescription '<IMG SRC="css.png" WIDTH="32" HEIGHT="32" ALT="">' css.png
+	AddDescription '<IMG SRC="GenericAudio.png" WIDTH="32" HEIGHT="32" ALT="">' GenericAudio.png
+	AddDescription '<IMG SRC="GenericCode.png" WIDTH="32" HEIGHT="32" ALT="">' GenericCode.png
+	AddDescription '<IMG SRC="GenericCompressed.png" WIDTH="32" HEIGHT="32" ALT="">' GenericCompressed.png
+	AddDescription '<IMG SRC="GenericDocument.png" WIDTH="32" HEIGHT="32" ALT="">' GenericDocument.png
+	AddDescription '<IMG SRC="GenericFileServerIcon.png" WIDTH="32" HEIGHT="32" ALT="">' GenericFileServerIcon.png
+	AddDescription '<IMG SRC="GenericFolder.png" WIDTH="32" HEIGHT="32" ALT="">' GenericFolder.png
+	AddDescription '<IMG SRC="GenericImage.png" WIDTH="32" HEIGHT="32" ALT="">' GenericImage.png
+	AddDescription '<IMG SRC="GenericURLIcon.png" WIDTH="32" HEIGHT="32" ALT="">' GenericURLIcon.png
+	AddDescription '<IMG SRC="GenericVideo.png" WIDTH="32" HEIGHT="32" ALT="">' GenericVideo.png
+	AddDescription '<IMG SRC="html.png" WIDTH="32" HEIGHT="32" ALT="">' html.png
+	AddDescription '<IMG SRC="jar.png" WIDTH="32" HEIGHT="32" ALT="">' jar.png
+	AddDescription '<IMG SRC="java.png" WIDTH="32" HEIGHT="32" ALT="">' java.png
+	AddDescription '<IMG SRC="pdf.png" WIDTH="32" HEIGHT="32" ALT="">' pdf.png
+	AddDescription '<IMG SRC="Placeholder.png" WIDTH="32" HEIGHT="32" ALT="">' Placeholder.png
+	AddDescription '<IMG SRC="txt.png" WIDTH="32" HEIGHT="32" ALT="">' txt.png
+</IfModule>

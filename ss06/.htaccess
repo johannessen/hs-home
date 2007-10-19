@@ -1,0 +1,17 @@
+# ~joar0011/ss06
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-07-06 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Tutorium Programmiersprachen I' ps1-t
+	AddDescription 'Studienarbeit Betriebssysteme' bs-sa
+	AddDescription 'Mediendesign und -integration II' mdi2
+	AddDescription 'Kartdendesign und -herstellung II' kdh2
+</IfModule>

@@ -1,0 +1,19 @@
+# ~joar0011/ss06/bs-sa/Kino/Preise
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-06-05 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Hide winning file from autoindex to not make it too obvious.
+	# We'd want a server-side image-map here in a real-life situation
+	# because a client-side map always gives away the URL to the UA.
+	# For example, the German iCab web browser <http://icab.de/>
+	# displays a list of all links on the current page on request;
+	# with this client-side map, the winning file is thus easily
+	# accessible without even playing the game.
+	
+	IndexIgnore Gewinn.html
+</IfModule>
