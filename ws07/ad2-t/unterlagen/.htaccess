@@ -10,13 +10,12 @@
 	# Create some descriptions
 	IndexOptions -SuppressDescription
 	
-#	AddDescription 'Interpolieren fuer Topographie' Interpol.java
-#	AddDescription 'Handzettel 4 "Template"' 4
-#	AddDescription 'Handzettel 5 "ProgressBar"' 5
-	
 	# create a link
 	AddDescription '-> /~vovo0011/Web/Skripte/' 'manuskript'
-	AddIcon /~joar0011/images/GenericURLIcon.png 'manuskript'
+	AddDescription '-> http://www.bluej.org/' 'BlueJ'
+	AddDescription '-> http://www.codingmonkeys.de/subethaedit/old.de.html' 'SubEthaEdit 2.2'
+	AddDescription '-> http://www.barebones.com/products/textwrangler/download_2_1_3.shtml' 'TextWrangler 2.1'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'manuskript' 'BlueJ' 'SubEthaEdit 2.2' 'TextWrangler 2.1'
 </IfModule>
 
 <IfModule mod_alias.c>
