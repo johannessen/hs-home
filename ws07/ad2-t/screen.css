@@ -1,6 +1,6 @@
 /* www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t
  * Standard (Screen) Stylesheet
- * Version 1.1.1
+ * Version 1.1.2
  * CSS layer 2
  *
  * by Arne Johannessen
@@ -146,11 +146,7 @@ H2 {
 	font-size: 1em;
 	margin: 2em 0 .5em;
 }
-H3, ADDRESS, HR {
-	font-size: 1em;
-	margin: 1.5em 0 .5em;
-}
-H4 {
+H3, H4, ADDRESS, HR {
 	font-size: 1em;
 	margin: 1.5em 0 .5em;
 }
@@ -220,6 +216,22 @@ SUP, SUB {
 }
 #achtung P {
 	margin: .5em;
+}
+PRE#id {
+	margin: 2.5em 0 1ex;
+}
+DIV#dateien PRE {
+	margin: 0;
+	padding: 1ex 0;
+	border: 0 solid #bbb;
+	border-width: 1px 0;
+	background-color: #eee;
+}
+DIV#dateien PRE IMG:first-child {
+	height: 0;
+}
+#dateien HR {
+	display: none;
 }
 
 .g, .or {
