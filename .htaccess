@@ -2,7 +2,7 @@
 # by Arne Johannessen
 # mailto:joar0011@hs-karlsruhe.de
 
-# last modified 2007-10-15 by joar0011
+# $Id$
 
 
 <IfModule mod_alias.c>
@@ -26,7 +26,9 @@
 
 
 <IfModule mod_autoindex.c>
-	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks -NameWidth -SuppressDescription -SuppressHTMLPreamble
+	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks NameWidth=* -SuppressDescription -SuppressHTMLPreamble
+	HeaderName HEADER.html
+	ReadmeName README.html
 	IndexIgnore images
 	AddIcon (DIR,/~joar0011/images/GenericFolder.png) ^^DIRECTORY^^
 	AddIcon /icons/blank.gif ^^BLANKICON^^
@@ -45,15 +47,3 @@
 	AddIconByType (TXT,/~joar0011/images/txt.png) text/*
 	DefaultIcon /~joar0011/images/GenericDocument.png
 </IfModule>
-
-
-
-#<IfModule mod_autoindex.c>
-#	# Create some descriptions
-#	IndexOptions -SuppressDescription
-#	
-#	AddDescription 'Sommersemester 2005' ss05
-#	AddDescription 'Wintersemester 2005/06' ws05
-#	AddDescription 'Sommersemester 2006' ss06
-#	AddDescription 'Wintersemester 2006/07' ws06
-#</IfModule>
