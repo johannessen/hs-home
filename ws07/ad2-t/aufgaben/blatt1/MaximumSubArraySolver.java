@@ -1,4 +1,4 @@
-/* $Id: MaximumSubArraySolver.java,v 1.1 2007-10-19 20:45:13 arne Exp $
+/* $Id: MaximumSubArraySolver.java,v 1.2 2007-10-21 01:39:22 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -8,7 +8,7 @@
  * Schnittstelle fuer die Loesung des Maximum-Sub-Array--Problems.
  * @see SubArray
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version 0.1
+ * @version $Revision: 1.2 $
  */
 public interface MaximumSubArraySolver {
 	
@@ -21,8 +21,8 @@ public interface MaximumSubArraySolver {
 	 * Elemente aufweist. Der Gesamt-Array kann sowohl positive als
 	 * auch negative Zahlen beinhalten; die Implementierung muss dies
 	 * beruecksichtigen. Existieren nur negative Elemente, ist die
-	 * Teilfolge mit der hoechsten Summe die leere Teilfolge mit dem
-	 * Wert null (<code>0</code>).
+	 * Teilfolge mit der hoechsten Summe die leere Teilfolge mit der
+	 * Summe null (<code>0</code>).
 	 * <p>Das Verhalten dieser Methode fuer <code>array == null</code>
 	 * ist nicht definiert.
 	 * @param array der fuer die Bestimmung der Problemloesung

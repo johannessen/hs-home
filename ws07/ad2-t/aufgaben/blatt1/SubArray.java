@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.2 2007-10-21 01:08:04 arne Exp $
+/* $Id: SubArray.java,v 1.3 2007-10-21 01:35:13 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -179,7 +179,7 @@ public class SubArray {
 	 * stammen sollen, wird uebergeben. Die Bereichsgrenzen selbst
 	 * koennen ebenfalls als Zufallszahlen auftreten.
 	 * @param arrayLength die Laenge des Arrays
-	 * @param limit der maximale Abstand, den die Zufallszahlen von der
+	 * @param limits der maximale Abstand, den die Zufallszahlen von der
 	 * Zahl null (<code>0</code>) haben sollen
 	 */
 	public static int[] createRandomArray (int arrayLength, int limits) {
