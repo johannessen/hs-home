@@ -1,4 +1,4 @@
-/* $Id: Loesung13.java,v 1.1 2007-10-21 01:08:19 arne Exp $
+/* $Id: Loesung13.java,v 1.2 2007-10-21 02:23:51 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -31,8 +31,8 @@ public class Loesung13 implements MaximumSubArraySolver {
 	public SubArray findMaximumSubArray (int[] array) {
 		
 		// lokale Variablen initialisieren
-		int maximumSum = Integer.MIN_VALUE;  // -2^31
-		int minimumLowerIndex = -1;
+		int maximumSum = 0;
+		int minimumLowerIndex = 0;
 		int maximumUpperIndex = -1;
 		
 		// alle moeglichen Sub-Arrays durchlaufen
