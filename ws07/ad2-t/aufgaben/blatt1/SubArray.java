@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.1 2007-10-19 20:45:13 arne Exp $
+/* $Id: SubArray.java,v 1.2 2007-10-21 01:08:04 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -20,7 +20,7 @@ public class SubArray {
 	
 	
 	/** Index des Beginns des Sub-Arrays im Gesamt-Array. */
-	private int subArrayStart = -1;
+	private int subArrayStart = 0;
 	
 	
 	/** Laenge des Sub-Arrays im Gesamt-Array. */
@@ -56,6 +56,7 @@ public class SubArray {
 	 */
 	public SubArray (int[] array) {
 		this.array = array;
+		this.subArrayLength = array.length;
 	}
 	
 	
@@ -93,68 +94,59 @@ public class SubArray {
 	
 	/**
 	 * Zugriffsmethode; setzt den Index des Beginns des Sub-Arrays.
-	 * <p>Wuerde diese Aenderung zu einer ungueltigen Definition des
-	 * Sub-Arrays fuehren (z. B. dadurch, dass der Sub-Array ausserhalb
-	 * des Gesamt-Arrays zu liegen kaeme), wird
-	 * <code>subArrayLength</code> so angepasst, dass sich wieder eine
-	 * gueltige Definition ergibt.
+	 * Es werden keinerlei Ueberpruefungen auf sinnvolle Werte
+	 * durchgefuehrt.
 	 * @param subArrayStart auf den Gesamt-Array bezogener Array-Index,
 	 * an dem der Sub-Array beginnen soll
 	 */
 	public void setStart (int subArrayStart) {
 		this.subArrayStart = subArrayStart;
-		this.validateSubArray();
 	}
 	
 	
 	
 	/**
 	 * Zugriffsmethode; liefert den Index des Beginns des Sub-Arrays.
+	 * <p>Der zurueckgegebene Index ist so angepasst, dass sich
+	 * immer eine gueltige Definition des Sub-Arrays ergibt.
 	 * @return auf den Gesamt-Array bezogener Array-Index, an dem der
 	 * Sub-Array beginnt
 	 */
 	public int getStart () {
-		return this.subArrayStart;
+		if (this.subArrayLength < 0) {
+			return 0;
+		}
+		return Math.min(this.array.length - 1, Math.max(0, this.subArrayStart));
 	}
 	
 	
 	
 	/**
-	 * Zugriffsmethode; setzt die Laenge des Sub-Arrays.
-	 * <p>Wuerde diese Aenderung zu einer ungueltigen Definition des
-	 * Sub-Arrays fuehren (z. B. durch eine negative Laenge), wird
-	 * die Laenge so angepasst, dass sich wieder eine gueltige
-	 * Definition ergibt.
+	 * Zugriffsmethode; setzt die Laenge des Sub-Arrays. Es werden
+	 * keinerlei Ueberpruefungen auf sinnvolle Werte durchgefuehrt.
 	 * @param subArrayLength Laenge des Sub-Arrays
 	 */
 	public void setLength (int subArrayLength) {
 		this.subArrayLength = subArrayLength;
-		this.validateSubArray();
 	}
 	
 	
 	
 	/**
 	 * Zugriffsmethode; liefert die Laenge des Sub-Arrays.
+	 * <p>Die zurueckgegebene Laenge ist so angepasst, dass sich
+	 * immer eine gueltige Definition des Sub-Arrays ergibt.
 	 * @return Laenge des Sub-Arrays
 	 */
 	public int getLength () {
-		return this.subArrayLength;
-	}
-	
-	
-	
-	/**
-	 * Passt, falls noetig, <code>subArrayLength</code> so an, dass der
-	 * Sub-Array gueltig definiert ist.
-	 */
-	private void validateSubArray () {
-		if (this.subArrayStart + this.subArrayLength > this.array.length) {
-			this.subArrayLength = this.array.length - this.subArrayStart;
+		if (this.subArrayLength < 0) {
+			return this.array.length;
 		}
-		if (this.subArrayStart < 0 || this.subArrayLength < 0) {
-			this.subArrayLength = 0;
+		int length = this.subArrayLength;
+		if (this.subArrayStart < 0) {
+			length += this.subArrayStart;
 		}
+		return Math.min(this.array.length - this.subArrayStart, Math.max(0, length));
 	}
 	
 	
@@ -244,12 +236,72 @@ public class SubArray {
 	
 	
 	/**
+	 * Errechnet das linke Rand-Maximum dieses Sub-Arrays. Dies ist
+	 * genau das Sub-Array, dessen erstes Element mit dem ersten
+	 * Element dieses Sub-Arrays identisch ist und dessen Summe der
+	 * Elemente so gross wie moeglich ist.
+	 * @return das linke Rand-Maximum als neues SubArray-Objekt
+	 */
+	public SubArray findLeftEdgeMaximum () {
+		
+		// Schleife vorbereiten
+		SubArray result = new SubArray(this.array, 0, 0);
+		int maximumSum = 0;
+		int beginIndex = this.getStart();
+		int endIndex = beginIndex + this.getLength() - 1;
+		
+		// Sub-Array von links nach rechts durchlaufen und Maximum bestimmen
+		for (int sum = 0, index = beginIndex; index <= endIndex; index++) {
+			sum += this.array[index];
+			if (sum > maximumSum) {
+				maximumSum = sum;
+				result.setStart(beginIndex);
+				result.setLength(index - beginIndex + 1);
+			}
+		}
+		
+		return result;
+	}
+	
+	
+	
+	/**
+	 * Errechnet das rechte Rand-Maximum dieses Sub-Arrays. Dies ist
+	 * genau das Sub-Array, dessen letzte Element mit dem letzten
+	 * Element dieses Sub-Arrays identisch ist und dessen Summe der
+	 * Elemente so gross wie moeglich ist.
+	 * @return das rechte Rand-Maximum als neues SubArray-Objekt
+	 */
+	public SubArray findRightEdgeMaximum () {
+		
+		// Schleife vorbereiten
+		SubArray result = new SubArray(this.array, 0, 0);
+		int maximumSum = 0;
+		int endIndex = this.getStart();
+		int beginIndex = endIndex + this.getLength() - 1;
+		
+		// Sub-Array von rechts nach links durchlaufen und Maximum bestimmen
+		for (int sum = 0, index = beginIndex; index >= endIndex; index--) {
+			sum += this.array[index];
+			if (sum > maximumSum) {
+				maximumSum = sum;
+				result.setStart(index);
+				result.setLength(beginIndex - index + 1);
+			}
+		}
+		return result;
+	}
+	
+	
+	
+	/**
 	 * Addiert alle Elemente des Sub-Arrays.
 	 * @return die Summe aller Elemente des Sub-Arrays
 	 */
 	public int sum () {
 		int sum = 0;
-		for (int index = this.subArrayStart; index < this.subArrayStart + this.subArrayLength; index++) {
+		int endIndex = this.getStart() + this.getLength();
+		for (int index = this.getStart(); index <= endIndex; index++) {
 			sum += this.array[index];
 		}
 		return sum;
@@ -274,21 +326,30 @@ public class SubArray {
 	 * @return dieses Objekt als String
 	 */
 	public String toString () {
+		
+		// triviale Faelle behandeln
 		if (this.array == null) {
 			return "null";
 		}
 		if (this.array.length == 0) {
 			return "";
 		}
+		
+		// Schleife vorbereiten
 		StringBuffer buffer = new StringBuffer(this.array.length * 4);
+		int beginIndex = this.getStart();
+		int endIndex = this.getStart() + this.getLength();
+		boolean isSubArrayEmpty = (beginIndex == endIndex);
+		
+		// Gesamt-Array durchlaufen und Werte mitsamt Sub-Array-Grenzen ausgeben
 		int index = 0;
 		while (true) {
-			if (index == this.subArrayStart && this.subArrayLength > 0) {
+			if (index == beginIndex && ! isSubArrayEmpty) {
 				buffer.append('[');
 			}
 			buffer.append(this.array[index]);
 			index++;
-			if (index == this.subArrayStart + this.subArrayLength && this.subArrayLength > 0) {
+			if (index == endIndex && ! isSubArrayEmpty) {
 				buffer.append(']');
 			}
 			if (index >= this.array.length) {
@@ -296,9 +357,11 @@ public class SubArray {
 			}
 			buffer.append(' ');
 		}
-		if (this.subArrayLength == 0) {
+		if (isSubArrayEmpty) {
 			buffer.append(" []");
 		}
+		
+		// Wert des Ausgabepuffers zurueckgeben
 		return buffer.toString();
 	}
 	
@@ -314,13 +377,17 @@ public class SubArray {
 	 */
 	public boolean equals (Object obj) {
 		if (! (obj instanceof SubArray)) {
-			return false;
+			return false;  // Objekt einer anderen Klasse
 		}
 		SubArray other = (SubArray)obj;
-		return this.array == other.array
-				&& (this.subArrayStart == other.subArrayStart
-				|| this.subArrayLength == 0)
-				&& this.subArrayLength == other.subArrayLength;
+		if (this.array != other.array) {
+			return false;  // Gesamt-Array nicht identisch
+		}
+		if (this.getLength() != other.getLength()) {
+			return false;  // Laengen der Sub-Arrays verschieden
+		}
+		// Sub-Arrays muessen entweder gleichen Bereich haben oder beide leer sein
+		return (this.getLength() == 0 || this.getStart() == other.getStart());
 	}
 	
 }
