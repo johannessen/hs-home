@@ -27,6 +27,13 @@
 
 <IfModule mod_autoindex.c>
 	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks NameWidth=* -SuppressDescription -SuppressHTMLPreamble
+	<IfModule mod_version.c>
+		<IfVersion >= 2.2>
+			<IfModule mod_autoindex.c>
+				IndexOptions +VersionSort
+			</IfModule>
+		</IfVersion>
+	</IfModule>
 	HeaderName HEADER.html
 	ReadmeName README.html
 	IndexIgnore images
