@@ -1,0 +1,29 @@
+# ~joar0011/ws07/ad2-t
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id$
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	# create a link
+	AddDescription '-> /~vovo0011/Web/Skripte/' 'Manuskript'
+	AddDescription '-> http://www.bluej.org/' 'BlueJ'
+	AddDescription '-> http://www.codingmonkeys.de/subethaedit/old.de.html' 'SubEthaEdit 2.2'
+	AddDescription '-> http://www.barebones.com/products/textwrangler/download_2_1_3.shtml' 'TextWrangler 2.1'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'BlueJ' 'SubEthaEdit 2.2' 'TextWrangler 2.1'
+</IfModule>
+
+<IfModule mod_alias.c>
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/Manuskript' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/BlueJ' http://www.bluej.org/
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/SubEthaEdit 2.2' http://www.codingmonkeys.de/subethaedit/old.de.html
+	Redirect permanent '/~joar0011/ws07/ad2-t/unterlagen/TextWrangler 2.1' http://www.barebones.com/products/textwrangler/download_2_1_3.shtml
+	
+	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt2/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/MaximumSubArraySolver.java
+	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt2/Loesung13.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/Loesung13.java
+</IfModule>
