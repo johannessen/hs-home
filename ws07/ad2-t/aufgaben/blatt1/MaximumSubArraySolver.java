@@ -1,4 +1,4 @@
-/* $Id: MaximumSubArraySolver.java,v 1.2 2007-10-21 01:39:22 arne Exp $
+/* $Id: MaximumSubArraySolver.java,v 1.3 2007-10-27 20:00:33 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -8,7 +8,7 @@
  * Schnittstelle fuer die Loesung des Maximum-Sub-Array--Problems.
  * @see SubArray
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public interface MaximumSubArraySolver {
 	
