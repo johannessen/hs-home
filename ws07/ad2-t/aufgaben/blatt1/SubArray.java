@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.3 2007-10-21 01:35:13 arne Exp $
+/* $Id: SubArray.java,v 1.4 2007-10-27 20:00:54 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -11,6 +11,7 @@
  * der Implementierung von Loesungen des Maximum-Sub-Array--Problems
  * nuetzlich sein koennten.
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
+ * @version $Revision: 1.4 $
  */
 public class SubArray {
 	
@@ -336,7 +337,7 @@ public class SubArray {
 		}
 		
 		// Schleife vorbereiten
-		StringBuffer buffer = new StringBuffer(this.array.length * 4);
+		StringBuffer buffer = new StringBuffer(this.array.length * 4);  // 4 passt haeufig
 		int beginIndex = this.getStart();
 		int endIndex = this.getStart() + this.getLength();
 		boolean isSubArrayEmpty = (beginIndex == endIndex);
@@ -369,7 +370,7 @@ public class SubArray {
 	
 	/**
 	 * Prueft, ob ein anderes Objekt gleich diesem ist. Das ist der
-	 * Fall genau dann, wenn die beiden Gesamt-Arrays identisch sind
+	 * Fall genau dann, wenn die beiden Gesamt-Arrays gleich sind
 	 * und die Definitionen der Sub-Arrays uebereinstimmen.
 	 * @param obj das auf Gleichheit zu pruefende Objekt
 	 * @return <code>true</code>, falls <code>obj</code> gleich diesem
@@ -380,14 +381,31 @@ public class SubArray {
 			return false;  // Objekt einer anderen Klasse
 		}
 		SubArray other = (SubArray)obj;
-		if (this.array != other.array) {
-			return false;  // Gesamt-Array nicht identisch
+		if (! java.util.Arrays.equals(this.array, other.array)) {
+			return false;  // Gesamt-Array nicht gleich
 		}
 		if (this.getLength() != other.getLength()) {
 			return false;  // Laengen der Sub-Arrays verschieden
 		}
 		// Sub-Arrays muessen entweder gleichen Bereich haben oder beide leer sein
 		return (this.getLength() == 0 || this.getStart() == other.getStart());
+	}
+	
+	
+	
+	/**
+	 * Liefert den Hash-Code fuer diesen Sub-Array.
+	 * @return den Hash-Code-Wert dieses Sub-Arrays
+	 * @see Object#hashCode()
+	 */
+	public int hashCode () {
+		// bitte nicht versuchen, dies zu verstehen!
+		int hashCode = 0x3c1 * java.util.Arrays.hashCode(this.array);
+		hashCode += 0x1f * this.getLength());
+		if (this.getLength() != 0) {
+			hashCode += this.getStart();
+		}
+		return hashCode;
 	}
 	
 }
