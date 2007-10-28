@@ -1,4 +1,4 @@
-/* $Id: Loesung21.java,v 1.3 2007-10-28 22:36:35 arne Exp $
+/* $Id: Loesung21.java,v 1.4 2007-10-28 22:41:22 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -7,9 +7,10 @@
 /**
  * Loesungsvorschlag fuer Aufgabe 2-1. Halb-naive Loesung fuer
  * das Maximum-Sub-Array--Problem mit O(n^2)-Effizienz.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class Loesung21 implements MaximumSubArraySolver {
 	
@@ -21,6 +22,7 @@ public class Loesung21 implements MaximumSubArraySolver {
 	 * Teilfolgen errechnet und gleichzeitig deren Summe bestimmt.
 	 * Fuer eine Teilfolge mit der hoechsten Summe wird eine
 	 * entsprechende <code>SubArray</code>-Instanz zurueckgeliefert.
+	 * 
 	 * @param array der fuer die Bestimmung der Problemloesung
 	 * heranzuziehende Gesamt-Array
 	 * @return eine neu erstellte Instanz der Klasse
@@ -69,7 +71,7 @@ public class Loesung21 implements MaximumSubArraySolver {
 		array = SubArray.createRandomArray();
 		maximumSubArray = new Loesung21().findMaximumSubArray(array);
 		System.out.println(maximumSubArray);
-		System.out.println("Summe: ["+maximumSubArray.sum()+"]");
+		System.out.println("Summe: ["+maximumSubArray.getSum()+"]");
 	}
 	
 }

@@ -1,4 +1,4 @@
-/* $Id: Loesung13.java,v 1.4 2007-10-28 22:36:36 arne Exp $
+/* $Id: Loesung13.java,v 1.5 2007-10-28 22:41:23 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -7,9 +7,10 @@
 /**
  * Loesungsvorschlag fuer Aufgabe 1-3. Naive Loesung (brute-force)
  * fuer das Maximum-Sub-Array--Problem mit O(n^3)-Effizienz.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/">Aufgabenblatt 1</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class Loesung13 implements MaximumSubArraySolver {
 	
@@ -22,6 +23,7 @@ public class Loesung13 implements MaximumSubArraySolver {
 	 * miteinander verglichen. Fuer eine Teilfolge mit der hoechsten
 	 * Summe wird eine entsprechende <code>SubArray</code>-Instanz
 	 * zurueckgeliefert.
+	 * 
 	 * @param array der fuer die Bestimmung der Problemloesung
 	 * heranzuziehende Gesamt-Array
 	 * @return eine neu erstellte Instanz der Klasse
@@ -74,7 +76,7 @@ public class Loesung13 implements MaximumSubArraySolver {
 		array = SubArray.createRandomArray();
 		maximumSubArray = new Loesung13().findMaximumSubArray(array);
 		System.out.println(maximumSubArray);
-		System.out.println("Summe: ["+maximumSubArray.sum()+"]");
+		System.out.println("Summe: ["+maximumSubArray.getSum()+"]");
 	}
 	
 }
