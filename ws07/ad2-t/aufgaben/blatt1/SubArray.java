@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.5 2007-10-28 22:33:05 arne Exp $
+/* $Id: SubArray.java,v 1.6 2007-10-28 22:45:12 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -13,7 +13,7 @@
  * nuetzlich sein koennten.
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class SubArray implements Cloneable {
 	
@@ -530,7 +530,7 @@ public class SubArray implements Cloneable {
 			return (SubArray)super.clone();
 		}
 		catch (CloneNotSupportedException exception) {
-		    throw (Error)new InternalError().initCause(exception);
+			throw (Error)new InternalError().initCause(exception);
 		}
 	}
 	
