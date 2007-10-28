@@ -1,4 +1,4 @@
-/* $Id: ArraySum.java,v 1.2 2007-10-27 20:00:33 arne Exp $
+/* $Id: ArraySum.java,v 1.3 2007-10-28 22:44:57 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,9 +6,10 @@
 
 /**
  * Klasse fuer Aufgabe 1-2.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/">Aufgabenblatt 1</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class ArraySum {
 	
@@ -21,6 +22,7 @@ public class ArraySum {
 	
 	/**
 	 * Gibt alle Elemente eines Arrays aus.
+	 * 
 	 * @param array das auszugebende Array
 	 * @throws NullObjectException falls <code>array == null</code>
 	 */
