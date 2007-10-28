@@ -1,4 +1,4 @@
-/* $Id: Loesung32.java,v 1.1 2007-10-27 19:59:54 arne Exp $
+/* $Id: Loesung32.java,v 1.2 2007-10-28 22:50:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -7,9 +7,10 @@
 
 /**
  * Loesungsvorschlag fuer Aufgabe 3-2.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung32 {
 	
@@ -20,11 +21,12 @@ public class Loesung32 {
 	 * liefert ein korrektes Ergebnis fuer Eingabewerte bis
 	 * einschliesslich 20; bei <code>n > 20</code> findet ein
 	 * binaerer Ueberlauf statt.
-	 * @see Loesung35
+	 * 
 	 * @param n die Zahl, von der die Fakultaet zu berechnen ist
 	 * @return die Fakultaet von <code>n</code> fuer
 	 * <code>n &lt;= 20</code>
 	 * @throws IllegalArgumentException falls <code>n &lt; 0</code>
+	 * @see Loesung35
 	 */
 	public static long factorial (int n) {
 		if (n < 0) {

@@ -1,4 +1,4 @@
-/* $Id: Loesung31b.java,v 1.1 2007-10-27 19:59:55 arne Exp $
+/* $Id: Loesung31b.java,v 1.2 2007-10-28 22:50:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,8 +6,10 @@
 
 /**
  * Loesungsvorschlag fuer Aufgabe 3-1b.
+ * 
+ * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung31b extends ArraySum {
 	
@@ -16,6 +18,7 @@ public class Loesung31b extends ArraySum {
 	/**
 	 * Liefert die Summe aller Elemente eines Arrays
 	 * (rekursive Berechnung).
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die Summe aller Elemente von <code>array</code>
 	 * @throws NullObjectException falls <code>array == null</code>
@@ -29,6 +32,7 @@ public class Loesung31b extends ArraySum {
 	/**
 	 * Berechnet rekursiv die Summe aller Elemente eines
 	 * Arrays von einem bestimmten Element an.
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @param index der Index des ersten aufzusummierenden
 	 * Elementsersten

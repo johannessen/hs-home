@@ -1,4 +1,4 @@
-/* $Id: Loesung31c.java,v 1.1 2007-10-27 19:59:55 arne Exp $
+/* $Id: Loesung31c.java,v 1.2 2007-10-28 22:50:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -7,7 +7,8 @@
 
 /**
  * Loesungsvorschlaege fuer Aufgabe 3-1c.
- * <p>Diese Klasse enthaelt vier verschiedene Beispiele fuer moegliche
+ * <p>
+ * Diese Klasse enthaelt vier verschiedene Beispiele fuer moegliche
  * Loesungsansaetze. Traditionell ist die Toggle-Loesung die bevozugte,
  * weil sie in allen imperativen Programmiersprachen (von Assembler bis
  * einschliesslich Java) sehr einfach zu implementieren ist.
@@ -15,14 +16,16 @@
  * Ausnahmenbehandlung meist ebenfalls einfach zu implementieren und
  * mindestens gleichwertig. Diese beiden Methoden sind empfehlenswert
  * fuer dieses Problem.
- * <p>Waehrend die rekursive Loesung durch ihre unuebertroffene
+ * <p>
+ * Waehrend die rekursive Loesung durch ihre unuebertroffene
  * Einfachheit besticht, ist ihr praktischer Nutzen in Java eingeschraenkt
  * (siehe Aufgabe 3-4). Der Ansatz mit Modulo-Formel ist vergleichsweise
  * schwer verstaendlich und sollte daher nur Anwendung finden, wenn aus
  * irgendeinem Grund die anderen Methoden nicht praktikabel sind.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung31c extends ArraySum {
 	
@@ -31,10 +34,12 @@ public class Loesung31c extends ArraySum {
 	/**
 	 * Loesungsvorschlag fuer Aufgabe 3-1c mit Anwendung einer
 	 * Modulo-Formel.
-	 * <p>Berechnet die "alternierende Summe" aller Elemente eines
+	 * <p>
+	 * Berechnet die "alternierende Summe" aller Elemente eines
 	 * Arrays. Dazu wird das jeweils richtige Vorzeichen fuer jedes
 	 * Array-Element anhand einer Modulo-basierten Formel errechnet
 	 * und dann mit jedem Summanden multipliziert.
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die alternierende Summe von <code>array</code>
 	 * @throws NullObjectException falls <code>array == null</code>
@@ -53,9 +58,11 @@ public class Loesung31c extends ArraySum {
 	
 	/**
 	 * Loesungsvorschlag fuer Aufgabe 3-1c mit Toggle (Umschalten).
-	 * <p>Berechnet die "alternierende Summe" aller Elemente eines
+	 * <p>
+	 * Berechnet die "alternierende Summe" aller Elemente eines
 	 * Arrays. Dazu wird das jeweils richtige Vorzeichen in Form eines
 	 * Boolean-Flags gespeichert und bei jeder Iteration umgeschaltet.
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die alternierende Summe von <code>array</code>
 	 * @throws NullObjectException falls <code>array == null</code>
@@ -81,10 +88,12 @@ public class Loesung31c extends ArraySum {
 	 * Rekursiver Loesungsvorschlag fuer Aufgabe 3-1c. Berechnet
 	 * rekursiv die "alternierende Summe" aller Elemente eines Arrays
 	 * von einem bestimmten Element an.
-	 * <p>Das durch <code>index</code> angegebene Element wird addiert
+	 * <p>
+	 * Das durch <code>index</code> angegebene Element wird addiert
 	 * und die durch die Rekursion gelieferte Summe des Rest-Arrays
 	 * subtrahiert. Durch das Prinzip der Invertierbarkeit ("minus und
 	 * minus gibt plus") ergibt sich direkt die alternierende Summe.
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @param index der Index des ersten aufzusummierenden
 	 * Elementsersten
@@ -104,11 +113,13 @@ public class Loesung31c extends ArraySum {
 	
 	/**
 	 * Loesungsvorschlag fuer Aufgabe 3-1c mit Ausnahmenbehandlung.
-	 * <p>Berechnet die "alternierende Summe" aller Elemente eines
+	 * <p>
+	 * Berechnet die "alternierende Summe" aller Elemente eines
 	 * Arrays. Dazu werden bei jedem Iterationsschritt zwei
 	 * Array-Elemente als Additions-Subtraktions-Paar gemeinsam
 	 * behandelt. Anstelle einer Abbruchbedingung wird auf das
 	 * Auftreten einer Ausnahme beim Array-Ueberlauf gewartet.
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die alternierende Summe von <code>array</code>
 	 * @throws NullObjectException falls <code>array == null</code>

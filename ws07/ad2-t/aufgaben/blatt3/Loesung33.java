@@ -1,4 +1,4 @@
-/* $Id: Loesung33.java,v 1.1 2007-10-27 19:59:54 arne Exp $
+/* $Id: Loesung33.java,v 1.2 2007-10-28 22:50:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -7,9 +7,10 @@
 
 /**
  * Loesungsvorschlag fuer Aufgabe 3-3.
+ * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung33 {
 	
@@ -19,6 +20,7 @@ public class Loesung33 {
 	 * Berechnet rekursiv, wie oft auf einer Party zur Begruessung
 	 * angestossen wurde. Jeder neu ankommende Gast stoesst mit jedem
 	 * bereits anwesenden an. Die Gastgeber stossen nicht mit an.
+	 * 
 	 * @param gaeste die Anzahl der anwesenden Gaeste
 	 * @return wie oft angestossen wurde
 	 */

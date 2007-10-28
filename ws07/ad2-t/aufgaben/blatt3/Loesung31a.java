@@ -1,4 +1,4 @@
-/* $Id: Loesung31a.java,v 1.1 2007-10-27 19:59:55 arne Exp $
+/* $Id: Loesung31a.java,v 1.2 2007-10-28 22:50:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,8 +6,10 @@
 
 /**
  * Loesungsvorschlag fuer Aufgabe 3-1a.
+ * 
+ * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung31a extends ArraySum {
 	
@@ -16,6 +18,7 @@ public class Loesung31a extends ArraySum {
 	/**
 	 * Liefert die Summe aller Elemente eines Arrays
 	 * (Berechnung mit <code>while</code>-Schleife).
+	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die Summe aller Elemente von <code>array</code>
 	 * @throws NullObjectException falls <code>array == null</code>
