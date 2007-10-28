@@ -1,4 +1,4 @@
-/* $Id: Loesung21.java,v 1.2 2007-10-27 20:00:32 arne Exp $
+/* $Id: Loesung21.java,v 1.3 2007-10-28 22:36:35 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * das Maximum-Sub-Array--Problem mit O(n^2)-Effizienz.
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung21 implements MaximumSubArraySolver {
 	
@@ -34,7 +34,7 @@ public class Loesung21 implements MaximumSubArraySolver {
 		
 		// lokale Variablen initialisieren
 		int maximumSum = 0;
-		int minimumLowerIndex = 0;
+		int maximumLowerIndex = -1;
 		int maximumUpperIndex = -1;
 		
 		// alle moeglichen Sub-Arrays durchlaufen und deren Summe berechnen
@@ -46,7 +46,7 @@ public class Loesung21 implements MaximumSubArraySolver {
 				// falls die Summe bisher die hoechste ist, merken
 				if (sum >= maximumSum) {
 					maximumSum = sum;
-					minimumLowerIndex = lowerIndex;
+					maximumLowerIndex = lowerIndex;
 					maximumUpperIndex = upperIndex;
 				}
 			}
@@ -54,8 +54,8 @@ public class Loesung21 implements MaximumSubArraySolver {
 		
 		// als Ergebnis das SubArray-Objekt erstellen
 		SubArray maximumSubArray = new SubArray(array);
-		maximumSubArray.setStart(minimumLowerIndex);
-		maximumSubArray.setLength(maximumUpperIndex - minimumLowerIndex + 1);
+		maximumSubArray.setStart(maximumLowerIndex);
+		maximumSubArray.setLength(maximumUpperIndex - maximumLowerIndex + 1);
 		return maximumSubArray;
 	}
 	

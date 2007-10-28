@@ -1,4 +1,4 @@
-/* $Id: Loesung22.java,v 1.2 2007-10-27 20:00:31 arne Exp $
+/* $Id: Loesung22.java,v 1.3 2007-10-28 22:36:35 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * das Maximum-Sub-Array--Problem mit O(n)-Effizienz.
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung22 implements MaximumSubArraySolver {
 	
@@ -33,38 +33,40 @@ public class Loesung22 implements MaximumSubArraySolver {
 	public SubArray findMaximumSubArray (int[] array) {
 		
 		// lokale Variablen initialisieren
+		int currentSum = 0;
 		int currentStart = 0;
 		int currentLength = 0;
-		int currentSum = 0;
-		SubArray maximum = new SubArray(array, 0, 0);
 		int maximumSum = 0;
+		int maximumStart = 0;
+		int maximumLength = 0;
 		
 		// Gesamt-Array genau einmal durchlaufen
 		for (int index = 0; index < array.length; index++) {
-			currentSum += array[index];
 			
-			// ist aktuelle laufende Summe zu klein?
+			// laufende Summe fortfuehren
+			currentSum += array[index];
+			currentLength++;
+			
+			// ist aktuelle laufende Summe negativ?
 			if (currentSum < 0) {
-				// ja: laufende Summe nullen
+				// laufende Summe auf null setzen
 				currentSum = 0;
+				// mit naechstem Element weitermachen
 				currentStart = index + 1;
 				currentLength = 0;
-			}
-			else {
-				// nein: laufende Summe fortfuehren
-				currentLength++;
+				continue;
 			}
 			
 			// aktuelle laufende Summe merken, falls bisher hoechste
 			if (currentSum > maximumSum) {
 				maximumSum = currentSum;
-				maximum.setStart(currentStart);
-				maximum.setLength(currentLength);
+				maximumStart = currentStart;
+				maximumLength = currentLength;
 			}
 		}
 		
 		// Ergebnis zurueckgeben
-		return maximum;
+		return new SubArray(array, maximumStart, maximumLength);
 	}
 	
 	
