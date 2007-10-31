@@ -1,4 +1,4 @@
-/* $Id: MaximumSubArraySolver.java,v 1.4 2007-10-28 22:44:57 arne Exp $
+/* $Id: MaximumSubArraySolver.java,v 1.5 2007-10-31 00:29:47 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,10 +6,41 @@
 
 /**
  * Schnittstelle fuer die Loesung des Maximum-Sub-Array--Problems.
+ * <p>
+ * Die folgende Klasse zeigt beispielhaft, wie der Rumpf einer Loesung
+ * aussehen koennte:<p>
+ * <pre><code>
+ * public class MsaProblemLoeser implements MaximumSubArraySolver {
+ *     
+ *     public SubArray findMaximumSubArray (int[] array) {
+ *         SubArray ergebnis;
+ *         
+ *          // Loesungs-Algorithmus hier
+ *          // (siehe Manuskript)
+ *         
+ *         return ergebnis;
+ *     }
+ *     
+ *     
+ *     public static void main (String[] args) {
+ *         
+ *          // Vorbereitung des Eingabewerts
+ *         int[] array = SubArray.createRandomArray();
+ *         
+ *          // Berechnung des Ergebnisses
+ *         MsaProblemLoeser problemLoeser = new MsaProblemLoeser();
+ *         SubArray maximumSubArray = problemLoeser.findMaximumSubArray(array);
+ *         
+ *          // Ausgabe des Ergebnisses
+ *         System.out.println(maximumSubArray);
+ *         System.out.println("Summe: ["+maximumSubArray.getSum()+"]");
+ *     }
+ * }
+ * </code></pre>
  * 
  * @see SubArray
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public interface MaximumSubArraySolver {
 	
