@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.9 2007-11-12 22:41:37 arne Exp $
+/* $Id: SubArray.java,v 1.10 2007-11-12 22:44:32 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -138,7 +138,7 @@
  * Differenz um eins erhoeht werden.)
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.9 $
+ * @version $Revision: 1.10 $
  * @see MaximumSubArraySolver
  */
 public class SubArray implements Cloneable {
@@ -188,7 +188,7 @@ public class SubArray implements Cloneable {
 	 * damit genau gleichbedeutend mit  dem folgenden
 	 * Code-Abschnitt:<p>
 	 * <pre><code>
-	 * SubArray subArray = new subArray(array);
+	 * SubArray subArray = new SubArray(array);
 	 * subArray.setStart(0);
 	 * subArray.setLength(array.length);
 	 * </code></pre>
@@ -200,7 +200,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, 2, 3};
-	 * SubArray subArray = new subArray(array);
+	 * SubArray subArray = new SubArray(array);
 	 * System.out.println(subArray);  // [1 2 3]
 	 * </code></pre>
 	 * 
@@ -224,7 +224,7 @@ public class SubArray implements Cloneable {
 	 * dieses Konstruktors ist also genau gleichbedeutend mit dem
 	 * folgenden Code-Abschnitt:<p>
 	 * <pre><code>
-	 * SubArray subArray = new subArray(array);
+	 * SubArray subArray = new SubArray(array);
 	 * subArray.setStart(subArrayStart);
 	 * subArray.setLength(subArrayLength);
 	 * </code></pre>
@@ -236,7 +236,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, 2, 3};
-	 * SubArray subArray = new subArray(array, 1, 1);
+	 * SubArray subArray = new SubArray(array, 1, 1);
 	 * System.out.println(subArray);  // 1 [2] 3
 	 * </code></pre>
 	 * 
@@ -264,7 +264,7 @@ public class SubArray implements Cloneable {
 	 * Aufruf dieses Konstruktors ist also genau gleichbedeutend
 	 * mit dem folgenden Code-Abschnitt:<p>
 	 * <pre><code>
-	 * SubArray subArray = new subArray(array.getFullArray());
+	 * SubArray subArray = new SubArray(array.getFullArray());
 	 * subArray.setStart(beginIndex);
 	 * subArray.setLength(endIndex - BeginIndex + 1);
 	 * </code></pre>
@@ -329,7 +329,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, 2, 3};
-	 * SubArray subArray = new subArray(array, 1, 1);
+	 * SubArray subArray = new SubArray(array, 1, 1);
 	 * System.out.println(subArray);  // 1 [2] 3
 	 * subArray.setStart(0);
 	 * System.out.println(subArray);  // [1] 2 3
@@ -384,7 +384,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, 2, 3};
-	 * SubArray subArray = new subArray(array, 1, 1);
+	 * SubArray subArray = new SubArray(array, 1, 1);
 	 * System.out.println(subArray);  // 1 [2] 3
 	 * subArray.setLength(2);
 	 * System.out.println(subArray);  // 1 [2 3]
@@ -476,7 +476,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, 2, 3};
-	 * SubArray subArray = new subArray(array, 1, 2);
+	 * SubArray subArray = new SubArray(array, 1, 2);
 	 * System.out.println(subArray);  // 1 [2 3]
 	 * System.out.println(subArray.getSum());  // 5
 	 * </code></pre>
@@ -576,7 +576,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, -4, 2};
-	 * SubArray subArray = new subArray(array);
+	 * SubArray subArray = new SubArray(array);
 	 * System.out.println(subArray);  // [1 -4 2]
 	 * subArray.findLeftEdgeMaximum();
 	 * System.out.println(subArray);  // [1] -4 2
@@ -621,7 +621,7 @@ public class SubArray implements Cloneable {
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
 	 * int[] array = {1, -4, 2};
-	 * SubArray subArray = new subArray(array);
+	 * SubArray subArray = new SubArray(array);
 	 * System.out.println(subArray);  // [1 -4 2]
 	 * subArray.findRightEdgeMaximum();
 	 * System.out.println(subArray);  // 1 -4 [2]
