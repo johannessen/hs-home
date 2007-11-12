@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.8 2007-10-31 00:14:09 arne Exp $
+/* $Id: SubArray.java,v 1.9 2007-11-12 22:41:37 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -138,7 +138,7 @@
  * Differenz um eins erhoeht werden.)
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.8 $
+ * @version $Revision: 1.9 $
  * @see MaximumSubArraySolver
  */
 public class SubArray implements Cloneable {
@@ -205,7 +205,7 @@ public class SubArray implements Cloneable {
 	 * </code></pre>
 	 * 
 	 * @param array der Gesamt-Array fuer die neue Instanz
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
@@ -243,7 +243,7 @@ public class SubArray implements Cloneable {
 	 * @param array der Gesamt-Array fuer die neue Instanz
 	 * @param subArrayStart der Index des Beginns des Sub-Arrays
 	 * @param subArrayLength die Laenge des Sub-Arrays
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
@@ -295,7 +295,7 @@ public class SubArray implements Cloneable {
 	 * Sub-Array
 	 * @param endIndex der Index des letzten Elements im neuen
 	 * Sub-Array
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
@@ -850,7 +850,7 @@ public class SubArray implements Cloneable {
 	 * @param obj das auf Gleichheit zu pruefende Objekt
 	 * @return <code>true</code>, falls <code>obj</code> gleich diesem
 	 * Objekt ist
-	 * @throws NullObjectException falls <code>obj == null</code>
+	 * @throws NullPointerException falls <code>obj == null</code>
 	 */
 	public boolean equals (Object obj) {
 		if (! (obj instanceof SubArray)) {
@@ -1011,7 +1011,7 @@ public class SubArray implements Cloneable {
 	 * beschreiben
 	 * @throws NumberFormatException falls eines der Array-Elemente
 	 * sich nicht in eine Ganzzahl wandeln laesst
-	 * @throws NullObjectException falls <code>args == null</code>
+	 * @throws NullPointerException falls <code>args == null</code>
 	 */
 	public static int[] parseStringArray (String[] args) {
 		int[] array = new int[args.length];
