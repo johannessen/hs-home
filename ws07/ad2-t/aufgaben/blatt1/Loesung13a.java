@@ -1,4 +1,4 @@
-/* $Id: Loesung13a.java,v 1.1 2007-11-12 10:00:14 arne Exp $
+/* $Id: Loesung13a.java,v 1.2 2007-11-12 22:09:49 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/">Aufgabenblatt 1</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung13a {
 	
@@ -20,8 +20,8 @@ public class Loesung13a {
 	 * Loest das Maximum-Sub-Array--Problem fuer den uebergebenen
 	 * Array auf naive Weise. Es werden saemtliche moeglichen
 	 * Teilfolgen errechnet, deren Summe bestimmt und diese dann
-	 * miteinander verglichen. Der Wert der Summe der hoechsten
-	 * Teilfolge wird auf dem Standard-Ausgabe-Stream ausgegeben.
+	 * miteinander verglichen. Der Wert dieser Summe wird auf
+	 * dem Standard-Ausgabe-Stream ausgegeben.
 	 * 
 	 * @param array der fuer die Bestimmung der Problemloesung
 	 * heranzuziehende Gesamt-Array
