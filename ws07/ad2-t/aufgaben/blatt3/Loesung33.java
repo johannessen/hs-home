@@ -1,4 +1,4 @@
-/* $Id: Loesung33.java,v 1.2 2007-10-28 22:50:20 arne Exp $
+/* $Id: Loesung33.java,v 1.3 2007-11-12 23:43:39 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung33 {
 	
@@ -36,7 +36,8 @@ public class Loesung33 {
 	/** Treiber fuer Aufruf von der Kommandozeilenschnittstelle. */
 	public static void main (String[] args) {
 		int gaeste = Integer.parseInt(args[0]);
-		System.out.print("Bei "+gaeste+" Gaesten wurde insgesamt ");
+		String numerus = (gaeste == 1 ? " Gast" : " Gaesten");  // korrektes Deutsch
+		System.out.print("Bei "+gaeste+numerus+" wurde insgesamt ");
 		System.out.println(hilfUwe(gaeste)+" Mal angestossen.");
 	}
 	
