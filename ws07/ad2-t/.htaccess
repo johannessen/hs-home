@@ -39,4 +39,6 @@
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt2/Loesung13.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/Loesung13.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt3/ArraySum.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/ArraySum.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt3/Loesung12.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/Loesung12.java
+	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/MaximumSubArraySolver.java
+	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/SubArray.java
 </IfModule>
