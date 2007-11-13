@@ -1,4 +1,4 @@
-/* $Id: Loesung12.java,v 1.3 2007-10-28 22:44:57 arne Exp $
+/* $Id: Loesung12.java,v 1.4 2007-11-13 02:15:14 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/">Aufgabenblatt 1</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class Loesung12 extends ArraySum {
 	
@@ -19,7 +19,7 @@ public class Loesung12 extends ArraySum {
 	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die Summe aller Elemente von <code>array</code>
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 */
 	public static int sum (int[] array) {
 		int sum = 0;

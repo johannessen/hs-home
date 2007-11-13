@@ -1,4 +1,4 @@
-/* $Id: Loesung13.java,v 1.5 2007-10-28 22:41:23 arne Exp $
+/* $Id: Loesung13.java,v 1.6 2007-11-13 02:15:14 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/">Aufgabenblatt 1</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.5 $
+ * @version $Revision: 1.6 $
  */
 public class Loesung13 implements MaximumSubArraySolver {
 	
@@ -31,7 +31,7 @@ public class Loesung13 implements MaximumSubArraySolver {
 	 * dieser Methode uebergebenen <code>array</code> ist und deren
 	 * Sub-Array--Definition derart ist, dass sie eine korrekte Loesung
 	 * des Maximum-Sub-Array--Problems darstellt.
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 */
 	public SubArray findMaximumSubArray (int[] array) {
 		

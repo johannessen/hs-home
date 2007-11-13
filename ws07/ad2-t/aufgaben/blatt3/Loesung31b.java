@@ -1,4 +1,4 @@
-/* $Id: Loesung31b.java,v 1.2 2007-10-28 22:50:20 arne Exp $
+/* $Id: Loesung31b.java,v 1.3 2007-11-13 02:12:36 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung31b extends ArraySum {
 	
@@ -21,7 +21,7 @@ public class Loesung31b extends ArraySum {
 	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die Summe aller Elemente von <code>array</code>
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 */
 	public static int sum (int[] array) {
 		return sum(array, 0);
@@ -38,7 +38,7 @@ public class Loesung31b extends ArraySum {
 	 * Elementsersten
 	 * @return die Summe aller Elemente von <code>array</code>;
 	 * <code>0</code>, falls <code>index >= array.length</code>
-	 * @throws NullObjectException falls <code>array == null</code>
+	 * @throws NullPointerException falls <code>array == null</code>
 	 */
 	private static int sum (int[] array, int index) {
 		if (index >= array.length) {
