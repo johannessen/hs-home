@@ -1,4 +1,4 @@
-/* $Id: Loesung41.java,v 1.1 2007-11-13 01:32:10 arne Exp $
+/* $Id: Loesung41.java,v 1.2 2007-11-26 17:38:08 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt4/">Aufgabenblatt 4</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung41 {
 	
@@ -20,7 +20,7 @@ public class Loesung41 {
 	 * Loest das Maximum-Sub-Array--Problem fuer den uebergebenen
 	 * Array im Divide-and-Conquer--Verfahren.
 	 * 
-	 * @see #findMaximumSubArray(SubArray)
+	 * @see #findMaximumSum(int[],int,int)
 	 * @param array der fuer die Bestimmung der Problemloesung
 	 * heranzuziehende Gesamt-Array
 	 * @return die maximale Teilsumme von <code>array</code>
