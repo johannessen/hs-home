@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 5-2 – Tutorium Algorithmen und Datenstrukturen 2 – WS 2007/08</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ws07-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorien für Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 5-2</H2>
+<P>(<A HREF="./">Übungsblatt 5</A>)</P>
+<P>Bestimmen Sie den Wahrheitsgehalt folgender Java-Ausdrücke vom Typ <CODE>boolean</CODE> (mit den Variablen <CODE><VAR>a</VAR></CODE> und <CODE><VAR>b</VAR></CODE> deklariert mit Typ <CODE>int</CODE>).</P>
+<OL TYPE="a">
+<LI><CODE><VAR>a</VAR> + <VAR>b</VAR> == <VAR>b</VAR> + <VAR>a</VAR></CODE></LI>
+<LI><CODE>true || false && true</CODE></LI>
+<LI><CODE>! true || <VAR>a</VAR> != <VAR>a</VAR></CODE></LI>
+<LI><CODE><VAR>a</VAR> == <VAR>a</VAR> + 1</CODE></LI>
+<LI><CODE>false || 10 &lt;= (8 * 2) % 10 + 5</CODE></LI>
+<LI>Zusatzaufgabe: <CODE>1 > 0x100 >> 8</CODE></LI>
+<!--LI>Zusatzaufgabe: <CODE>1 > 010000 >> 10</CODE></LI-->
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI><CODE>true</CODE> (Kommutativität)</LI>
+<LI><CODE>true</CODE> (= <CODE>true || false</CODE>)</LI>
+<LI><CODE>false</CODE> (= <CODE>false || false</CODE>)</LI>
+<LI><CODE>false</CODE> (Identität)</LI>
+<LI><CODE>true</CODE> (= <CODE>false || true</CODE> = <CODE>false || 10 &lt;= 11</CODE>)</LI>
+<LI><CODE>false</CODE> (= <CODE>1 > 1</CODE> = <CODE>1 > 0x1</CODE>)</LI>
+<!--LI><CODE>false</CODE> (= <CODE>1 > 4</CODE> = <CODE>1 > 04</CODE> = <CODE>1 > 010 >> 1</CODE>)</LI-->
+</OL>
+<P><STRONG>Anmerkung.</STRONG> Bei Problemen dieser Art ist das „Code Pad“ in BlueJ äußerst hilfreich. Siehe <A HREF="../../unterlagen/">Unterlagen</A>.</P>
+
+<ADDRESS ID="author">Arne Johannessen, 28. November 2007</ADDRESS>
+<!-- $Id$ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Blatt 4</A></LI>
+		<LI><A HREF="./">Blatt 5</A></LI>
+		<LI><A>Blatt 6</A></LI>
+		<LI><A>Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+		<LI><A>Blatt 10</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>
