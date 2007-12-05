@@ -1,4 +1,4 @@
-/* $Id: Loesung55c.java,v 1.1 2007-12-03 03:25:16 arne Exp $
+/* $Id: Loesung55c.java,v 1.2 2007-12-05 04:34:24 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -111,14 +111,14 @@ public class Loesung55c {
 			karte1.inhalt = "Panorama";  // ist ja egal
 			karte1.nettoPreis = 152.99;
 			
-			karte1.lfdNummer = 2006141;
-			karte1.titel = "Nguma, Gabun Offshore";
-			karte1.breite = 1023;
-			karte1.hoehe = 795;
-			karte1.zustand = "nicht mehr im Vertrieb";
-			karte1.ausgabe = new GregorianCalendar(2007, 2, 13).getTime();
-			karte1.inhalt = "Touristik";
-			karte1.nettoPreis = 220.00;
+			karte2.lfdNummer = 2006141;
+			karte2.titel = "Nguma, Gabun Offshore";
+			karte2.breite = 1023;
+			karte2.hoehe = 795;
+			karte2.zustand = "nicht mehr im Vertrieb";
+			karte2.ausgabe = new GregorianCalendar(2007, 2, 13).getTime();
+			karte2.inhalt = "Touristik";
+			karte2.nettoPreis = 220.00;
 			
 			
 			
