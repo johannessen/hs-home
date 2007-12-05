@@ -16,6 +16,9 @@ BODY {
 	font: normal 9.9pt "Times", serif;
 	line-height: 11pt;
 }
+* {
+	color: black !important;
+}
 
 #head, H2 {
 	position: static;
