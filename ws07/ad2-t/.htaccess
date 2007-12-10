@@ -45,3 +45,7 @@
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/MaximumSubArraySolver.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/SubArray.java
 </IfModule>
+
+<IfModule mod_mime.c>
+	AddType application/x-java-archive .jar
+</IfModule>
