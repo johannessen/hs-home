@@ -1,4 +1,4 @@
-/* $Id: Loesung56.java,v 1.2 2007-12-11 20:06:25 arne Exp $
+/* $Id: Loesung56.java,v 1.3 2007-12-11 20:11:20 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -18,9 +18,10 @@
  * neues Objekt dieser Klasse, setzen dessen Grad- und Minutenzahl passend
  * und geben dann dieses Objekt zurueck.
  * 
+ * @see MaximumSubArraySolver
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt5/#zusatzaufgabe5-6">Aufgabenblatt 5, Zusatzaufgabe 5-6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung56 {
 	
