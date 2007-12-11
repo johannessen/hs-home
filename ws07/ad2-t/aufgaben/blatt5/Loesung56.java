@@ -1,9 +1,27 @@
-/* $Id: Loesung56.java,v 1.1 2007-12-03 03:25:16 arne Exp $
+/* $Id: Loesung56.java,v 1.2 2007-12-11 20:06:25 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
+/**
+ * Loesungsvorschlag fuer Aufgabe 5-6.
+ * <p>
+ * Der "objektorientierte Ansatz" aus Teilaufgabe (a) besteht darin, statt
+ * eines primitiven Datentyps wie etwa <code>int</code> eine Klasse als
+ * Rueckgabetyp festzulegen. Objekte dieser Klasse enthalten dann mehrere
+ * primitive Werte.
+ * <p>
+ * In diesem Loesungsvorschlag wird eine Klasse <code>DegreesMinutes</code>
+ * definiert. Diese Klasse enthaelt zwei Objektvariablen, jeweils eine fuer
+ * Grad- und Minutenzahl. Die entsprechenden Methoden erzeugen dann ein
+ * neues Objekt dieser Klasse, setzen dessen Grad- und Minutenzahl passend
+ * und geben dann dieses Objekt zurueck.
+ * 
+ * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt5/#zusatzaufgabe5-6">Aufgabenblatt 5, Zusatzaufgabe 5-6</A>
+ * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
+ * @version $Revision: 1.2 $
+ */
 public class Loesung56 {
 	
 	static  /* bitte nicht versuchen, dieses "static" zu verstehen */
