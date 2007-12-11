@@ -8,9 +8,10 @@
 
 <H2 ID="blatt">Übungsblatt 6: Dynamische Datenstrukturen</H2>
 
-<H3 ID="aufgabe5-1a">Aufgabe 5-1 Teil (a)</H3>
+<H3 ID="aufgabe5-1a"><EM>Nachtrag:</EM> Aufgabe 5-1 Teil (a)</H3>
 <P>Verwenden Sie die Java-Anwendung „MsaRacer“ zur Analyse des Laufzeitverhaltens der vier implementierten Lösungsverfahren des Maximum–Sub-Array–Problems. Die Anwendung besteht aus einem Java-Archiv, in dem alle <I>.class</I>- und <I>.java</I>-Dateien gebündelt sind. Starten Sie die Anwendung durch Doppelklick auf die <I><ABBR TITLE="Java-Archiv">.jar</ABBR></I>-Datei oder durch folgenden Kommandozeilen-Befehl: <BR><CODE><ABBR TITLE="Prompt">$</ABBR> <KBD>java -jar MsaRacer.jar</KBD></CODE></P>
 <P>Ergänzend können Sie das Java-Werkzeug „MsaTimer“ auf der Kommandozeile wie folgt benutzen: <BR><CODE><ABBR TITLE="Prompt">$</ABBR> <KBD>java MsaTimer <SAMP>Klassenname</SAMP> <VAR>Arraylänge</VAR> > /dev/null</KBD></CODE></P>
+<P>Die Klasse <CODE>MsaTimer</CODE> finden Sie zusammen mit der Anwendung „MsaRacer“ bei den <A HREF="../../unterlagen/MaximumSubArray">Maximum–Sub-Array–Unterlagen</A>.</P>
 
 <H3 ID="aufgabe6-1">Aufgabe 6-1</H3>
 <P>In ihrer einfachsten Form besteht eine nicht-leere lineare Liste aus nichts weiter als einem Wert („Kopf“ der Liste, hier eine Ganzzahl) und einem Verweis auf die Liste der restlichen Werte („Rumpf“).</P>
@@ -19,13 +20,13 @@
 <H3 ID="aufgabe6-2">Aufgabe 6-2</H3>
 <P>Die folgenden Teilaufgaben beziehen sich auf Ihre Lösung aus Aufgabe 6-1 und auf die bereitgestellte Klasse <CODE>MutableLinearList</CODE>, die Ihre Lösung durch Vererbung erweitert.</P>
 <OL TYPE="a">
-<LI><CODE>MutableLinearList</CODE> ist eine lineare Liste mit zusätzlichen Methoden zur Veränderung der Liste. Studieren Sie wenigstens eine dieser Methoden so weit, dass Sie ihre Funktionsweise detailliert beschreiben könnten. <BR><EM>Merke:</EM> Nicht das Was ist wichtig, sondern das Warum!</LI>
+<LI><CODE>MutableLinearList</CODE> ist eine lineare Liste mit zusätzlichen Objektmethoden zum Verändern und Abfragen der Liste. Studieren Sie wenigstens eine dieser Methoden so weit, dass Sie ihre Funktionsweise detailliert beschreiben können. <BR><EM>Merke:</EM> Nicht das Was ist am wichtigsten, sondern das Warum!</LI>
 <LI>Schreiben Sie eine Methode <CODE>start()</CODE>, in der eine lineare Liste vom Typ <CODE>MutableLinearList</CODE> erzeugt wird. Die Liste soll genau die drei Elemente 42, 8 und 15 in dieser Reihenfolge haben.</LI>
-<LI>In Java stellt das Paket <CODE>java.util</CODE> einen ganzen Sack voll mit verschiedenen dynamischen Datenstrukturen zur Verfügung. Die Klasse <CODE>java.util.LinkedList</CODE> ist eine fertige Implementierung einer doppelt verketteten linearen Liste. Finden Sie heraus, welche Methoden(aufrufe) in <CODE>LinkedList</CODE> denen in <CODE>MutableLinearList</CODE> am ehesten entsprechen.</LI>
+<LI>In Java stellt das Paket <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/package-summary.html" HREFLANG="en">java.util</A> einen ganzen Sack voll mit verschiedenen dynamischen Datenstrukturen zur Verfügung. Die Klasse <CODE>java.util.LinkedList</CODE> ist eine fertige Implementierung einer doppelt verketteten linearen Liste. Finden Sie heraus, welche Methoden(aufrufe) in <CODE>LinkedList</CODE> denen in <CODE>MutableLinearList</CODE> am ehesten entsprechen.</LI>
 </OL>
 
 <H3 ID="sternaufgabe6-3">Aufgabe 6-3 *</H3>
-<P>Verwenden Sie eine lineare Liste zur Implementierung eines Stapels (<SPAN LANG="en">stack</SPAN>). Ihr Stapel soll eine eigene Klasse sein mit den beiden Objektmethoden <CODE>push(int)</CODE> und <CODE>pop()</CODE>. Bitte verwenden Sie nach Möglichkeit eine <CODE>LinkedList</CODE> als lineare Liste.</P>
+<P>Verwenden Sie eine <CODE>LinkedList</CODE> zur Implementierung eines <A HREF="http://de.wikipedia.org/wiki/Stapelspeicher">Stapels</A> für Strings. Ihr Stapel soll eine eigene Klasse sein mit den beiden Objektmethoden <CODE>push(String)</CODE> und <CODE>pop()</CODE>.</P>
 
 <H3 ID="zusatzaufgabe6-4">Zusatzaufgabe 6-4</H3>
 <P>Schreiben Sie ein Programm, welches das Problem der <A HREF="http://de.wikipedia.org/wiki/T%C3%BCrme_von_Hanoi">„Türme von Hanoi“</A> für eine beliebige Scheibenanzahl lösen kann. Ihr Programm soll für die interne Modellierung der drei Pfosten drei Instanzen Ihres Stapels aus Aufgabe 6-3 verwenden. Bei jeder Bewegung soll Ihr Programm eine Ausgabe der folgenden Art erzeugen: <BR><SAMP>Scheibe <VAR>n</VAR> von Pfosten <VAR>x</VAR> nach Pfosten <VAR>y</VAR></SAMP></P>
