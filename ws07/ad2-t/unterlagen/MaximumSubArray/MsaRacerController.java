@@ -1,4 +1,4 @@
-/* $Id: MsaRacerController.java,v 1.1 2007-12-10 06:53:49 arne Exp $
+/* $Id: MsaRacerController.java,v 1.2 2007-12-12 05:49:18 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  * 
@@ -7,17 +7,22 @@
 
 
 import javax.swing.*;
+import javax.swing.event.*;
 import java.awt.*;
 import java.awt.event.*;
 
 
-public class MsaRacerController extends JPanel {
+public class MsaRacerController extends JPanel implements ChangeListener {
 	
 	private MsaRacerDelegate delegate = null;
 	
 	private AbstractButton addButton = null;
 	
 	private MsaFactory factory = null;
+	
+	private JLabel arrayInfo = null;
+	
+	private JSlider arraySlider = null;
 	
 	
 	public MsaRacerController (MsaRacerDelegate delegate) {
@@ -30,17 +35,26 @@ public class MsaRacerController extends JPanel {
 		
 		this.factory = new MsaFactory(this);
 		
+		JPanel arrayPanel = new JPanel();
+		arrayPanel.setLayout(new BoxLayout(arrayPanel, BoxLayout.PAGE_AXIS));
+		this.arrayInfo = new JLabel("Array mit 2500 Zahlen");
+		this.arraySlider = new JSlider(6214608, 12431214, 7824046);
+		this.arraySlider.addChangeListener(this);
+		arrayPanel.add(this.arrayInfo);
+		arrayPanel.add(this.arraySlider);
+		
 		JPanel listPanel = new JPanel(new FlowLayout());
 		listPanel.add(new JButton(new AddAction()));
 		listPanel.add(new JButton(new RemoveAction()));
 		
-		JPanel controlPanel = new JPanel(new FlowLayout());
-		listPanel.add(new JButton(new StartAction()));
-		listPanel.add(new JButton(new StopAction()));
+		JPanel startStopPanel = new JPanel(new FlowLayout());
+		startStopPanel.add(new JButton(new StartAction()));
+		startStopPanel.add(new JButton(new StopAction()));
 		
+		super.add(arrayPanel, BorderLayout.PAGE_START);
 		super.add(listPanel, BorderLayout.LINE_START);
-		super.add(new JPanel(), BorderLayout.CENTER);  // :BUG:
-		super.add(controlPanel, BorderLayout.LINE_END);
+		super.add(new JPanel(), BorderLayout.CENTER);
+		super.add(startStopPanel, BorderLayout.LINE_END);
 		
 		this.setupDefaultSolvers();
 	}
@@ -52,6 +66,18 @@ public class MsaRacerController extends JPanel {
 			if (solvers[index] != null) {
 				SwingUtilities.invokeLater(new AddRunnable(solvers[index]));
 			}
+		}
+	}
+	
+	
+	private int arrayLength () {
+		return (int)Math.round(Math.exp((double)this.arraySlider.getValue() / 1000000d)) - 500;
+	}
+	
+	
+	public void stateChanged (ChangeEvent event) {
+		if (event.getSource() == this.arraySlider) {
+			this.arrayInfo.setText("Array mit "+this.arrayLength()+" Zahlen");
 		}
 	}
 	
@@ -161,7 +187,7 @@ public class MsaRacerController extends JPanel {
 		}
 		
 		public void run () {
-			MsaRacerController.this.delegate.startRace();
+			MsaRacerController.this.delegate.startRace(MsaRacerController.this.arrayLength());
 		}
 		
 	}

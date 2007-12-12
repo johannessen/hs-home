@@ -1,4 +1,4 @@
-/* $Id: MsaRacerImplementationsList.java,v 1.1 2007-12-10 06:53:49 arne Exp $
+/* $Id: MsaRacerImplementationsList.java,v 1.2 2007-12-12 05:49:18 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  * 
@@ -49,9 +49,9 @@ public class MsaRacerImplementationsList extends JScrollPane implements MsaRacer
 	}
 	
 	
-	public void startRace () {
+	public void startRace (int arrayLength) {
 		this.stopRace();
-		int[] array = SubArray.createRandomArray(2500);
+		int[] array = SubArray.createRandomArray((arrayLength >= 0) ? arrayLength : 2500);
 		Component[] components = this.list.getComponents();
 		MsaRacerImplementation implementation = null;
 //		for (Iterator iterator = this.implementations.iterator(); iterator.hasNext(); implementation = (MsaRacerImplementation)iterator.next()) {
@@ -70,6 +70,7 @@ public class MsaRacerImplementationsList extends JScrollPane implements MsaRacer
 			implementation = (MsaRacerImplementation)components[index];
 			implementation.stop();
 		}
+		Thread.yield();  // try to give everyone time to actually stop
 	}
 	
 }
