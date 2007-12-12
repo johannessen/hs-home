@@ -1,4 +1,4 @@
-/* $Id: Loesung64.java,v 1.2 2007-12-12 03:49:10 arne Exp $
+/* $Id: Loesung64.java,v 1.3 2007-12-12 03:59:48 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung64 {
 	
@@ -39,8 +39,12 @@ public class Loesung64 {
 	
 	/** oberste Scheibe von from nach to bewegen */
 	public void moveDisc (Stack from, Stack to) {
+		
+		// bewegung mit Stapel-Operationen durchfuehren
 		String disc = from.pop();
 		to.push(disc);
+		
+		// bewegung protokollieren
 		System.err.println("Scheibe "+disc+" von Pfosten "+from.name()+" nach Pfosten "+to.name());
 		printAllTowers();
 	}
