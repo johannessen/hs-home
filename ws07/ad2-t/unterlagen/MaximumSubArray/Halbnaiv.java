@@ -1,4 +1,4 @@
-/* $Id: Halbnaiv.java,v 1.1 2007-12-10 06:53:49 arne Exp $
+/* $Id: Halbnaiv.java,v 1.2 2007-12-12 05:48:06 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Halbnaiv extends AbstractMaximumSubArraySolver {
 	
@@ -43,10 +43,10 @@ public class Halbnaiv extends AbstractMaximumSubArraySolver {
 		
 		// alle moeglichen Sub-Arrays durchlaufen und deren Summe berechnen
 		for (int lowerIndex = 0; lowerIndex < array.length; lowerIndex++) {
+			super.reportState(lowerIndex, array.length);
 			int sum = 0;
 			for (int upperIndex = lowerIndex; upperIndex < array.length; upperIndex++) {
 				sum += array[upperIndex];
-				super.reportState(lowerIndex, array.length);
 				
 				// falls die Summe bisher die hoechste ist, merken
 				if (sum >= maximumSum) {
