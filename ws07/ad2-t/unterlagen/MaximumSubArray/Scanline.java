@@ -1,4 +1,4 @@
-/* $Id: Scanline.java,v 1.1 2007-12-10 06:53:49 arne Exp $
+/* $Id: Scanline.java,v 1.2 2007-12-12 04:13:40 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Scanline extends AbstractMaximumSubArraySolver {
 	
@@ -45,7 +45,6 @@ public class Scanline extends AbstractMaximumSubArraySolver {
 		
 		// Gesamt-Array genau einmal durchlaufen
 		for (int index = 0; index < array.length; index++) {
-			super.reportState(index, array.length);
 			
 			// laufende Summe fortfuehren
 			sum += array[index];
@@ -61,6 +60,8 @@ public class Scanline extends AbstractMaximumSubArraySolver {
 				maximumSum = sum;
 				maximumBegin = beginIndex;
 				maximumEnd = index;
+				
+				super.reportState(index, array.length / 5);  // Schaetzwert
 			}
 		}
 		
