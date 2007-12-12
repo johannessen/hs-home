@@ -1,4 +1,4 @@
-/* $Id: Loesung63.java,v 1.1 2007-12-11 20:08:59 arne Exp $
+/* $Id: Loesung63.java,v 1.2 2007-12-12 02:58:01 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -12,7 +12,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung63 extends java.util.LinkedList {
 	
@@ -35,7 +35,7 @@ public class Loesung63 extends java.util.LinkedList {
 	 * @return der abgenommene String
 	 */
 	public String pop () {
-		String value = super.getFirst();
+		String value = (String)super.getFirst();
 		super.removeFirst();
 		return value;
 	}
