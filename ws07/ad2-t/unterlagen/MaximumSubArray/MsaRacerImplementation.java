@@ -1,4 +1,4 @@
-/* $Id: MsaRacerImplementation.java,v 1.1 2007-12-10 06:53:48 arne Exp $
+/* $Id: MsaRacerImplementation.java,v 1.2 2007-12-12 06:03:30 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  * 
@@ -56,7 +56,7 @@ public class MsaRacerImplementation extends JPanel implements Runnable {
 	
 	public void start (final int[] array) {
 		this.array = array;
-		this.displayProgressNow(0, 1, "running…");
+		this.displayProgressNow(0, 1, "läuft…");
 		this.thread = new Thread(this);
 		this.thread.start();  // :BUG: bei synchron laufendem solver kommt keine rückmeldung und es werden erst alle threads gestartet, bevor der erste anfängt zu laufen
 		// :TODO: ein semaphor, für jeden thread lock um 1 erhöht. P-operation am anfang von run, V-operation _entweder_ am ende von run _oder_ beim ersten gui-update-callback (muss aber in _beiden_ fällen ausführen, insgesamt genau einmal!)
@@ -72,7 +72,7 @@ public class MsaRacerImplementation extends JPanel implements Runnable {
 			this.displayProgressLater(1, 1, (endTime - startTime - this.sleepTime)+" ms");
 		}
 		catch (UserCanceledException exception) {
-			this.displayProgressLater(-1, -1, "stopped");
+			this.displayProgressLater(-1, -1, "gestoppt");
 		}
 	}
 	
