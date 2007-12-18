@@ -1,4 +1,4 @@
-/* $Id: Loesung72.java,v 1.1 2007-12-12 00:37:46 arne Exp $
+/* $Id: Loesung72.java,v 1.2 2007-12-18 11:27:58 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * @see java.util.Arrays#binarySearch(int[],int)
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt7/">Aufgabenblatt 7</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung72 {
 	
@@ -32,6 +32,12 @@ public class Loesung72 {
 	 * @see java.util.Arrays#sort(int[])
 	 */
 	public static int find (int[] array, int key) {
+		
+		/* Default-Werte beim Erstaufruf:
+		 * leftIndex = 0
+		 * rightIndex = array.length - 1
+		 */
+		
 		return find(array, key, 0, array.length - 1);
 	}
 	
