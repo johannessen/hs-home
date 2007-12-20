@@ -1,4 +1,4 @@
-/* $Id: Loesung83.java,v 1.2 2007-12-20 18:15:55 arne Exp $
+/* $Id: Loesung83.java,v 1.3 2007-12-20 18:52:32 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung83 {
 	
@@ -97,6 +97,9 @@ public class Loesung83 {
 	 * <li><code>FIBONACCI</code> enthaelt die Fibonaccifolge, mit
 	 * <code>FIBONACCI[0] == 1</code></li>
 	 * </ul>
+	 * <p>
+	 * Das Verhalten dieser Methode bei Nichterfuellung dieser
+	 * Vorbedingungen ist nicht definiert.
 	 * 
 	 * @param array das zu durchsuchende Array
 	 * @param key den zu suchenden Wert
@@ -185,8 +188,10 @@ public class Loesung83 {
 		
 		int valueToBeFound = 3;
 		try {
+		for (valueToBeFound = -1; valueToBeFound < array.length; valueToBeFound++) {
 			int index = find(array, valueToBeFound);
 			System.out.println("Die Zahl "+valueToBeFound+" ist im Array an der Stelle "+index+".");
+		}
 		}
 		catch (IndexOutOfBoundsException exception) {
 			System.out.println("Die Zahl "+valueToBeFound+" ist nicht im Array enthalten.");
