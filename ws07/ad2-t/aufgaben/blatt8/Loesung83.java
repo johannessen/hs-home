@@ -1,4 +1,4 @@
-/* $Id: Loesung83.java,v 1.4 2007-12-20 19:05:01 arne Exp $
+/* $Id: Loesung83.java,v 1.5 2007-12-20 19:13:54 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class Loesung83 {
 	
@@ -155,13 +155,11 @@ public class Loesung83 {
 		 * Die Fibonacisuche kann ihren Vorteil nur dann
 		 * ausspielen, wenn die zu durchsuchenden Arrays eine
 		 * bekannte, aber sehr grosse Zahl von Elementen haben,
-		 * eine ungleichmaessige Schluesselverteilung haben und die
-		 * Burst-Zugriffszeiten deutlich schneller als die normalen
-		 * Zugriffszeiten sind. Das sind eine Menge Bedingungen. In
-		 * der Praxis wird die Fibonaccisuche meines Wissens so gut
-		 * wie nie verwendet -- moeglicherweise bietet der Zugriff
-		 * ueber Datenstrukturen wie etwa ISAM ohenhin groessere
-		 * Vorteile.
+		 * eine ungleichmaessige Schluesselverteilung haben und
+		 * die Burst-Zugriffszeiten deutlich schneller als die
+		 * wahlfreien Zugriffszeiten sind. Das sind eine Menge
+		 * Bedingungen. In der Praxis wird die Fibonaccisuche
+		 * meines Wissens so gut wie nie verwendet.
 		 * 
 		 * Fuer die Praxis relevante Tips gibt's in Aufgabe 8-2d.
 		 */
