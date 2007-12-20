@@ -1,4 +1,4 @@
-/* $Id: Loesung83.java,v 1.1 2007-12-20 15:23:15 arne Exp $
+/* $Id: Loesung83.java,v 1.2 2007-12-20 18:15:55 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung83 {
 	
@@ -18,7 +18,7 @@ public class Loesung83 {
 	 * Die Fibonaccifolge <i>F</i>, angepasst fuer die Fibonaccisuche.
 	 * Diese Folge enthaelt alle Fibonaccizahlen in <code>int</code>;
 	 * dies sind alle Fibonaccizahlen kleiner oder gleich
-	 * <i>F</i><sub>47</sub> = 2971215073.
+	 * <i>F</i><sub>46</sub> = 1836311903.
 	 * <p>
 	 * Im Allgemeinen ist die Fibonaccifolge wie folgt definiert:
 	 * <br><code>FIBONACCI[n] = (n == 0 ? 0 : (n == 1 ? 1 :
@@ -27,7 +27,7 @@ public class Loesung83 {
 	 * Um klaren Code in der Rekursion zu haben, wird abweichend davon
 	 * <code>FIBONACCI[0] = 1</code> definiert; dies spart eine eigene
 	 * <code>if</code>-Bedingung fuer sehr kurze Teil-Arrays ein. Auch
-	 * wird <code>FIBONACCI[48] = Integer.MAX_VALUE</code> definiert,
+	 * wird <code>FIBONACCI[47] = Integer.MAX_VALUE</code> definiert,
 	 * um die Korrektheit des Algorithmus auch bei langen Arrays
 	 * herzustellen.
 	 */
@@ -51,7 +51,7 @@ public class Loesung83 {
 	 */
 	public static int find (int[] array, int key) {
 		
-		// ein leerer Array fuehrt zu einer ArrayIndexOutOfBoundsException
+		// einen leeren Array muessen wir abfangen
 		if (array.length == 0) {
 			throw new KeyNotFoundException();
 		}
@@ -63,11 +63,11 @@ public class Loesung83 {
 		 * steigend ist, waere eigentlich eine binaere Suche
 		 * optimal. Bis zu einer Arraylaenge von einigen
 		 * zehntausend Elementen ist aber eine sequentielle Suche
-		 * nicht viel langsamer. 
+		 * in diesem Fall noch nicht viel langsamer. 
 		 */
 		
 		// Suchanfang: die richtigen Startwerte finden
-		int fibonacciIndex = 2;
+		int fibonacciIndex = 2;  // FIBONACCI[2] == 1
 		while (fibonacciIndex < FIBONACCI.length && FIBONACCI[fibonacciIndex] < array.length) {
 			fibonacciIndex++;
 		}
@@ -130,6 +130,26 @@ public class Loesung83 {
 		 * ein Element in der Naehe der Mitte zur Entscheidung
 		 * betrachtet werden -- aufgrund der Summenformel muss der
 		 * Split trennscharf geschehen (vgl. MSA).
+		 * 
+		 * Weil bei der Fibonaccisuche statt einer Division wie bei
+		 * der binaeren Suche eine Subtraktion durchgefuehrt wird,
+		 * ist sie theoretisch schneller. Allerdings handelt es
+		 * sich bei der Division in der binaeren Suche um eine
+		 * Division durch zwei, die sich leicht durch eine billige
+		 * Schieberegister-Operation ersetzten laesst. Des Weiteren
+		 * ist bei der Fibonaccisuche ein Speicherzugriff mehr
+		 * noetig als bei der binaeren Suche (naemlich ein Zugriff
+		 * auf die Fibonaccizahlen, die als Array nicht in einem
+		 * Register im Prozessor liegen koennen). Aus diesen
+		 * Gruenden hat der theoretische Vorteil der Fibonaccisuche
+		 * keine praktische Relevanz. Hinzu kommt, dass die
+		 * staendigen teuren Methodenaufrufe bei allen unseren
+		 * Implementationen diese ganze Diskussion ohnehin
+		 * ad absurbum fuehren; wollte man ernsthaft die
+		 * Ausfuehrungsgeschwindigkeit erhoehen, so muesste man
+		 * als erstes aus der Rekursion eine Iteration machen...
+		 * 
+		 * Fuer die Praxis relevante Tips gibt's in Aufgabe 8-2d.
 		 */
 		
 		// Rekursionsabbruch, wenn keine Fibonacci-Zahlen
