@@ -1,4 +1,4 @@
-/* $Id: Loesung81.java,v 1.1 2007-12-18 11:27:32 arne Exp $
+/* $Id: Loesung81.java,v 1.2 2007-12-20 15:23:46 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung81 {
 	
@@ -31,12 +31,12 @@ public class Loesung81 {
 	 */
 	public static int find (int[] array, int key) {
 		
-		/* Default-Werte beim Erstaufruf:
-		 * leftIndex = 0
-		 * rightIndex = array.length - 1
-		 */
+		// Suchanfang: ganzen Array durchsuchen
+		int firstIndex = 0;
+		int lastIndex = array.length - 1;
 		
-		return find(array, key, 0, array.length - 1);
+		// Suche starten
+		return find(array, key, firstIndex, lastIndex);
 	}
 	
 	
@@ -93,11 +93,10 @@ public class Loesung81 {
 	 * @see java.util.Arrays#sort(int[])
 	 */
 	public static void main (String[] args) {
-		// bei der binaeren Suche MUSS der Array sortiert sein!
-		int[] array = new int[] {7, 4, 6, 9, 1, -1, 2, 3, 8, 0, 6, 5};
-		java.util.Arrays.sort(array);
+		// bei der Interpolationssuche MUSS der Array sortiert sein!
+		int[] array = new int[] {-1, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9};
 		
-		int valueToBeFound = Integer.parseInt(args[0]);
+		int valueToBeFound = 3;
 		try {
 			int index = find(array, valueToBeFound);
 			System.out.println("Die Zahl "+valueToBeFound+" ist im Array an der Stelle "+index+".");

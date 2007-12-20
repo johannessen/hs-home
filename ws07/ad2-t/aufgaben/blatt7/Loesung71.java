@@ -1,4 +1,4 @@
-/* $Id: Loesung71.java,v 1.1 2007-12-12 00:37:46 arne Exp $
+/* $Id: Loesung71.java,v 1.2 2007-12-20 15:23:45 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,7 +9,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt7/">Aufgabenblatt 7</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class Loesung71 {
 	
@@ -45,7 +45,7 @@ public class Loesung71 {
 		// bei der sequentiellen Suche darf der Array unsortiert sein
 		int[] array = new int[] {7, 4, 6, 9, 1, -1, 2, 3, 8, 0, 6, 5};
 		
-		int valueToBeFound = Integer.parseInt(args[0]);
+		int valueToBeFound = 3;
 		try {
 			int index = find(array, valueToBeFound);
 			System.out.println("Die Zahl "+valueToBeFound+" ist im Array an der Stelle "+index+".");
