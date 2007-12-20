@@ -44,6 +44,7 @@
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt3/Loesung12.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/Loesung12.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/MaximumSubArraySolver.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt4/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt1/SubArray.java
+	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt7/LinearList.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt6/Loesung61.java
 	Redirect permanent /~joar0011/ws07/ad2-t/aufgaben/blatt8/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt7/KeyNotFoundException.java
 </IfModule>
 
