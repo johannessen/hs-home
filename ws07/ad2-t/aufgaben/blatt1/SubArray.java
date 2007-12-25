@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.10 2007-11-12 22:44:32 arne Exp $
+/* $Id: SubArray.java,v 1.11 2007-12-25 14:56:37 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -138,7 +138,7 @@
  * Differenz um eins erhoeht werden.)
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.10 $
+ * @version $Revision: 1.11 $
  * @see MaximumSubArraySolver
  */
 public class SubArray implements Cloneable {
@@ -850,11 +850,13 @@ public class SubArray implements Cloneable {
 	 * @param obj das auf Gleichheit zu pruefende Objekt
 	 * @return <code>true</code>, falls <code>obj</code> gleich diesem
 	 * Objekt ist
-	 * @throws NullPointerException falls <code>obj == null</code>
 	 */
 	public boolean equals (Object obj) {
+		if (this == obj) {
+			return true;  // Objekte identisch
+		}
 		if (! (obj instanceof SubArray)) {
-			return false;  // Objekt eines anderen Typs
+			return false;  // Objekt eines anderen Typs (oder null)
 		}
 		SubArray other = (SubArray)obj;
 		if (! java.util.Arrays.equals(this.array, other.array)) {
