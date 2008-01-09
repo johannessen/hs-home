@@ -1,4 +1,4 @@
-/* $Id: Loesung31c.java,v 1.3 2007-11-13 02:12:36 arne Exp $
+/* $Id: Loesung31c.java,v 1.4 2008-01-09 00:20:29 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,23 +9,30 @@
  * Loesungsvorschlaege fuer Aufgabe 3-1c.
  * <p>
  * Diese Klasse enthaelt vier verschiedene Beispiele fuer moegliche
- * Loesungsansaetze. Traditionell ist die Toggle-Loesung die bevozugte,
+ * Loesungsansaetze. Traditionell ist die Toggle-Loesung die bevorzugte,
  * weil sie in allen imperativen Programmiersprachen (von Assembler bis
- * einschliesslich Java) sehr einfach zu implementieren ist.
- * In objektorientierten Sprachen wie Java ist der moderne Ansatz mit
- * Ausnahmenbehandlung meist ebenfalls einfach zu implementieren und
- * mindestens gleichwertig. Diese beiden Methoden sind empfehlenswert
- * fuer dieses Problem.
+ * einschliesslich Java) sehr einfach zu implementieren ist. Diese
+ * Methode ist die beste Loesung fuer dieses Problem.
  * <p>
  * Waehrend die rekursive Loesung durch ihre unuebertroffene
  * Einfachheit besticht, ist ihr praktischer Nutzen in Java eingeschraenkt
  * (siehe Aufgabe 3-4). Der Ansatz mit Modulo-Formel ist vergleichsweise
  * schwer verstaendlich und sollte daher nur Anwendung finden, wenn aus
- * irgendeinem Grund die anderen Methoden nicht praktikabel sind.
+ * irgendeinem Grund die anderen Methoden nicht praktikabel sind. Beide
+ * Methoden sind langsamer als die Toggle-Loesung.
+ * <p>
+ * Obwohl in objektorientierten Sprachen wie Java eine weitere Loesung
+ * mit Ausnahmenbehandlung moeglich ist, sollte sie niemals verwendet
+ * werden. Sie ist naemlich zwar einfach zu schreiben, aber schwer zu
+ * lesen; ausserdem ist er sehr langsam. Naeheres erklaert Josh Bloch in
+ * Effective Java auf Seite 169 ff.; vgl. Java Puzzlers Puzzle 42, S. 89.
+ * 
+ * @see <A HREF="http://java.sun.com/docs/books/effective/" HREFLANG="en">Effective Java</A>
+ * @see <A HREF="http://www.javapuzzlers.com/" HREFLANG="en">Java Puzzlers</A>
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class Loesung31c extends ArraySum {
 	
@@ -119,6 +126,17 @@ public class Loesung31c extends ArraySum {
 	 * Array-Elemente als Additions-Subtraktions-Paar gemeinsam
 	 * behandelt. Anstelle einer Abbruchbedingung wird auf das
 	 * Auftreten einer Ausnahme beim Array-Ueberlauf gewartet.
+	 * 
+	 * @deprecated
+	 * Effective Java Item 39:
+	 * <b>Use exceptions only for exceptional conditions.</b>
+	 * <br>
+	 * Diese Art, eine Schleife zu verwenden, ist zwar dem
+	 * Problem angemessen, aber schwer verstaendlich und dazu
+	 * noch sehr langsam in der Ausfuehrung. Sie sollte daher nie
+	 * verwendet werden.
+	 * 
+	 * @see <A HREF="http://java.sun.com/docs/books/effective/" HREFLANG="en">Effective Java</A>
 	 * 
 	 * @param array das aufzusummierende Array
 	 * @return die alternierende Summe von <code>array</code>
