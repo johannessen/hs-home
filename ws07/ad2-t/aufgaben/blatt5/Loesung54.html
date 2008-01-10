@@ -45,7 +45,7 @@ System.out.println(<VAR>p1</VAR>.distanceFrom(<VAR>p2</VAR>));</CODE></PRE>
 	<P>Offensichtlich ist das objektorientierte Prinzip der Erweiterung von Klassenstrukturen durch Vererbung nicht immer problemlos.</P>
 	<P>Das Problem war in dieser Klassenstruktur das Hinzufügen der Methode für die Entfernungsberechnung zur allgemeinen Oberklasse <CODE>Position</CODE>. Instanzen der Unterklassen erben solche neuen Methoden automatisch – selbst dann, wenn sie im Kontext der Unterklasse gar nicht sinnvoll sind.</P>
 	<P>Solche Probleme lassen sich umgehen, indem man Klassenstrukturen sorgfältig plant. In Fällen wie dem vorliegenden würde man für jede Art von Koordinaten eine eigene Unterklasse von <CODE>Position</CODE> erstellen und <CODE>Position</CODE> selbst dann so deklarieren, dass sie nicht instanziiert werden kann (also nur Objekte der verschiedenen Unterklassen konstruiert werden können). (Dazu setzt man entweder das Zugriffsrecht aller Konstruktoren auf <CODE>private</CODE> oder man deklariert die Klasse als abstrakt (<CODE>abstract class</CODE>).)</LI>
-	<P>(Eine moderne Lösung dieser Problematik stellt das <A HREF="http://en.wikipedia.org/wiki/Delegation_pattern" HREFLANF="en">Delegation-Pattern</A> dar; dabei gehen allerdings die Vorteile des Polymorphismus teilweise verloren.)</P>
+	<P>(Eine moderne Lösung dieser Problematik stellt das <A HREF="http://en.wikipedia.org/wiki/Decorator_pattern" HREFLANF="en">Decorator-Pattern</A> dar.)</P>
 </OL>
 
 <ADDRESS ID="author">Arne Johannessen, 4. Dezember 2007</ADDRESS>
