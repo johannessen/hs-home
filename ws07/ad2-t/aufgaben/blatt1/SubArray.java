@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.11 2007-12-25 14:56:37 arne Exp $
+/* $Id: SubArray.java,v 1.12 2008-01-13 19:19:07 arne Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -136,24 +136,41 @@
  * einfachen Differenz <code>endIndex - beginIndex</code> wuerde sich dann
  * jedoch faelschlich null fuer die Laenge ergeben. Folglich muss diese
  * Differenz um eins erhoeht werden.)
+ * <p>
+ * <br>
+ * <b>Anmerkung.</b> Diese Klasse arbeitet unmittelbar auf dem durch
+ * <code>array</code> referenzierten Array. Das Verhalten dieser Klasse
+ * bei externer Veraenderung dieses Arrays ist nicht definiert. Um daraus
+ * resultierende Probleme zu umgehen, kann der Array beim Instanziieren
+ * dieser Klasse dupliziert werden:<p>
+ * <pre><code>
+ * int[] array = new int[] {1, 2, 3};
+ * SubArray subArray = new SubArray(array.clone());
+ * </code></pre>
+ * <p>
+ * <br>
+ * <b>Anmerkung.</b> Die ueberschreibbaren Methoden dieser Klasse werden
+ * nicht von anderen Methoden oder Konstruktoren dieser Klasse aufgerufen.
+ * Das bedeutet, dass diese Klasse durch Vererbung erweitert werden kann.
+ * <br>
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.11 $
+ * @version $Revision: 1.12 $
  * @see MaximumSubArraySolver
  */
-public class SubArray implements Cloneable {
+public class SubArray implements Comparable {
 	
 	
 	/** Der Gesamt-Array. */
-	private int[] array = null;
+	private final int[] array;
 	
 	
 	/** Index des Beginns des Sub-Arrays im Gesamt-Array. */
-	private int subArrayStart = 0;
+	private int subArrayStart;
 	
 	
 	/** Laenge des Sub-Arrays im Gesamt-Array. */
-	private int subArrayLength = 0;
+	private int subArrayLength;
 	
 	
 	/** Cache der Summe der Elemente des Sub-Arrays. */
@@ -209,7 +226,7 @@ public class SubArray implements Cloneable {
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
-	public SubArray (int[] array) {
+	public SubArray (final int[] array) {
 		this.array = array;
 		this.subArrayStart = 0;
 		this.subArrayLength = array.length;
@@ -247,7 +264,7 @@ public class SubArray implements Cloneable {
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
-	public SubArray (int[] array, int subArrayStart, int subArrayLength) {
+	public SubArray (final int[] array, final int subArrayStart, final int subArrayLength) {
 		if (array == null) {
 			throw new NullPointerException();
 		}
@@ -299,7 +316,7 @@ public class SubArray implements Cloneable {
 	 * @see #setStart(int)
 	 * @see #setLength(int)
 	 */
-	public SubArray (SubArray array, int beginIndex, int endIndex) {
+	public SubArray (final SubArray array, final int beginIndex, final int endIndex) {
 		this.array = array.array;
 		this.subArrayStart = beginIndex;
 		this.subArrayLength = endIndex - beginIndex + 1;
@@ -312,10 +329,15 @@ public class SubArray implements Cloneable {
 	/**
 	 * Zugriffsmethode; liefert den bei der Instanziierung gesetzten
 	 * Gesamt-Array.
+	 * <p>
+	 * Diese Methode war bis Revision 1.11 <code>public</code> und
+	 * damit Teil der exportierten API dieser Klasse. Das verletzte
+	 * jedoch das objektorientierte Prinzip der Kapselung
+	 * (encapsulation) [EJ Item 12].
 	 * 
 	 * @return den Gesamt-Array
 	 */
-	public int[] getFullArray () {
+	int[] getFullArray () {
 		return this.array;
 	}
 	
@@ -328,7 +350,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, 2, 3};
+	 * int[] array = new int[] {1, 2, 3};
 	 * SubArray subArray = new SubArray(array, 1, 1);
 	 * System.out.println(subArray);  // 1 [2] 3
 	 * subArray.setStart(0);
@@ -344,7 +366,7 @@ public class SubArray implements Cloneable {
 	 * an dem der Sub-Array beginnen soll
 	 * @see #getSum()
 	 */
-	public void setStart (int subArrayStart) {
+	public void setStart (final int subArrayStart) {
 		this.subArrayStart = subArrayStart;
 		this.subArraySum = null;
 	}
@@ -369,6 +391,10 @@ public class SubArray implements Cloneable {
 	 * @see #getLength()
 	 */
 	public int getStart () {
+		return this.getStart1();
+	}
+	
+	private int getStart1 () {
 		if (this.subArrayLength < 0) {
 			return 0;
 		}
@@ -383,7 +409,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, 2, 3};
+	 * int[] array = new int[] {1, 2, 3};
 	 * SubArray subArray = new SubArray(array, 1, 1);
 	 * System.out.println(subArray);  // 1 [2] 3
 	 * subArray.setLength(2);
@@ -398,7 +424,7 @@ public class SubArray implements Cloneable {
 	 * @param subArrayLength Laenge des Sub-Arrays
 	 * @see #getSum()
 	 */
-	public void setLength (int subArrayLength) {
+	public void setLength (final int subArrayLength) {
 		this.subArrayLength = subArrayLength;
 		this.subArraySum = null;
 	}
@@ -422,6 +448,10 @@ public class SubArray implements Cloneable {
 	 * @see #getStart()
 	 */
 	public int getLength () {
+		return this.getLength1();
+	}
+	
+	private int getLength1 () {
 		if (this.subArrayLength < 0) {
 			return this.array.length;
 		}
@@ -447,7 +477,7 @@ public class SubArray implements Cloneable {
 	 * @param subArraySum Summe des Sub-Arrays
 	 * @see #getSum()
 	 */
-	public void setSum (int subArraySum) {
+	public void setSum (final int subArraySum) {
 		this.subArraySum = new Integer(subArraySum);
 	}
 	
@@ -475,7 +505,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, 2, 3};
+	 * int[] array = new int[] {1, 2, 3};
 	 * SubArray subArray = new SubArray(array, 1, 2);
 	 * System.out.println(subArray);  // 1 [2 3]
 	 * System.out.println(subArray.getSum());  // 5
@@ -485,10 +515,14 @@ public class SubArray implements Cloneable {
 	 * @see #setSum(int)
 	 */
 	public int getSum () {
+		return this.getSum1();
+	}
+	
+	private int getSum1 () {
 		if (this.subArraySum == null) {
 			int sum = 0;
-			int endIndex = this.getEndIndex();
-			for (int index = this.getBeginIndex(); index <= endIndex; index++) {
+			final int endIndex = this.getEndIndex1();
+			for (int index = this.getBeginIndex1(); index <= endIndex; index++) {
 				sum += this.array[index];
 			}
 			this.subArraySum = new Integer(sum);
@@ -511,14 +545,12 @@ public class SubArray implements Cloneable {
 	 * @return die Summe aller Elemente des Sub-Arrays
 	 * @see #getSum()
 	 * 
-	 * @deprecated Verglichen mit dem Summen-Cache ist diese Methode
-	 * unnoetig langsam und sollte nicht mehr verwendet werden. Statt
-	 * dessen sollte ersatzweise <code>getSum()</code> verwendet
-	 * werden.
+	 * @deprecated Diese Methode ist unnoetig langsam. Statt dessen
+	 * sollte <code>getSum()</code> verwendet werden.
 	 */
 	int sum () {
 		this.subArraySum = null;
-		return this.getSum();
+		return this.getSum1();
 	}
 	
 	
@@ -542,7 +574,11 @@ public class SubArray implements Cloneable {
 	 * @see #getStart()
 	 */
 	public int getBeginIndex () {
-		return this.getStart();
+		return this.getStart1();
+	}
+	
+	private int getBeginIndex1 () {
+		return this.getStart1();
 	}
 	
 	
@@ -559,7 +595,11 @@ public class SubArray implements Cloneable {
 	 * @return Index des letzten Elements im Sub-Array
 	 */
 	public int getEndIndex () {
-		return this.getStart() + this.getLength() - 1;
+		return this.getEndIndex1();
+	}
+	
+	private int getEndIndex1 () {
+		return this.getStart1() + this.getLength1() - 1;
 	}
 	
 	
@@ -575,7 +615,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, -4, 2};
+	 * int[] array = new int[] {1, -4, 2};
 	 * SubArray subArray = new SubArray(array);
 	 * System.out.println(subArray);  // [1 -4 2]
 	 * subArray.findLeftEdgeMaximum();
@@ -587,8 +627,8 @@ public class SubArray implements Cloneable {
 	public void findLeftEdgeMaximum () {
 		
 		// Sub-Array--Grenzen normalisieren
-		int beginIndex = this.getBeginIndex();
-		int endIndex = this.getEndIndex();
+		final int beginIndex = this.getBeginIndex1();
+		final int endIndex = this.getEndIndex1();
 		this.subArrayStart = beginIndex;
 		this.subArrayLength = 0;
 		
@@ -620,7 +660,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, -4, 2};
+	 * int[] array = new int[] {1, -4, 2};
 	 * SubArray subArray = new SubArray(array);
 	 * System.out.println(subArray);  // [1 -4 2]
 	 * subArray.findRightEdgeMaximum();
@@ -632,8 +672,8 @@ public class SubArray implements Cloneable {
 	public void findRightEdgeMaximum () {
 		
 		// Sub-Array--Grenzen normalisieren
-		int beginIndex = this.getBeginIndex();
-		int endIndex = this.getEndIndex();
+		final int beginIndex = this.getBeginIndex1();
+		final int endIndex = this.getEndIndex1();
 		this.subArrayStart = endIndex + 1;
 		this.subArrayLength = 0;
 		
@@ -666,7 +706,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, -4, 2};
+	 * int[] array = new int[] {1, -4, 2};
 	 * SubArray subArray = SubArray.findLeftEdgeMaximum(array, 0, 2);
 	 * System.out.println(subArray);  // [1] -4 2
 	 * </code></pre>
@@ -679,8 +719,8 @@ public class SubArray implements Cloneable {
 	 * @see #findLeftEdgeMaximum()
 	 * @see #setSum(int)
 	 */
-	public static SubArray findLeftEdgeMaximum (int[] array, int beginIndex, int endIndex) {
-		SubArray subArray = new SubArray(array, beginIndex, endIndex - beginIndex + 1);
+	public static SubArray findLeftEdgeMaximum (final int[] array, final int beginIndex, final int endIndex) {
+		final SubArray subArray = new SubArray(array, beginIndex, endIndex - beginIndex + 1);
 		subArray.findLeftEdgeMaximum();
 		return subArray;
 	}
@@ -698,7 +738,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, -4, 2};
+	 * int[] array = new int[] {1, -4, 2};
 	 * SubArray subArray = SubArray.findRightEdgeMaximum(array, 0, 2);
 	 * System.out.println(subArray);  // 1 -4 [2]
 	 * </code></pre>
@@ -711,8 +751,8 @@ public class SubArray implements Cloneable {
 	 * @see #findRightEdgeMaximum()
 	 * @see #setSum(int)
 	 */
-	public static SubArray findRightEdgeMaximum (int[] array, int beginIndex, int endIndex) {
-		SubArray subArray = new SubArray(array, beginIndex, endIndex - beginIndex + 1);
+	public static SubArray findRightEdgeMaximum (final int[] array, final int beginIndex, final int endIndex) {
+		final SubArray subArray = new SubArray(array, beginIndex, endIndex - beginIndex + 1);
 		subArray.findRightEdgeMaximum();
 		return subArray;
 	}
@@ -725,7 +765,7 @@ public class SubArray implements Cloneable {
 	 * <p>
 	 * <b>Beispiel:</b><p>
 	 * <pre><code>
-	 * int[] array = {1, 2, 3};
+	 * int[] array = new int[] {1, 2, 3};
 	 * SubArray subArray = new SubArray(array);
 	 * subArray.print();  // [1 2 3]
 	 * </code></pre>
@@ -762,10 +802,10 @@ public class SubArray implements Cloneable {
 		}
 		
 		// Schleife vorbereiten
-		StringBuffer buffer = new StringBuffer(this.array.length * 4);  // 4 passt haeufig
-		int beginIndex = this.getStart();
-		int endIndex = this.getStart() + this.getLength();
-		boolean isSubArrayEmpty = (beginIndex == endIndex);
+		final StringBuffer buffer = new StringBuffer(this.array.length * 4);  // 4 passt haeufig
+		final int beginIndex = this.getStart1();
+		final int endIndex = this.getStart1() + this.getLength1();
+		final boolean isSubArrayEmpty = (beginIndex == endIndex);
 		
 		// Gesamt-Array durchlaufen und Werte mitsamt Sub-Array-Grenzen ausgeben
 		int index = 0;
@@ -800,44 +840,56 @@ public class SubArray implements Cloneable {
 	 * derzeitigen Grenzen entspricht.
 	 */
 	public int[] toArray () {
-		int[] array = new int[this.getLength()];
-		System.arraycopy(this.array, this.getStart(), array, 0, array.length);
+		int[] array = new int[this.getLength1()];
+		System.arraycopy(this.array, this.getStart1(), array, 0, array.length);
 		return array;
 	}
 	
 	
 	
 	/**
-	 * Erstellt eine exakte Bitkopie dieses SubArray-Objekts. Dabei
-	 * wird jedoch der Gesamt-Array nicht geklont, sondern nur als
-	 * Referenz kopiert.
-	 * <p>
-	 * Das Original-Objekt wird mit Hilfe der von der JVM zur
-	 * Verfuegung gestellten Methode clone() geklont. Das erwartete
-	 * Verhalten entspricht prinzipiell dem folgenden Code-Block.
-	 * Allerdings werden die Werte der internen Felder keim klonen ohne
-	 * jegliche Aenderung vom Original uebernommen (im folgenden Code
-	 * findet eine implizite Wertekorrektur und eine Neuberechnung des
-	 * Summen-Caches statt).<p>
-	 * <pre><code>
-	 * SubArray original = ...;  // beliebiger Sub-Array
-	 * SubArray kopie = new SubArray(original.getFullArray());
-	 * kopie.setStart(original.getStart());
-	 * kopie.setLength(original.getLength());
-	 * kopie.setSum(original.getSum());
-	 * </code></pre>
+	 * Erstellt eine exakte Bitkopie dieses SubArray-Objekts,
+	 * einschliesslich des Inhalts des Gesamt-Arrays.
 	 * 
 	 * @return ein Klon dieses Objekts vom Typ <code>SubArray</code>
+	 * @throws CloneNotSupportedException falls die
+	 * <i>runtime class</i> dieses Objekts nicht
+	 * <code>Cloneable</code> implementiert
 	 * @see Object#clone()
 	 * @see Cloneable
 	 */
-	public Object clone () {
-		try {
-			return super.clone();
+	protected Object clone () throws CloneNotSupportedException {
+		SubArray clone = (SubArray)super.clone();
+		System.arraycopy(this.array, 0, clone.array, 0, this.array.length);
+		return clone;
+	}
+	
+	
+	
+	/**
+	 * Vergleicht dieses Objekt mit dem angegebenen Objekt. Ist dieses
+	 * Objekt kleiner, gleich, oder groesser als das angegebene Objekt,
+	 * wird entsprechend eine negative Zahl, null, oder eine positive
+	 * Zahl zurueckgegeben.
+	 * <p>
+	 * Hinweis: Diese Klasse hat eine natuerliche Ordnung, die nicht
+	 * mit <i>equals</i> uebereinstimmt.
+	 * 
+	 * @param o das zu vergleichende Objekt
+	 * @return die Differenz aus der Summe dieses Sub-Arrays und der
+	 * Summe des Sub-Arrays <code>o</code>
+	 * @throws NullPointerException falls <code>o == null</code>
+	 * @throws ClassCastException falls <code>o</code> kein Sub-Array
+	 * ist
+	 * @throws java.util.ConcurrentModificationException falls die
+	 * beiden Sub-Arrays ungleiche Gesamt-Arrays haben
+	 */
+	public int compareTo (final Object o) {
+		final SubArray other = (SubArray)o;
+		if (! java.util.Arrays.equals(this.array, other.array)) {
+			throw new java.util.ConcurrentModificationException("comparing subarrays of unequal arrays");
 		}
-		catch (CloneNotSupportedException exception) {
-			throw (Error)new InternalError().initCause(exception);
-		}
+		return this.getSum1() - other.getSum1();
 	}
 	
 	
@@ -851,22 +903,23 @@ public class SubArray implements Cloneable {
 	 * @return <code>true</code>, falls <code>obj</code> gleich diesem
 	 * Objekt ist
 	 */
-	public boolean equals (Object obj) {
+	public boolean equals (final Object obj) {
 		if (this == obj) {
 			return true;  // Objekte identisch
 		}
 		if (! (obj instanceof SubArray)) {
 			return false;  // Objekt eines anderen Typs (oder null)
 		}
-		SubArray other = (SubArray)obj;
+		final SubArray other = (SubArray)obj;
 		if (! java.util.Arrays.equals(this.array, other.array)) {
 			return false;  // Gesamt-Array nicht gleich
 		}
-		if (this.getLength() != other.getLength()) {
+		final int length = this.getLength1();
+		if (length != other.getLength1()) {
 			return false;  // Laengen der Sub-Arrays verschieden
 		}
 		// Sub-Arrays muessen entweder gleichen Bereich haben oder beide leer sein
-		return (this.getLength() == 0 || this.getStart() == other.getStart());
+		return (length == 0 || this.getStart1() == other.getStart1());
 	}
 	
 	
@@ -885,9 +938,10 @@ public class SubArray implements Cloneable {
 			hashCode = 0x1f * hashCode + this.array[index];
 		}
 		hashCode *= 0x3c1;
-		hashCode += 0x1f * this.getLength();
-		if (this.getLength() != 0) {
-			hashCode += this.getStart();
+		final int length = this.getLength1();
+		hashCode += 0x1f * length;
+		if (length != 0) {
+			hashCode += this.getStart1();
 		}
 		return hashCode;
 	}
@@ -913,9 +967,9 @@ public class SubArray implements Cloneable {
 	 * @param lowerLimit die kleinstmoegliche Zufallszahl
 	 * @param upperLimit die groesstmoegliche Zufallszahl
 	 */
-	public static int[] createRandomArray (int arrayLength, int lowerLimit, int upperLimit) {
-		int[] array = new int[arrayLength];
-		double range = upperLimit - lowerLimit + 1;
+	public static int[] createRandomArray (final int arrayLength, final int lowerLimit, final int upperLimit) {
+		final int[] array = new int[arrayLength];
+		final double range = upperLimit - lowerLimit + 1;
 		for (int index = 0; index < array.length; index++) {
 			array[index] = (int)(Math.random() * range) + lowerLimit;
 		}
@@ -939,7 +993,7 @@ public class SubArray implements Cloneable {
 	 * der Zahl null (<code>0</code>) haben sollen
 	 * @see #createRandomArray(int, int, int)
 	 */
-	public static int[] createRandomArray (int arrayLength, int limits) {
+	public static int[] createRandomArray (final int arrayLength, int limits) {
 		limits = Math.abs(limits);
 		return SubArray.createRandomArray(arrayLength, -limits, limits);
 	}
@@ -960,7 +1014,7 @@ public class SubArray implements Cloneable {
 	 * @see #createRandomArray(int, int)
 	 * @see #DEFAULT_LIMITS
 	 */
-	public static int[] createRandomArray (int arrayLength) {
+	public static int[] createRandomArray (final int arrayLength) {
 		return SubArray.createRandomArray(arrayLength, DEFAULT_LIMITS);
 	}
 	
@@ -1015,8 +1069,8 @@ public class SubArray implements Cloneable {
 	 * sich nicht in eine Ganzzahl wandeln laesst
 	 * @throws NullPointerException falls <code>args == null</code>
 	 */
-	public static int[] parseStringArray (String[] args) {
-		int[] array = new int[args.length];
+	public static int[] parseStringArray (final String[] args) {
+		final int[] array = new int[args.length];
 		for (int index = 0; index < args.length; index++) {
 			array[index] = Integer.parseInt(args[index]);
 		}
