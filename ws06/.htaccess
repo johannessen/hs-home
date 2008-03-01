@@ -3,7 +3,7 @@
 # by Arne Johannessen
 # mailto:joar0011@hs-karlsruhe.de
 
-# last modified 2006-10-13 by joar0011
+# $Id$
 
 
 <IfModule mod_autoindex.c>
@@ -11,4 +11,10 @@
 	IndexOptions -SuppressDescription
 	
 	AddDescription 'Tutorium Programmiersprachen 2' ps2-t
+</IfModule>
+
+
+
+<IfModule mod_alias.c>
+	Redirect permanent /~joar0011/ws06/ws06/ad2-t http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t
 </IfModule>
