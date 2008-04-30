@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 1-2 – Tutorium Algorithmen und Datenstrukturen 2 – SS 2008</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ws07-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 1-2</H2>
+<P>(<A HREF="./">Übungsblatt 1</A>)</P>
+<P>Sind folgende Java-Anweisungen fehlerfrei zu compilieren und auszuführen? Begründen Sie Ihre Antwort.</P>
+<OL TYPE="a">
+<LI><CODE>int <VAR>a</VAR>;<VAR>a</VAR> = 5;</CODE></LI>
+<LI><CODE>int <VAR>b</VAR> = 5;</CODE></LI>
+<LI><CODE>int <VAR>c</VAR>,<VAR>c</VAR> = 5;</CODE></LI>
+<LI><CODE>float <VAR>d</VAR> = 5,5;</CODE></LI>
+<LI><CODE>float <VAR>e</VAR> = 5;</CODE></LI>
+<LI><CODE>double <VAR>f1</VAR> = 5d; float <VAR>f2</VAR> = <VAR>f1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>g1</VAR> = 5e; float <VAR>g2</VAR> = <VAR>g1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>h1</VAR> = 5f; float <VAR>h2</VAR> = <VAR>h1</VAR>;</CODE></LI>
+<LI><CODE>long <VAR>i</VAR> = 0.0;</CODE></LI>
+<LI><CODE>float <VAR>j</VAR> = 0.0;</CODE></LI>
+<LI><CODE>float <VAR>k1</VAR> = 5f; double <VAR>k2</VAR> = <VAR>k1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>l</VAR> = 0.0;</CODE></LI>
+<LI><CODE>long <VAR>m</VAR> = (short)Integer.MAX_VALUE;</CODE></LI>
+<LI><CODE>short <VAR>n</VAR> = (long)0;</CODE></LI>
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI>Fehlerfrei: Umgestellt ist das gleichbedeutend mit dem folgenden Code-Fragment, welches offensichtlich richtig ist, weil sowohl <CODE><VAR>a</VAR></CODE> als auch <CODE>5</CODE> vom Typ <CODE>int</CODE> sind: <BR><CODE>int <VAR>a</VAR>;<BR><VAR>a</VAR> = 5;</CODE></LI>
+<LI>Fehlerfrei: sowohl <CODE><VAR>b</VAR></CODE> als auch <CODE>5</CODE> sind vom Typ <CODE>int</CODE>.</LI>
+<LI>Nicht fehlerfrei: Umgestellt ist das gleichbedeutend mit dem folgenden Code-Fragment, welches offensichtlich syntaktisch falsch ist, weil zweimal eine Variable mit Namen <CODE><VAR>c</VAR></CODE> deklariert wird: <BR><CODE>int <VAR>c</VAR>;<BR>int <VAR>c</VAR> = 5;</CODE></LI>
+<LI>Nicht fehlerfrei: <CODE>5,5</CODE> ist kein numerischer Wert und kann folglich nicht zugewiesen werden -- <CODE><VAR>d</VAR></CODE> hat den Typ <CODE>float</CODE>, einen Kommazahlentyp. Kommazahlen in Java haben immer einen Dezimal<EM>punkt.</EM></LI>
+<LI>Fehlerfrei: <CODE>5</CODE> ist zwar vom Typ <CODE>int</CODE>, aber die Zuweisung eines Ganzzahl-Werts zu einer Kommazahl-Variable ist logischerweise möglich. Es kommt dann zu einer impliziten Konvertierung (Type-Cast); man sagt umgangssprachlich, die Typen <CODE>float</CODE> und <CODE>int</CODE> seien in diesem Zusammenhang <EM>zuweisungskompatibel</EM> (gilt aber nicht umgekehrt!).</LI>
+<LI>Nicht fehlerfrei. Die zweite Anweisung ist das Problem; in der ersten ist <CODE>5d</CODE> die Zahl <CODE>5</CODE> als Wert vom Typ <CODE>double</CODE> völlig korrekt. Dann aber wird ein <CODE>double</CODE>-Wert in Form der Variablen <CODE><VAR>f1</VAR></CODE> der <CODE>float</CODE>-Variablen <CODE><VAR>f2</VAR></CODE> zugewiesen. Weil <CODE>double</CODE> doppelt so viele Stellen hat wie <CODE>float</CODE>, verbietet der Compiler diese Zuweisung. (Mit einem expliziten Type-Cast wäre es möglich, sie zu erzwingen.)</LI>
+<LI>Nicht fehlerfrei: <CODE>5e</CODE> ist kein Wert; die nachgestellten Kürzel gibt es nur für die Typen <CODE>float</CODE> (<CODE>f</CODE>), <CODE>double</CODE> (<CODE>d</CODE>) und <CODE>long</CODE> (<CODE>L</CODE>).</LI>
+<LI>Nicht fehlerfrei: analog zu Teilaufgabe (f); dass in der ersten Anweisung rechts ein <CODE>float</CODE>-Wert steht, ändert nichts daran, dass <CODE><VAR>h1</VAR></CODE> vom Typ <CODE>double</CODE> ist. Es findet eine transparente Typumwandlung statt, genau wie bei Teilaufgabe (e).</LI>
+<LI>Nicht fehlerfrei: analog zu Teilaufgabe (f); <CODE>0.0</CODE> hat den Typ <CODE>double</CODE>. Kommazahlen-Werte können nicht Ganzahl-Variablen zugewiesen werden, außer, man macht einen expliziten Type-Cast. Teilaufgabe (e) demonstriert den umgekehrten Fall (allerdings mit <CODE>float</CODE> und <CODE>int</CODE>).</LI>
+<LI>Nicht fehlerfrei: analog zu Teilaufgabe (f); <CODE>0.0</CODE> hat den Typ <CODE>double</CODE>, benötigt wird aber <CODE>float</CODE>.</LI>
+<LI>Fehlerfrei: <CODE>float</CODE> hat weniger Stellen als <CODE>double</CODE>, daher ist die Zuweisung kein Problem. Die zusätzlichen Stellen in <CODE>double</CODE> werden quasi einfach mit Nullen aufgefüllt. Vergleiche Teilaufgabe (f).</LI>
+<LI>Fehlerfrei: <CODE><VAR>l</VAR></CODE> ist vom Typ <CODE>double</CODE>, <CODE>0.0</CODE> ebenfalls.</LI>
+<LI>Fehlerfrei: <CODE>Integer.MAX_VALUE</CODE> hat den Wert <CODE>2147483647</CODE> (natürlich vom Typ <CODE>int</CODE>). Mit einem expliziten Type-Cast wie hier gezeigt ist es möglich, diesen Wert in den Typ <CODE>short</CODE> „hineinzupressen,“ obwohl der viel weniger Stellen hat. Alles, was nicht reinpasst, fällt dann einfach weg. Und den dann rechts resultierenden Wert vom Typ <CODE>short</CODE> kann man natürlich einer <CODE>long</CODE>-Variablen zuweisen; die zusätzlichen Stellen in <CODE>long</CODE> werden dann einfach mit Nullen gefüllt. (<CODE><VAR>m</VAR></CODE> hat übrigens hinterher den Wert<CODE>-1</CODE> wegen der internen Darstellungsform negativer Zahlen. Wie man sieht, warnt der Compiler nicht ohne Grund vor „possible loss of precision.“)</LI>
+<LI>Nicht fehlerfrei: Rechts steht ein Wert vom Typ <CODE>int</CODE>, der dann noch explizit in <CODE>long</CODE> gecastet wird (also noch mehr Stellen bekommt). Der Typ <CODE>short</CODE> hat aber weniger Stellen als jeder der beiden, so dass eine Zuweisung nur mit explizitem Type-Cast zu <CODE>short</CODE> möglich wäre.</LI>
+</OL>
+<P><STRONG>Anmerkung.</STRONG> Bei Problemen dieser Art ist das „Code Pad“ in BlueJ äußerst hilfreich. Siehe <A HREF="../../unterlagen/">Unterlagen</A>.</P>
+
+<ADDRESS ID="author">Arne Johannessen, 2. Dezember 2007</ADDRESS>
+<!-- $Id$ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="./">Blatt 1</A></LI>
+		<LI><A>Blatt 2</A></LI>
+		<LI><A>Blatt 3</A></LI>
+		<LI><A>Blatt 4</A></LI>
+		<LI><A>Blatt 5</A></LI>
+		<LI><A>Blatt 6</A></LI>
+		<LI><A>Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

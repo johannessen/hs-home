@@ -1,0 +1,27 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 2: Dynamische Datenstrukturen</H2>
+
+<H3 ID="aufgabe2-1">Aufgabe 2-1</H3>
+<P>In ihrer einfachsten Form besteht eine nicht-leere <A HREF="http://de.wikipedia.org/wiki/Verkettete_Liste">lineare Liste</A> aus nichts weiter als einem Wert („Kopf“ der Liste, hier eine Ganzzahl) und einem Verweis auf die Liste der restlichen Werte („Rumpf“).</P>
+<P>Implementieren Sie eine Klasse <CODE>LinearList</CODE> mit genau diesen beiden Feldern. Nennen Sie den Kopf <CODE>head</CODE> und den Rumpf <CODE>tail</CODE>.</LI>
+
+<H3 ID="aufgabe2-2">Aufgabe 2-2</H3>
+<P>Die folgenden Teilaufgaben beziehen sich auf Ihre Lösung aus Aufgabe 2-1 und auf die bereitgestellte Klasse <CODE>MutableLinearList</CODE>, die Ihre Lösung durch Vererbung erweitert.</P>
+<OL TYPE="a">
+<LI><CODE>MutableLinearList</CODE> ist eine lineare Liste mit zusätzlichen Objektmethoden zum Verändern und Abfragen der Liste. Studieren Sie wenigstens eine dieser Methoden so weit, dass Sie ihre Funktionsweise detailliert beschreiben können. <BR><EM>Merke:</EM> Nicht das Was ist am wichtigsten, sondern das Warum!</LI>
+<LI>Schreiben Sie eine Methode <CODE>start()</CODE>, in der eine lineare Liste vom Typ <CODE>MutableLinearList</CODE> erzeugt wird. Die Liste soll genau die drei Elemente 42, 8 und 15 in dieser Reihenfolge haben.</LI>
+<LI>In Java stellt das Paket <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/package-summary.html" HREFLANG="en">java.util</A> einen ganzen Sack voll mit verschiedenen dynamischen Datenstrukturen zur Verfügung. Die Klasse <CODE>java.util.LinkedList</CODE> ist eine fertige Implementierung einer doppelt verketteten linearen Liste. Finden Sie heraus, welche Methoden(aufrufe) in <CODE>LinkedList</CODE> denen in <CODE>MutableLinearList</CODE> am ehesten entsprechen.</LI>
+</OL>
+
+<H3 ID="sternaufgabe2-3">Aufgabe 2-3 *</H3>
+<P>Verwenden Sie eine <CODE>LinkedList</CODE> zur Implementierung eines <A HREF="http://de.wikipedia.org/wiki/Stapelspeicher">Stapels</A> für Strings. Ihr Stapel soll eine eigene Klasse sein mit den beiden Objektmethoden <CODE>push(String)</CODE> und <CODE>pop()</CODE>.</P>
+
+<PRE ID="id">$Id$</PRE>
+<DIV ID="dateien">
