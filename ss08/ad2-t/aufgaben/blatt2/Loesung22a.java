@@ -1,4 +1,4 @@
-/* $Id: Loesung22a.java,v 1.1 2008-04-30 01:13:45 aj3 Exp $
+/* $Id: Loesung22a.java,v 1.2 2008-04-30 02:15:25 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -20,9 +20,9 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-public class Loesung22a extends MutableLinearList {
+class Loesung22a extends MutableLinearList {
 	
 	
 	
@@ -32,7 +32,7 @@ public class Loesung22a extends MutableLinearList {
 	 * 
 	 * @param value der einzufuegende Wert
 	 */
-	public void addInFront (int value) {
+	void addInFront (int value) {
 		/* Bei dieser Methode ist das Was (oben im
 		 * Javadoc-Kommentar) viel einfacher beschrieben als das
 		 * Warum. Das Problem ist, dass das erste Element der Liste
@@ -70,7 +70,7 @@ public class Loesung22a extends MutableLinearList {
 	 * @throws NullPointerException falls das letzte Element der Liste
 	 * geloescht wird
 	 */
-	public void deleteFromFront () {
+	void deleteFromFront () {
 		/* Die Liste besteht aus _diesem_ Listenelement und dem
 		 * Rest, der Rest heisst "tail".
 		 * Ahnlich wie bei addInFront(int) oben kann _dieses_
@@ -96,7 +96,7 @@ public class Loesung22a extends MutableLinearList {
 	 * 
 	 * @return den Wert dieses Listenelements
 	 */
-	public int firstElementValue () {
+	int firstElementValue () {
 		/* Die Liste besteht aus _diesem_ Listenelement und dem
 		 * Rest.
 		 * Der Wert dieses Elements ist in der Objektvariablen
@@ -114,7 +114,7 @@ public class Loesung22a extends MutableLinearList {
 	 * 
 	 * @return die Anzahl der Elemente der Restliste, plus <code>1</code>
 	 */
-	public int length () {
+	int length () {
 		/* Die Liste besteht aus _diesem_ Listenelement und dem
 		 * Rest.
 		 * Dieses Element ist genau ein Element. Also lassen wir
@@ -144,7 +144,7 @@ public class Loesung22a extends MutableLinearList {
 	/**
 	 * Gibt die gesamte Liste in einer Zeile aus.
 	 */
-	public void println () {
+	void println () {
 		/* Die Liste besteht aus _diesem_ Listenelement und dem
 		 * Rest.
 		 * Wir geben also erst mal dieses Element aus und dann die
