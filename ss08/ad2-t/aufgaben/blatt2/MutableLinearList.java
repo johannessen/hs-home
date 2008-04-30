@@ -1,4 +1,4 @@
-/* $Id: MutableLinearList.java,v 1.2 2008-04-30 01:45:52 aj3 Exp $
+/* $Id: MutableLinearList.java,v 1.3 2008-04-30 02:05:12 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -134,9 +134,9 @@ class MutableLinearList extends LinearList {
 	 */
 	public static void println (java.util.Collection list) {
 		// zum Durchlaufen von Datenstrukturen aus java.util.* wird aus Performancegruenden immer ein Iterator verwendet
-		java.util.Iterator iterator = list.iterator();
-		while (iterator.hasNext()) {
-			System.out.print(iterator.next()+" ");
+		for (java.util.Iterator i = list.iterator(); i.hasNext(); ) {  // die ganze Liste durchlaufen
+			Object item = i.next();  // das jeweils naechste Element aus der Liste holen
+			System.out.print(item+" ");
 		}
 		System.out.println();
 	}
