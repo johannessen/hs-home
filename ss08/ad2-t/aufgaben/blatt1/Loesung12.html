@@ -31,7 +31,7 @@
 <OL TYPE="a">
 <LI>nicht korrekt: <CODE><VAR>a</VAR> + 1</CODE> ergibt einen Wert; auf der linken Seite einer Zuweisung (<CODE>=</CODE>) sind jedoch nur Variablen erlaubt</LI>
 <LI>nicht korrekt: der Subtraktions-Operator <CODE>-</CODE> kann nicht auf den Typ <CODE>boolean</CODE> angewandt werden</LI>
-<LI>korrekt: der „vollständige“ (Bit-weise) Und-Operator kann auf alle primitiven Typen angewandt werden (<CODE><VAR>b</VAR></CODE> erhält hier den Wert <CODE>3</CODE>)</LI>
+<LI>korrekt: der „vollständige“ (Bit-weise) Und-Operator kann auf alle primitiven Typen außer Fließkommazahlen angewandt werden (<CODE><VAR>b</VAR></CODE> erhält hier den Wert <CODE>3</CODE>)</LI>
 <LI>nicht korrekt: laut Aufgabenstellung ist bereits eine Variable <CODE><VAR>a</VAR></CODE> deklariert, Variablen müssen aber (nur) genau einmal deklariert werden <BR>(<EM>Anmerkung:</EM> wäre noch keine andere Variable <CODE><VAR>a</VAR></CODE> deklariert, würde diese Anweisung so korrekt sein und <CODE><VAR>a</VAR></CODE> den Wert <CODE>65</CODE> zuweisen)</LI>
 <LI>korrekt: obwohl der Wert <CODE>280</CODE> außerhalb des Wertebereichs des Typs <CODE>byte</CODE> liegt, ist diese Anweisung aufgrund des ausdrücklichen Type-Casts <code>(byte)</code> korrekt (<CODE><VAR>x</VAR></CODE> erhält hier den Wert <CODE>24</CODE> wegen des Bereichsüberlaufs)</LI>
 <LI>korrekt: Deklarierung und Initialisierung von <CODE><VAR>z</VAR></CODE> mit einem booleschen Wert, der Ausdruck <CODE>(10 >= 20)</CODE> ergibt false, <CODE>(false == false)</CODE> ergibt <CODE>true</CODE></LI>
