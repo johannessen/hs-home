@@ -1,4 +1,4 @@
-/* $Id: Loesung22c.java,v 1.1 2008-04-30 01:13:45 aj3 Exp $
+/* $Id: Loesung22c.java,v 1.2 2008-04-30 02:15:19 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -17,9 +17,9 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-public class Loesung62c extends java.util.LinkedList {
+class Loesung62c extends java.util.LinkedList {
 	
 	
 	
@@ -29,7 +29,7 @@ public class Loesung62c extends java.util.LinkedList {
 	 * 
 	 * @param value der einzufuegende Wert
 	 */
-	public void addInFront (int value) {
+	void addInFront (int value) {
 		// LinkedList versteht nur Objekte:
 		// wir machen daher aus einer Zahl ein Objekt
 		Object valueAsObject = new Integer(value);
@@ -45,7 +45,7 @@ public class Loesung62c extends java.util.LinkedList {
 	 * @throws NullPointerException falls das letzte Element der Liste
 	 * geloescht wird
 	 */
-	public void deleteFromFront () {
+	void deleteFromFront () {
 		super.removeFirst();
 	}
 	
@@ -56,7 +56,7 @@ public class Loesung62c extends java.util.LinkedList {
 	 * 
 	 * @return den Wert dieses Listenelements
 	 */
-	public int firstElementValue () {
+	int firstElementValue () {
 		Object valueAsObject = super.getFirst();
 		
 		// LinkedList versteht nur Objekte:
@@ -72,7 +72,7 @@ public class Loesung62c extends java.util.LinkedList {
 	 * 
 	 * @return die Anzahl der Elemente der Restliste, plus <code>1</code>
 	 */
-	public int length () {
+	int length () {
 		return super.size();
 	}
 	
@@ -81,7 +81,7 @@ public class Loesung62c extends java.util.LinkedList {
 	/**
 	 * Gibt die gesamte Liste in einer Zeile aus.
 	 */
-	public void println () {
+	void println () {
 		Loesung62c.println(this);  // siehe unten
 	}
 	
@@ -99,8 +99,8 @@ public class Loesung62c extends java.util.LinkedList {
 		
 		// zum Durchlaufen von Datenstrukturen aus java.util.* wird
 		// aus Performancegruenden immer ein Iterator verwendet
-		Object item = null;
-		for (java.util.Iterator iterator = list.iterator(); iterator.hasNext(); item = iterator.next()) {
+		for (java.util.Iterator i = list.iterator(); i.hasNext(); ) {  // die ganze Liste durchlaufen
+			Object item = i.next();  // das jeweils naechste Element aus der Liste holen
 			System.out.print(item+" ");
 		}
 		System.out.println();
@@ -114,7 +114,7 @@ public class Loesung62c extends java.util.LinkedList {
 	 * @param list die auszugebende Liste
 	 * @see MutableLinearList#println(MutableLinearList)
 	 */
-	public static void println (MutableLinearList list) {
+	static void println (MutableLinearList list) {
 		MutableLinearList.println(list);
 	}
 	
