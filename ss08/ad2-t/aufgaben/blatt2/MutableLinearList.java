@@ -1,4 +1,4 @@
-/* $Id: MutableLinearList.java,v 1.1 2008-04-30 01:13:45 aj3 Exp $
+/* $Id: MutableLinearList.java,v 1.2 2008-04-30 01:45:52 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,11 +10,11 @@
  * 
  * @see Loesung22a
  */
-public class MutableLinearList extends LinearList {
+class MutableLinearList extends LinearList {
 	
 	
 	
-	public void addInFront (int value) {
+	void addInFront (int value) {
 		MutableLinearList firstItem = this;
 		
 		MutableLinearList secondItem = new MutableLinearList();
@@ -26,18 +26,18 @@ public class MutableLinearList extends LinearList {
 	}
 	
 	
-	public void deleteFromFront () {
+	void deleteFromFront () {
 		head = tail.head;
 		tail = tail.tail;
 	}
 	
 	
-	public int firstElementValue () {
+	int firstElementValue () {
 		return head;
 	}
 	
 	
-	public int length () {
+	int length () {
 		MutableLinearList tail = MutableLinearList.cast(this.tail);  // Typanpassung
 		
 		if (tail == null) {
@@ -47,7 +47,7 @@ public class MutableLinearList extends LinearList {
 	}
 	
 	
-	public void println () {
+	void println () {
 		MutableLinearList tail = MutableLinearList.cast(this.tail);  // Typanpassung
 		
 		System.out.print(head+" ");
@@ -94,7 +94,7 @@ public class MutableLinearList extends LinearList {
 	 * das dem in <code>list</code> uebergebenen Objekt entspricht.
 	 * <code>null</code>, falls <code>list == null</code>.
 	 */
-	public static MutableLinearList cast (LinearList list) {
+	private static MutableLinearList cast (LinearList list) {
 		if (list == null) {
 			return null;
 		}
@@ -117,7 +117,7 @@ public class MutableLinearList extends LinearList {
 	 * 
 	 * @param list die auszugebende lineare Liste
 	 */
-	public static void println (MutableLinearList list) {
+	static void println (MutableLinearList list) {
 		if (list != null) {
 			list.println();
 		}
