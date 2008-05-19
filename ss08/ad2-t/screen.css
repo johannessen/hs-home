@@ -49,6 +49,7 @@ BODY {
 A, :link {
 	color: #06f;
 	background-color: inherit;
+	font-weight: bold;
 }
 A:hover, A:active {
 	color: white;
@@ -180,6 +181,10 @@ BLOCKQUOTE P, BLOCKQUOTE PRE {
 }
 SAMP, VAR, DFN {
 	font-style: italic;
+}
+VAR {
+	color: #c70;
+	font-weight: bold;
 }
 DEL {
 	display: inline;
