@@ -1,4 +1,4 @@
-/* $Id: RandomisedArrayFactory.java,v 1.1 2008-05-19 04:44:47 aj3 Exp $
+/* $Id: RandomisedArrayFactory.java,v 1.2 2008-05-21 01:40:51 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,9 +6,9 @@
 
 /**
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-class RandomisedArrayFactory {
+public class RandomisedArrayFactory {
 	
 	
 	// non-instantiable
@@ -34,7 +34,7 @@ class RandomisedArrayFactory {
 	 * @param lowerLimit die kleinstmoegliche Zufallszahl
 	 * @param upperLimit die groesstmoegliche Zufallszahl
 	 */
-	static int[] createRandomArray (final int arrayLength, final int lowerLimit, final int upperLimit) {
+	public static int[] createRandomArray (final int arrayLength, final int lowerLimit, final int upperLimit) {
 		final int[] array = new int[arrayLength];
 		final double range = upperLimit - lowerLimit + 1;
 		for (int index = 0; index < array.length; index++) {
@@ -57,10 +57,10 @@ class RandomisedArrayFactory {
 	 * 
 	 * @param arrayLength die Laenge des Arrays
 	 * @param limits der maximale Abstand, den die Zufallszahlen von
-	 * der Zahl null (<code>0</code>) haben sollen
+	 *  der Zahl null (<code>0</code>) haben sollen
 	 * @see #createRandomArray(int, int, int)
 	 */
-	static int[] createRandomArray (final int arrayLength, int limits) {
+	public static int[] createRandomArray (final int arrayLength, int limits) {
 		limits = Math.abs(limits);
 		return RandomisedArrayFactory.createRandomArray(arrayLength, -limits, limits);
 	}
@@ -80,7 +80,7 @@ class RandomisedArrayFactory {
 	 * @see #createRandomArray(int, int, int)
 	 * @see #createRandomArray(int, int)
 	 */
-	static int[] createRandomArray (final int arrayLength) {
+	public static int[] createRandomArray (final int arrayLength) {
 		return RandomisedArrayFactory.createRandomArray(arrayLength, 99);
 	}
 	
@@ -99,8 +99,19 @@ class RandomisedArrayFactory {
 	 * @see #createRandomArray(int, int, int)
 	 * @see #createRandomArray(int)
 	 */
-	static int[] createRandomArray () {
+	public static int[] createRandomArray () {
 		return RandomisedArrayFactory.createRandomArray(12);
+	}
+	
+	
+	
+	public static String toString (final int[] array) {
+		final StringBuffer buffer = new StringBuffer();
+		for (int i = 0; i < array.length; i++) {
+			buffer.append(array[i]);
+			buffer.append(' ');
+		}
+		return buffer.deleteCharAt(buffer.length() - 1);
 	}
 	
 }
