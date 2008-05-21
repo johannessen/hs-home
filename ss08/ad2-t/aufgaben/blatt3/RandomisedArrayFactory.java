@@ -1,4 +1,4 @@
-/* $Id: RandomisedArrayFactory.java,v 1.2 2008-05-21 01:40:51 aj3 Exp $
+/* $Id: RandomisedArrayFactory.java,v 1.3 2008-05-21 13:50:23 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,7 +6,7 @@
 
 /**
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class RandomisedArrayFactory {
 	
@@ -111,7 +111,7 @@ public class RandomisedArrayFactory {
 			buffer.append(array[i]);
 			buffer.append(' ');
 		}
-		return buffer.deleteCharAt(buffer.length() - 1);
+		return buffer.deleteCharAt(buffer.length() - 1).toString();
 	}
 	
 }
