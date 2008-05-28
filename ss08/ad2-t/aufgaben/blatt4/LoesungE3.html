@@ -29,7 +29,7 @@
 </UL>
 <P>Nachteile einer Rekursion:</P>
 <UL>
-	<LI>Kontextwechsel beim Methodenaufruf benötigt Rechenzeit (früher bei einigen Großrechnern so viel, dass an Rekursion überhaupt gar nicht zu denken war – beim <A HREF="http://de.wikipedia.org/wiki/IBM_704">IBM 704</A> z. B. war’s besonders schlimm)</LI>
+	<LI>Kontextwechsel beim Methodenaufruf benötigt Rechenzeit (früher bei einigen Großrechnern so viel, dass an Rekursion überhaupt gar nicht zu denken war – beim <A HREF="http://de.wikipedia.org/wiki/IBM_704">IBM 704</A> z. B. war’s besonders schlimm <!--cf. M. L. Scott. Programming Language Pragmatics. Morgan Kaufmann Publishers, San Francisco, CA, Vereinigte Staaten. p. 110-->)</LI>
 	<LI>bei jedem Rekursionsschritt wird ein zusätzlicher Methoden-Kontext auf den Stack gelegt; aufgrund der begrenzten Stackgröße der gängigen Laufzeitumgebungen (Java: Stapel-Größe 2<SUP>10</SUP>) kommt es bei tieferer Rekursion schnell zum Stapelüberlauf (Java: <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/StackOverflowError.html" HREFLANG="en">StackOverflowError</A>) mit Programmabsturz</LI>
 	<LI>Laufzeitverhalten weniger leicht zu bestimmen als bei Iteration</LI>
 </UL>
