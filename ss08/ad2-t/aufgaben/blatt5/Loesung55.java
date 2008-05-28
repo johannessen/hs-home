@@ -1,17 +1,17 @@
-/* $Id: Loesung55.java,v 1.1 2008-05-21 01:39:58 aj3 Exp $
+/* $Id: Loesung55.java,v 1.2 2008-05-28 14:39:23 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 8-3. Fibonaccisuche.
+ * Loesungsvorschlag fuer Aufgabe 5-5. Fibonaccisuche.
  * 
- * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
+ * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5/">Aufgabenblatt 5</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-public class Loesung83 {
+class Loesung55 {
 	
 	
 	/**
@@ -31,7 +31,7 @@ public class Loesung83 {
 	 * um die Korrektheit des Algorithmus auch bei langen Arrays
 	 * herzustellen.
 	 */
-	public static final int[] FIBONACCI = new int[] {1, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, Integer.MAX_VALUE};
+	static final int[] FIBONACCI = new int[] {1, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, Integer.MAX_VALUE};
 	
 	
 	/**
@@ -43,13 +43,13 @@ public class Loesung83 {
 	 * @param array das zu durchsuchende Array
 	 * @param key den zu suchenden Wert
 	 * @return den Index desjenigen Elements in <code>array</code>, das
-	 * den Wert <code>key</code> hat
+	 *  den Wert <code>key</code> hat
 	 * @throws KeyNotFoundException falls der Array den gesuchten Wert
-	 * nicht enthaelt
+	 *  nicht enthaelt
 	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see java.util.Arrays#sort(int[])
 	 */
-	public static int find (int[] array, int key) {
+	int find (int[] array, int key) {
 		
 		// einen leeren Array muessen wir abfangen
 		if (array.length == 0) {
@@ -121,7 +121,7 @@ public class Loesung83 {
 	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see java.util.Arrays#sort(int[])
 	 */
-	protected static int find (int[] array, int key, int leftIndex, int rightIndex, int fibonacciIndex) {
+	int find (int[] array, int key, int leftIndex, int rightIndex, int fibonacciIndex) {
 		
 		/* Grundannahme: die Array-Laenge ist genau eine
 		 * Fibonaccizahl; dann setzt die Array-Laenge sich
@@ -161,7 +161,7 @@ public class Loesung83 {
 		 * Bedingungen. In der Praxis wird die Fibonaccisuche
 		 * meines Wissens so gut wie nie verwendet.
 		 * 
-		 * Fuer die Praxis relevante Tips gibt's in Aufgabe 8-2d.
+		 * Fuer die Praxis relevante Tips gibt's in Aufgabe 5-4d.
 		 */
 		
 		// Rekursionsabbruch, wenn keine Fibonacci-Zahlen
@@ -184,27 +184,6 @@ public class Loesung83 {
 		// an diesem Punkt ist die Suche erfolgreich
 		// (key == pivotValue)
 		return pivotIndex;
-	}
-	
-	
-	
-	/**
-	 * Treiber fuer Aufruf von der Kommandozeilenschnittstelle.
-	 */
-	public static void main (String[] args) {
-		// bei der Fibonaccisuche MUSS der Array sortiert sein!
-		int[] array = new int[] {-1, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9};
-		
-		int valueToBeFound = 3;
-		try {
-		for (valueToBeFound = -1; valueToBeFound < array.length; valueToBeFound++) {
-			int index = find(array, valueToBeFound);
-			System.out.println("Die Zahl "+valueToBeFound+" ist im Array an der Stelle "+index+".");
-		}
-		}
-		catch (IndexOutOfBoundsException exception) {
-			System.out.println("Die Zahl "+valueToBeFound+" ist nicht im Array enthalten.");
-		}
 	}
 	
 }

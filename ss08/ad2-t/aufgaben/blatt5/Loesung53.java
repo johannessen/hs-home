@@ -1,17 +1,17 @@
-/* $Id: Loesung53.java,v 1.1 2008-05-21 01:39:58 aj3 Exp $
+/* $Id: Loesung53.java,v 1.2 2008-05-28 14:39:23 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 8-1.
+ * Loesungsvorschlag fuer Aufgabe 5-3.
  * 
- * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
+ * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5/">Aufgabenblatt 5</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-public class Loesung81 {
+class Loesung53 {
 	
 	
 	/**
@@ -23,13 +23,13 @@ public class Loesung81 {
 	 * @param array das zu durchsuchende Array
 	 * @param key den zu suchenden Wert
 	 * @return den Index desjenigen Elements in <code>array</code>, das
-	 * den Wert <code>key</code> hat
+	 *  den Wert <code>key</code> hat
 	 * @throws KeyNotFoundException falls der Array den gesuchten Wert
-	 * nicht enthaelt
+	 *  nicht enthaelt
 	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see java.util.Arrays#sort(int[])
 	 */
-	public static int find (int[] array, int key) {
+	int find (int[] array, int key) {
 		
 		// Suchanfang: ganzen Array durchsuchen
 		int firstIndex = 0;
@@ -50,17 +50,17 @@ public class Loesung81 {
 	 * @param array das zu durchsuchende Array
 	 * @param key den zu suchenden Wert
 	 * @param leftIndex der Index, der die untere Grenze des zu
-	 * durchsuchenden Bereichs im Array darstellt (einschliesslich)
+	 *  durchsuchenden Bereichs im Array darstellt (einschliesslich)
 	 * @param rightIndex der Index, der die obere Grenze des zu
-	 * durchsuchenden Bereichs im Array darstellt (einschliesslich)
+	 *  durchsuchenden Bereichs im Array darstellt (einschliesslich)
 	 * @return den Index desjenigen Elements in <code>array</code>, das
-	 * den Wert <code>key</code> hat
+	 *  den Wert <code>key</code> hat
 	 * @throws IndexOutOfBoundsException falls der Array den gesuchten
-	 * Wert nicht enthaelt
+	 *  Wert nicht enthaelt
 	 * @throws NullPointerException falls <code>array == null</code>
 	 * @see java.util.Arrays#sort(int[])
 	 */
-	protected static int find (int[] array, int key, int leftIndex, int rightIndex) {
+	int find (int[] array, int key, int leftIndex, int rightIndex) {
 		
 		// Rekursionsabbruch bei leerem Teil-Array
 		if (leftIndex > rightIndex) {
@@ -83,27 +83,6 @@ public class Loesung81 {
 		// an diesem Punkt ist die Suche erfolgreich
 		// (key == array[pivotIndex])
 		return pivotIndex;
-	}
-	
-	
-	
-	/**
-	 * Treiber fuer Aufruf von der Kommandozeilenschnittstelle.
-	 * 
-	 * @see java.util.Arrays#sort(int[])
-	 */
-	public static void main (String[] args) {
-		// bei der Interpolationssuche MUSS der Array sortiert sein!
-		int[] array = new int[] {-1, 0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9};
-		
-		int valueToBeFound = 3;
-		try {
-			int index = find(array, valueToBeFound);
-			System.out.println("Die Zahl "+valueToBeFound+" ist im Array an der Stelle "+index+".");
-		}
-		catch (IndexOutOfBoundsException exception) {
-			System.out.println("Die Zahl "+valueToBeFound+" ist nicht im Array enthalten.");
-		}
 	}
 	
 }
