@@ -1,6 +1,6 @@
 /* www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t
  * Standard (Screen) Stylesheet
- * Version 1.1.4
+ * Version 1.1.5
  * CSS layer 2
  *
  * by Arne Johannessen
@@ -158,6 +158,9 @@ P, UL, OL {
 	margin-top: .5em;
 	margin-bottom: .5em;
 }
+DIV+UL {
+	margin-top: 0;
+}
 CODE {
 	color: inherit;
 	background-color: #ccc;
@@ -236,6 +239,12 @@ DIV#dateien PRE IMG:first-child {
 }
 #dateien HR {
 	display: none;
+}
+.natural-language DIV {
+	padding-left: 2em;
+}
+.natural-language SPAN {
+	display: block;
 }
 
 .g, .or {
