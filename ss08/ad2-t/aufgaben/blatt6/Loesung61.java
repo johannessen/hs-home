@@ -1,4 +1,4 @@
-/* $Id: Loesung61.java,v 1.1 2008-06-03 23:54:14 aj3 Exp $
+/* $Id: Loesung61.java,v 1.2 2008-06-04 14:33:05 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung61 {
 	
@@ -26,7 +26,7 @@ class Loesung61 {
 	 *  heranzuziehende Gesamt-Array
 	 * @return Wert der groessten ermittelten Teilsumme
 	 */
-	int findMaximumSubArray (int[] array) {
+	int findMaximumSum (int[] array) {
 		
 		int maximumSum = Integer.MIN_VALUE;  // -2147483648
 		

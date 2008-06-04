@@ -1,4 +1,4 @@
-/* $Id: Loesung62c.java,v 1.1 2008-06-03 23:54:14 aj3 Exp $
+/* $Id: Loesung62c.java,v 1.2 2008-06-04 14:33:12 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -10,7 +10,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung62c {
 	
@@ -26,7 +26,7 @@ class Loesung62c {
 	 * @return Wert der groessten errechneten Teilsumme
 	 * @throws NullPointerException falls <code>array == null</code>
 	 */
-	int findMaximumSubArray (int[] array) {
+	int findMaximumSum (int[] array) {
 		
 		int maximumSum = Integer.MIN_VALUE;  // -2147483648
 		

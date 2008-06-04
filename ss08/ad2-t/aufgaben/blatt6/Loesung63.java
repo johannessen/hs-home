@@ -1,4 +1,4 @@
-/* $Id: Loesung63.java,v 1.1 2008-06-03 23:54:14 aj3 Exp $
+/* $Id: Loesung63.java,v 1.2 2008-06-04 14:33:23 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -19,7 +19,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung63 {
 	
@@ -29,7 +29,7 @@ class Loesung63 {
 	public static void main (String[] args) {
 		int[] myArray = new int[] {-8, 12, -23, 17, 42, -61, 7};
 		Loesung61 instance = new Loesung61();
-		int maximumSum = instance.findMaximumSubArray(myArray);
+		int maximumSum = instance.findMaximumSum(myArray);
 		System.out.println("Maximale Teilsumme: "+maximumSum);  // 59
 	}
 	
