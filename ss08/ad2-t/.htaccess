@@ -38,8 +38,8 @@
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt1 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt2 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt2
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt3 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt4 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt4
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt5 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt4 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt4
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt5 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5
 #	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt6 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6
 #	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt7 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7
 #	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.entwurf/blatt8 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt8
@@ -48,21 +48,23 @@
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt1 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt2 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt2
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt3 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt4 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt4
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt5 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt6 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt7 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt4 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt4
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt5 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt6 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt7 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7
 #	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt8 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt8
 #	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt9 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt9
 	
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt4/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/KeyNotFoundException.java
-	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt4/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt5/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/KeyNotFoundException.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt4/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt5/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt6/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt7/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt8/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt9/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt8/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7/SubArray.java
 	
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt2/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1/MaximumSubArraySolver.java
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt2/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1/SubArray.java
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt3/ArraySum.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1/ArraySum.java
 </IfModule>
 
 <IfModule mod_mime.c>
