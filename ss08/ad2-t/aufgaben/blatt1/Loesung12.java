@@ -1,4 +1,4 @@
-/* $Id: Loesung12.java,v 1.1 2008-04-30 01:13:45 aj3 Exp $
+/* $Id: Loesung12.java,v 1.2 2008-06-04 18:22:00 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,9 +9,9 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1/#aufgabe1-2">Aufgabenblatt 1, Aufgabe 1-2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
-public class Loesung12 {
+class Loesung12 {
 	
 	
 	static {
