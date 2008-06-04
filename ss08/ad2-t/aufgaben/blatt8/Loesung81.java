@@ -1,16 +1,16 @@
-/* $Id: Loesung81.java,v 1.1 2008-06-04 14:30:13 aj3 Exp $
+/* $Id: Loesung81.java,v 1.2 2008-06-04 19:52:32 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 8-1. Divide-and-Conquer--Loesung fuer
- * das Maximum-Sub-Array--Problem mit O(n*log(n))-Komplexitaet.
+ * Loesungsvorschlag fuer Aufgabe 8-1: Maximum-Sub-Array:
+ * Divide-and-Conquer--Loesung mit O(n*log(n)).
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt8/">Aufgabenblatt 8</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung81 {
 	

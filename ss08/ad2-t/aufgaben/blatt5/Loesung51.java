@@ -1,16 +1,16 @@
-/* $Id: Loesung51.java,v 1.2 2008-05-28 14:39:23 aj3 Exp $
+/* $Id: Loesung51.java,v 1.3 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 5-1.
+ * Loesungsvorschlag fuer Aufgabe 5-1: Binaere Suche.
  * 
  * @see java.util.Arrays#binarySearch(int[],int)
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5/">Aufgabenblatt 5</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 class Loesung51 {
 	

@@ -1,4 +1,4 @@
-/* $Id: MsaTester.java,v 1.1 2008-06-04 17:49:25 aj3 Exp $
+/* $Id: MsaTester.java,v 1.2 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,9 +6,8 @@
 
 
 /**
- * Diese Klasse kann ueberpruefen, ob ein oder mehrere
- * Loesungsalgorithmen des Maximum--Sub-Array--Problems
- * korrekt arbeiten.
+ * Diese Klasse kann ueberpruefen, ob ein Loesungsalgorithmus
+ * des Maximum--Sub-Array--Problems korrekt arbeitet.
  */
 public class MsaTester {
 	

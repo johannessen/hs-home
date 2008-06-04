@@ -1,16 +1,16 @@
-/* $Id: Loesung62c.java,v 1.2 2008-06-04 14:33:12 aj3 Exp $
+/* $Id: Loesung62c.java,v 1.3 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 6-2c. Halb-naive Loesung fuer
- * das Maximum-Sub-Array--Problem mit O(n^2)-Effizienz.
+ * Loesungsvorschlag fuer Aufgabe 6-2c: Maximum-Sub-Array:
+ * Halb-naive Loesung (brute force) mit O(n^2).
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6/">Aufgabenblatt 6</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 class Loesung62c {
 	

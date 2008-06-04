@@ -1,4 +1,4 @@
-/* $Id: LoesungE4.java,v 1.1 2008-05-21 01:40:05 aj3 Exp $
+/* $Id: LoesungE4.java,v 1.2 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,7 +6,7 @@
 
 
 /**
- * Loesungsvorschlaege fuer Aufgabe E-4.
+ * Loesungsvorschlaege fuer Aufgabe E-4: Alternierende Summe.
  * <p>
  * Diese Klasse enthaelt vier verschiedene Beispiele fuer moegliche
  * Loesungsansaetze. Traditionell ist die Toggle-Loesung die bevorzugte,
@@ -32,7 +32,7 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt4/">Aufgabenblatt 4</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class LoesungE4 {
 	

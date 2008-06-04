@@ -1,4 +1,4 @@
-/* $Id: Loesung14c.java,v 1.1 2008-04-30 01:13:45 aj3 Exp $
+/* $Id: Loesung14c.java,v 1.2 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -9,11 +9,11 @@ import java.util.GregorianCalendar;
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 1-4c.
+ * Loesungsvorschlag fuer Aufgabe 1-4c: Instanzen statischer Datenstrukturen.
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt1/#aufgabe14c">Aufgabenblatt 1, Aufgabe 1-4 (c)</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung14c {
 	

@@ -1,15 +1,15 @@
-/* $Id: Loesung34.java,v 1.1 2008-05-19 04:44:47 aj3 Exp $
+/* $Id: Loesung34.java,v 1.2 2008-06-04 19:51:14 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
- * Loesungsvorschlag fuer Aufgabe 3-4.
+ * Loesungsvorschlag fuer Aufgabe 3-4: Sequentielle Suche (Array).
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 class Loesung34 {
 	
