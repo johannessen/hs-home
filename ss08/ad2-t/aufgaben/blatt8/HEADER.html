@@ -1,0 +1,26 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 8: Maximum–Sub-Array, Divide-and-Conquer</H2>
+
+<H3 ID="sternaufgabe8-1">Aufgabe 8-1*</H3>
+<P>Schreiben Sie eine Methode, die das Maximum&#8211;Sub-Array&#8211;Problem im Divide-and-Conquer–Verfahren löst. Die Rückgabe der maximalen Summe genügt, Indizes dafür brauchen nicht ermittelt zu werden. Das zu bearbeitende Array des Typs <CODE>int[]</CODE> soll dieser Methode als Parameter übergeben werden.</P>
+<P>Verwenden Sie beim „Join“ die Methoden <A HREF="../../unterlagen/doc/SubArray.html#findLeftEdgeMaximum(int[], int, int)">findLeftEdgeMaximum</A> und <A HREF="../../unterlagen/doc/SubArray.html#findRightEdgeMaximum(int[], int, int)">findRightEdgeMaximum</A> der Klasse <CODE>SubArray</CODE> zum Ermitteln der Randmaxima. Rufen Sie diese Klassenmethoden auf wie im folgenden Beispiel:</P>
+<BLOCKQUOTE>
+	<PRE><CODE>int <VAR>untergrenze</VAR>, <VAR>obergrenze</VAR>;
+int <VAR>linkesRandMaximum</VAR>;
+…
+<VAR>linkesRandMaximum</VAR> = SubArray.findLeftEdgeMaximum(<VAR>array</VAR>, <VAR>untergrenze</VAR>, <VAR>obergrenze</VAR>).getSum();</CODE></PRE>
+</BLOCKQUOTE>
+<P>Die Unter- und Obergrenze definieren denjenigen Teil des Arrays, von dem das Randmaximum gesucht werden soll; diese Grenzen gehen aus Ihrem Algorithmus hervor. Die Variable <VAR>linkesRandMaximum</VAR> hat nach Ausführung der obigen Anweisung dann genau den Wert der höchstmöglichen Summe aller Sub-Arrays, die in <VAR>array</VAR> bei <VAR>untergrenze</VAR> beginnen.</P>
+
+<H3 ID="zusatzaufgabe8-2">Zusatzaufgabe 8-2</H3>
+<DIV>Erweitern Sie die Klasse, die Ihre Lösung zu Aufgabe 8-1 enthält, zu einem ausführbaren Programm.</DIV>
+
+<PRE ID="id">$Id$</PRE>
+<DIV ID="dateien">
