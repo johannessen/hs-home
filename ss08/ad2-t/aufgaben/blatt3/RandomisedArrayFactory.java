@@ -1,12 +1,27 @@
-/* $Id: RandomisedArrayFactory.java,v 1.3 2008-05-21 13:50:23 aj3 Exp $
+/* $Id: RandomisedArrayFactory.java,v 1.4 2008-06-04 14:32:08 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
 
 
 /**
+ * Diese Klasse bietet einige Klassenmethoden an, die anhand bestimmter
+ * Kriterien Arrays mit Zahlen erstellen: <ul>
+ * <li>
+ * Die Methoden <code>createRandomArray(...)</code> erstellen einen mit
+ * zufaelligen Elementen gefuellten Array des Typs <code>int[]</code>. Das
+ * kann nutzlich sein, wenn man ohne grossen Aufwand schnell eine grosse
+ * Anzahl von Testwerten braucht.
+ * <li>
+ * Die Methode <code>parseStringArray(String[])</code> erstellt einen Array
+ * des Typs <code>int[]</code>, der mit genau den Zahlen gefuellt ist, die
+ * sich in den einzelnen String-Elementen des Arrays befinden. Das kann
+ * nuetzlich sein beim Versuch, auf der Kommandozeile einen Array an das
+ * Programm zu uebergeben.
+ * </ul>
+ * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class RandomisedArrayFactory {
 	
@@ -112,6 +127,44 @@ public class RandomisedArrayFactory {
 			buffer.append(' ');
 		}
 		return buffer.deleteCharAt(buffer.length() - 1).toString();
+	}
+	
+	
+	
+	/**
+	 * Erstellt einen <code>Integer</code>-Array, der mit den
+	 * umgewandelten Zahlen aus dem uebergebenen
+	 * <code>String</code>-Array gefuellt ist. Beide Arrays haben die
+	 * gleiche Laenge.
+	 * <p>
+	 * <b>Beispiel:</b><p> Die folgende Klasse erstellt beim
+	 * Programmstart einen Array <code>array</code>, der mit genau den
+	 * auf der Kommandozeile uebergebenen Werten gefuellt ist:<p>
+	 * <pre><code>
+	 * class Beispiel {
+	 *     public static void main (String[] args) {
+	 *         int[] array = SubArray.parseStringArray(args);
+	 *         // mehr code hierhin
+	 *     }
+	 * }
+	 * </code></pre>
+	 * <p>Nun kann das Programm z. B. mit
+	 * <code>java Beispiel 12 -56 47 8 -87</code>
+	 * gestartet werden, um einen Array mit einer Laenge von fuenf
+	 * Elementen mit genau diesen Zahlenwerten zu erstellen.
+	 * 
+	 * @param args ein Array, dessen Elemente allesamt Ganzzahlen
+	 *  beschreiben
+	 * @throws NumberFormatException falls eines der Array-Elemente
+	 *  sich nicht in eine Ganzzahl wandeln laesst
+	 * @throws NullPointerException falls <code>args == null</code>
+	 */
+	public static int[] parseStringArray (final String[] args) {
+		final int[] array = new int[args.length];
+		for (int index = 0; index < args.length; index++) {
+			array[index] = Integer.parseInt(args[index]);
+		}
+		return array;
 	}
 	
 }
