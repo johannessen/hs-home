@@ -1,4 +1,4 @@
-/* $Id: Loesung33.java,v 1.2 2008-05-21 01:32:15 aj3 Exp $
+/* $Id: Loesung33.java,v 1.3 2008-06-04 18:23:02 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -16,7 +16,7 @@ import java.util.LinkedList;
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class Loesung33 {
 	
@@ -35,7 +35,7 @@ public class Loesung33 {
 	 * 
 	 * @param listSize die Groesse der Liste, in der gesucht werden
 	 *  soll (<var>n</var>)
-	 * @param repititions die Anzahl der Wiederholungen der Suche
+	 * @param repetitions die Anzahl der Wiederholungen der Suche
 	 * @param algorithm <code>"3-1"</code> fuer das Loesungsverfahren
 	 *  aus Aufgabe 3-1, <code>"3-2"</code> fuer das Loesungsverfahren
 	 *  aus Aufgabe 3-2
@@ -71,12 +71,14 @@ public class Loesung33 {
 	 * <p>
 	 * Diese Methode ruft lediglich <code>run()</code> auf.
 	 * 
-	 * @param args[0] die Groesse der Liste, in der gesucht werden soll
-	 *  (<var>n</var>)
-	 * @param args[1] die Anzahl der Wiederholungen der Suche
-	 * @param args[2] <code>"3-1"</code> fuer das Loesungsverfahren aus
-	 *  Aufgabe 3-1, <code>"3-2"</code> fuer das Loesungsverfahren aus
-	 *  Aufgabe 3-2
+	 * @param args Array der Kommandozeilenparameter. Erwartete
+	 *  Eingaben: <ul>
+	 *  <li><code>[0]</code> die Groesse der Liste, in der gesucht
+	 *  werden soll (<var>n</var>)
+	 *  <li><code>[1]</code> die Anzahl der Wiederholungen der Suche
+	 *  <li><code>[2]</code> <code>"3-1"</code> fuer das
+	 *  Loesungsverfahren aus Aufgabe 3-1, <code>"3-2"</code> fuer
+	 *  das Loesungsverfahren aus Aufgabe 3-2
 	 */
 	public static void main (final String[] args) {
 		Loesung33.run(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
