@@ -22,7 +22,7 @@
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/Manuskript' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/BlueJ' http://www.bluej.org/
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/TextWrangler' http://www.barebones.com/products/textwrangler/
-	Redirect temp '/~joar0011/ss08/ad2-t/unterlagen/doc/' http://java.sun.com/j2se/1.4.2/docs/api/overview-summary.html
+#	Redirect temp '/~joar0011/ss08/ad2-t/unterlagen/doc/' http://java.sun.com/j2se/1.4.2/docs/api/overview-summary.html
 	
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/doc http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/unterlagen/doc
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt1/doc http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/unterlagen/doc
@@ -64,6 +64,8 @@
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt8/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt9/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/RandomisedArrayFactory.java
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt8/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7/SubArray.java
+	
+	Redirect permanent /~joar0011/ss08/ad2-t/unterlagen/doc/Welcome.html http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/unterlagen/doc/package-summary.html
 	
 </IfModule>
 
