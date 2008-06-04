@@ -52,8 +52,8 @@
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt5 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt5
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt6 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt6
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt7 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt7
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt8 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt8
-#	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt9 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt9
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt8 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt8
+	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/.blatt9 http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt9
 	
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt4/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/KeyNotFoundException.java
 	Redirect permanent /~joar0011/ss08/ad2-t/aufgaben/blatt5/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/KeyNotFoundException.java
