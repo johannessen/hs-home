@@ -1,4 +1,4 @@
-/* $Id: Loesung22c.java,v 1.2 2008-04-30 02:15:19 aj3 Exp $
+/* $Id: Loesung22c.java,v 1.3 2008-06-04 18:50:30 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -17,9 +17,9 @@
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt2/">Aufgabenblatt 2</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
-class Loesung62c extends java.util.LinkedList {
+class Loesung22c extends java.util.LinkedList {
 	
 	
 	
