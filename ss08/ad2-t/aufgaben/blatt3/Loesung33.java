@@ -1,4 +1,4 @@
-/* $Id: Loesung33.java,v 1.3 2008-06-04 18:23:02 aj3 Exp $
+/* $Id: Loesung33.java,v 1.4 2008-06-04 18:23:27 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -16,7 +16,7 @@ import java.util.LinkedList;
  * 
  * @see <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/aufgaben/blatt3/">Aufgabenblatt 3</A>
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.3 $
+ * @version $Revision: 1.4 $
  */
 public class Loesung33 {
 	
@@ -79,6 +79,7 @@ public class Loesung33 {
 	 *  <li><code>[2]</code> <code>"3-1"</code> fuer das
 	 *  Loesungsverfahren aus Aufgabe 3-1, <code>"3-2"</code> fuer
 	 *  das Loesungsverfahren aus Aufgabe 3-2
+	 *  </ul>
 	 */
 	public static void main (final String[] args) {
 		Loesung33.run(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
