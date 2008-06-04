@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.1 2008-06-04 14:29:45 aj3 Exp $
+/* $Id: SubArray.java,v 1.2 2008-06-04 19:05:30 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -139,7 +139,7 @@
  * <br>
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class SubArray implements Comparable {
 	
@@ -866,7 +866,6 @@ public class SubArray implements Comparable {
 	 * 
 	 * @return den Hash-Code-Wert dieses Sub-Arrays
 	 * @see Object#hashCode()
-	 * @see java.util.Arrays#hashCode(int[])
 	 */
 	public int hashCode () {
 		// bitte nicht versuchen, dies zu verstehen!

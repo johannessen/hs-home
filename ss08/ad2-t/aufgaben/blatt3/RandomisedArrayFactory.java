@@ -1,4 +1,4 @@
-/* $Id: RandomisedArrayFactory.java,v 1.4 2008-06-04 14:32:08 aj3 Exp $
+/* $Id: RandomisedArrayFactory.java,v 1.5 2008-06-04 19:05:53 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -6,7 +6,7 @@
 
 /**
  * Diese Klasse bietet einige Klassenmethoden an, die anhand bestimmter
- * Kriterien Arrays mit Zahlen erstellen: <ul>
+ * Kriterien Arrays mit Zahlen erstellen. <ul>
  * <li>
  * Die Methoden <code>createRandomArray(...)</code> erstellen einen mit
  * zufaelligen Elementen gefuellten Array des Typs <code>int[]</code>. Das
@@ -21,7 +21,7 @@
  * </ul>
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.4 $
+ * @version $Revision: 1.5 $
  */
 public class RandomisedArrayFactory {
 	
