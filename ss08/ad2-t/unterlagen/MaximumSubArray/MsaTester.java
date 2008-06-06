@@ -1,4 +1,4 @@
-/* $Id: MsaTester.java,v 1.2 2008-06-04 19:51:14 aj3 Exp $
+/* $Id: MsaTester.java,v 1.3 2008-06-06 17:12:35 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
