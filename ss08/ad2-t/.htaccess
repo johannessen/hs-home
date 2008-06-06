@@ -12,14 +12,15 @@
 	AddDescription 'Klassendokumentation (Javadoc)' 'doc'
 	
 	# create a link
-	AddDescription '-> /~vovo0011/Web/Skripte/' 'Manuskript'
-	AddDescription '-> http://www.bluej.org/' 'BlueJ'
-	AddDescription '-> http://www.barebones.com/products/textwrangler/' 'TextWrangler'
-	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'BlueJ' 'TextWrangler'
+	AddDescription '<STRONG>inoffizieller Mitschrieb</STRONG> eines Kommilitonen' 'Vorlesungsmitschrieb'
+	AddDescription 'BlueJ-Umgebung' 'BlueJ'
+	AddDescription 'ein Mac-Texteditor' 'TextWrangler'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'Vorlesungsmitschrieb' 'BlueJ' 'TextWrangler'
 </IfModule>
 
 <IfModule mod_alias.c>
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/Manuskript' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
+	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/Vorlesungsmitschrieb' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/BlueJ' http://www.bluej.org/
 	Redirect permanent '/~joar0011/ss08/ad2-t/unterlagen/TextWrangler' http://www.barebones.com/products/textwrangler/
 #	Redirect temp '/~joar0011/ss08/ad2-t/unterlagen/doc/' http://java.sun.com/j2se/1.4.2/docs/api/overview-summary.html
