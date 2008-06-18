@@ -1,4 +1,4 @@
-/* $Id: SubArray.java,v 1.2 2008-06-04 19:05:30 aj3 Exp $
+/* $Id: SubArray.java,v 1.3 2008-06-18 00:41:36 aj3 Exp $
  * by Arne Johannessen
  * Faculty of Geomatics, Hochschule Karlsruhe - Technik und Wirtschaft
  */
@@ -139,7 +139,7 @@
  * <br>
  * 
  * @author <A HREF="http://www.home.hs-karlsruhe.de/~joar0011/">Arne Johannessen</A>
- * @version $Revision: 1.2 $
+ * @version $Revision: 1.3 $
  */
 public class SubArray implements Comparable {
 	
@@ -796,7 +796,8 @@ public class SubArray implements Comparable {
 	 * @see Cloneable
 	 */
 	protected Object clone () throws CloneNotSupportedException {
-		SubArray clone = (SubArray)super.clone();
+//		SubArray clone = (SubArray)super.clone();  // :BUG: causes CloneNotSupported to trip because this class doesn't implement Cloneable
+		SubArray clone = new SubArray(new int[this.array.length], this.subArrayStart, this.subArrayLength);
 		System.arraycopy(this.array, 0, clone.array, 0, this.array.length);
 		return clone;
 	}
