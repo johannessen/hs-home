@@ -100,3 +100,9 @@
 	AddIconByType (TXT,/~joar0011/images/txt.png) text/*
 	DefaultIcon /~joar0011/images/GenericDocument.png
 </IfModule>
+
+
+
+<IfModule mod_mime.c>
+	AddType "application/octet-stream" dae
+</IfModule>
