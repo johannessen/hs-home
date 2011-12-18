@@ -7,7 +7,7 @@
 
 <IfModule mod_alias.c>
 	
-	Redirect permanent /~joar0011/freehand-mx/ http://www.home.hs-karlsruhe.de/~joar0011/doc/freehand-mx/
+	Redirect permanent /~joar0011/freehand-mx http://www.home.hs-karlsruhe.de/~joar0011/doc/freehand-mx
 	
 	# Lehrveranstaltungen -> lehre/
 	Redirect permanent /~joar0011/ss06/ps1-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1
