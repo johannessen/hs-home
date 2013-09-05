@@ -5,67 +5,74 @@
 # $Id$
 
 
+# adapt from login.hs-karlsruhe.de to tay.johannessen.de
+<IfModule mod_mime.c>
+	DirectoryIndex Welcome.html
+</IfModule>
+
+
+
 <IfModule mod_alias.c>
 	
-	Redirect permanent /~joar0011/freehand-mx http://www.home.hs-karlsruhe.de/~joar0011/doc/freehand-mx
+	Redirect permanent /~joar0011/freehand-mx http://arne.johannessen.de/~joar0011/doc/freehand-mx
 	
 	# Lehrveranstaltungen -> lehre/
-	Redirect permanent /~joar0011/ss06/ps1-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1
-	Redirect permanent /~joar0011/ws06/ps2-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ws/ps2
-	Redirect permanent /~joar0011/ws07/ad2-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2
-	Redirect permanent /~joar0011/ss08/ad2-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2
-	Redirect permanent /~joar0011/ss09/ad2-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2009-ss/ad2
+	Redirect permanent /~joar0011/ss06/ps1-t http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1
+	Redirect permanent /~joar0011/ws06/ps2-t http://arne.johannessen.de/~joar0011/lehre/2006-ws/ps2
+	Redirect permanent /~joar0011/ws07/ad2-t http://arne.johannessen.de/~joar0011/lehre/2007-ws/ad2
+	Redirect permanent /~joar0011/ss08/ad2-t http://arne.johannessen.de/~joar0011/lehre/2008-ss/ad2
+	Redirect permanent /~joar0011/ss09/ad2-t http://arne.johannessen.de/~joar0011/lehre/2009-ss/ad2
 	
 	# Namensaenderungen
-	Redirect permanent /~joar0011/ss06/ps1-t/Handzettel1.pdf http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1/handzettel/1/Handzettel1.pdf
-	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel1.pdf http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1handzettel/1/Handzettel1.pdf
-	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel2/ http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1/handzettel/2/
-	Redirect permanent /~joar0011/ss06/ps1-t/src/handzettel/ http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1/handzettel/
-	Redirect permanent "/~joar0011/ws05/ps1-%fcb" http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent "/~joar0011/ws05/ps1-üb" http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent "/~joar0011/ws05/ps1-%FCb" http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent "/~joar0011/ws05/ps1-\xfcb" http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent "/~joar0011/ws05/ps1-%C3%BCb" http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent /~joar0011/work/ps1-ueb http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ue
-	Redirect permanent /~joar0011/ss06/bs-sa http://www.home.hs-karlsruhe.de/~joar0011/work/bs
-	Redirect permanent /~joar0011/work/bs-sa http://www.home.hs-karlsruhe.de/~joar0011/work/bs
-	Redirect permanent /~joar0011/ws05/dbv-sa http://www.home.hs-karlsruhe.de/~joar0011/work/dbv
-	Redirect permanent /~joar0011/work/dbv-sa http://www.home.hs-karlsruhe.de/~joar0011/work/dbv
-	Redirect permanent /~joar0011/ss05/kk-sa1 http://www.home.hs-karlsruhe.de/~joar0011/work/kk/sa1
-	Redirect permanent /~joar0011/work/kk-sa1 http://www.home.hs-karlsruhe.de/~joar0011/work/kk/sa1
-	Redirect permanent /~joar0011/ss05/klimatologie http://www.home.hs-karlsruhe.de/~joar0011/work/klima
-	Redirect permanent /~joar0011/work/klimatologie http://www.home.hs-karlsruhe.de/~joar0011/work/klima
-	Redirect permanent /~joar0011/ss05/topographie http://www.home.hs-karlsruhe.de/~joar0011/work/topo
-	Redirect permanent /~joar0011/work/topographie http://www.home.hs-karlsruhe.de/~joar0011/work/topo
-	Redirect permanent /~joar0011/ss05/v http://www.home.hs-karlsruhe.de/~joar0011/work/verm
-	Redirect permanent /~joar0011/work/v http://www.home.hs-karlsruhe.de/~joar0011/work/verm
+	Redirect permanent /~joar0011/ss06/ps1-t/Handzettel1.pdf http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1/handzettel/1/Handzettel1.pdf
+	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel1.pdf http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1handzettel/1/Handzettel1.pdf
+	Redirect permanent /~joar0011/ss06/ps1-t/src/Handzettel2/ http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1/handzettel/2/
+	Redirect permanent /~joar0011/ss06/ps1-t/src/handzettel/ http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1/handzettel/
+	Redirect permanent "/~joar0011/ws05/ps1-%fcb" http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent "/~joar0011/ws05/ps1-üb" http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent "/~joar0011/ws05/ps1-%FCb" http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent "/~joar0011/ws05/ps1-\xfcb" http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent "/~joar0011/ws05/ps1-%C3%BCb" http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent /~joar0011/work/ps1-ueb http://arne.johannessen.de/~joar0011/work/ps1-ue
+	Redirect permanent /~joar0011/ss06/bs-sa http://arne.johannessen.de/~joar0011/work/bs
+	Redirect permanent /~joar0011/work/bs-sa http://arne.johannessen.de/~joar0011/work/bs
+	Redirect permanent /~joar0011/ws05/dbv-sa http://arne.johannessen.de/~joar0011/work/dbv
+	Redirect permanent /~joar0011/work/dbv-sa http://arne.johannessen.de/~joar0011/work/dbv
+	Redirect permanent /~joar0011/ss05/kk-sa1 http://arne.johannessen.de/~joar0011/work/kk/sa1
+	Redirect permanent /~joar0011/work/kk-sa1 http://arne.johannessen.de/~joar0011/work/kk/sa1
+	Redirect permanent /~joar0011/ss05/klimatologie http://arne.johannessen.de/~joar0011/work/klima
+	Redirect permanent /~joar0011/work/klimatologie http://arne.johannessen.de/~joar0011/work/klima
+	Redirect permanent /~joar0011/ss05/topographie http://arne.johannessen.de/~joar0011/work/topo
+	Redirect permanent /~joar0011/work/topographie http://arne.johannessen.de/~joar0011/work/topo
+	Redirect permanent /~joar0011/ss05/v http://arne.johannessen.de/~joar0011/work/verm
+	Redirect permanent /~joar0011/work/v http://arne.johannessen.de/~joar0011/work/verm
 	
 	# Studienarbeiten -> work/
-	Redirect permanent /~joar0011/ss05/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws05/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ss06/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws06/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ss07/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws07/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ss08/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws08/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ss09/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws09/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ss10/ http://www.home.hs-karlsruhe.de/~joar0011/work/
-	Redirect permanent /~joar0011/ws10/ http://www.home.hs-karlsruhe.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss05/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws05/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss06/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws06/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss07/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws07/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss08/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws08/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss09/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws09/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ss10/ http://arne.johannessen.de/~joar0011/work/
+	Redirect permanent /~joar0011/ws10/ http://arne.johannessen.de/~joar0011/work/
 	
 	# Shortcuts
-	Redirect permanent /~joar0011/Utils.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2006-ss/ps1/src/Utils.java
-	Redirect /~joar0011/tutorium http://www.home.hs-karlsruhe.de/~joar0011/lehre/2009-ss/ad2
-	Redirect /~joar0011/Tutorium http://www.home.hs-karlsruhe.de/~joar0011/lehre/2009-ss/ad2
-	Redirect permanent /~joar0011/Kino http://www.home.hs-karlsruhe.de/~joar0011/work/bs/Kino
-	Redirect permanent /~joar0011/ps1 http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ueb
-	Redirect permanent /~joar0011/java http://www.home.hs-karlsruhe.de/~joar0011/work/ps1-ueb
-	Redirect permanent /~joar0011/dynamik http://www.home.hs-karlsruhe.de/~joar0011/work/klima
-	Redirect permanent /~joar0011/thematisch http://www.home.hs-karlsruhe.de/~joar0011/ss05/kk/sa1
+	Redirect permanent /~joar0011/Utils.java http://arne.johannessen.de/~joar0011/lehre/2006-ss/ps1/src/Utils.java
+	Redirect /~joar0011/tutorium http://arne.johannessen.de/~joar0011/lehre/2009-ss/ad2
+	Redirect /~joar0011/Tutorium http://arne.johannessen.de/~joar0011/lehre/2009-ss/ad2
+	Redirect permanent /~joar0011/Kino http://arne.johannessen.de/~joar0011/work/bs/Kino
+	Redirect permanent /~joar0011/ps1 http://arne.johannessen.de/~joar0011/work/ps1-ueb
+	Redirect permanent /~joar0011/java http://arne.johannessen.de/~joar0011/work/ps1-ueb
+	Redirect permanent /~joar0011/dynamik http://arne.johannessen.de/~joar0011/work/klima
+	Redirect permanent /~joar0011/thematisch http://arne.johannessen.de/~joar0011/ss05/kk/sa1
 	
 	# 410s/Fehler
-	Redirect permanent /~joar0011/ws06/ws06/ad2-t http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2
+	Redirect permanent /~joar0011/ws06/ws06/ad2-t http://arne.johannessen.de/~joar0011/lehre/2007-ws/ad2
 	Redirect gone /~joar0011/sa3-mdi1
 	Redirect gone /~joar0011/ws05/mdi1/sa3
 	
@@ -74,7 +81,7 @@
 
 
 <IfModule mod_autoindex.c>
-	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks NameWidth=* -SuppressDescription -SuppressHTMLPreamble
+	IndexOptions TrackModified ScanHTMLTitles DescriptionWidth=* FancyIndexing IconWidth=32 IconHeight=32 IgnoreCase -IconsAreLinks NameWidth=* -SuppressDescription -SuppressHTMLPreamble Charset=windows-1252
 	<IfModule mod_version.c>
 		<IfVersion >= 2.2>
 			<IfModule mod_autoindex.c>
