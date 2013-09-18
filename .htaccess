@@ -114,4 +114,10 @@
 
 <IfModule mod_mime.c>
 	AddType "application/octet-stream" dae
+	<Files *.txt>
+		ForceType "text/plain; charset=utf-8"
+	</Files>
+	<Files *.java>
+		ForceType "text/x-java; charset=utf-8"
+	</Files>
 </IfModule>
