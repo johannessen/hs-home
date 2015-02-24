@@ -76,6 +76,8 @@
 	Redirect gone /~joar0011/sa3-mdi1
 	Redirect gone /~joar0011/ws05/mdi1/sa3
 	
+	Redirect 403 /~joar0011/images/portrait.jpeg
+	
 </IfModule>
 
 
