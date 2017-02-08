@@ -1,0 +1,55 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 2: mehr Iteration und Rekursion</H2>
+
+<H3 ID="aufgabe2-1">Aufgabe 2-1</H3>
+<P>Implementieren Sie den <A HREF="http://de.wikipedia.org/wiki/Euklidischer_Algorithmus#Moderner_Euklidischer_Algorithmus">„modernen“ Euklidischen Algorithmus</A> zur Berechnung des größten gemeinsamen Teilers (<ABBR>ggT</ABBR>) zweier positiver Ganzzahlen rekursiv in einer Methode.</P>
+<P><EM>Tipp.</EM> Dr. Bürg würde diesen (nicht offensichtlichen) Algorithmus möglicherweise so formulieren:</P>
+<DIV CLASS="natural-language">
+	<P>Gegeben: zwei Zahlen <VAR>a</VAR> und <VAR>b</VAR> <BR>Gesucht: größter gemeinsamer Teiler (ggT)</P>
+	<SPAN>Start</SPAN>
+	<DIV>
+		<SPAN>falls <VAR>b</VAR> = 0</SPAN>
+		<DIV>
+			<SPAN>ggT gefunden (Ergebnis ist <VAR>a</VAR>)</SPAN>
+		</DIV>
+		<SPAN>sonst</SPAN>
+		<DIV>
+			<SPAN>ermittele ggT von <VAR>b</VAR> und (<VAR>a</VAR> mod <VAR>b</VAR>)</SPAN>
+		</DIV>
+	</DIV>
+	<SPAN>Stop</SPAN>
+</DIV>
+<P><EM>Tipp.</EM> Verwenden Sie folgende Methodensignatur:</P>
+<P><CODE>static int ggT (int a, int b)</CODE></P>
+
+<H3 ID="sternaufgabe2-2">Aufgabe 2-2 *</H3>
+<P>Schreiben Sie eine Methode, die rekursiv die Quersumme einer übergebenen positiven Ganzzahl ermittelt und das Ergebnis zurückgibt.</P>
+<P><EM>Tipp.</EM> In Java ist der Wert von <CODE>x % 10</CODE> genau der Wert der niederwertigsten Stelle von <CODE>x</CODE>. Der Wert von <CODE>x / 10</CODE> hat die Nachkommastellen abgeschnitten.</P>
+
+<H3 ID="aufgabe2-3">Aufgabe 2-3</H3>
+<P>Entwerfen Sie einen Algorithmus, der <EM>iterativ</EM> feststellt, ob ein Array des Typs <CODE>int[]</CODE> aufsteigend sortiert ist.</P>
+<OL TYPE="a">
+<LI>Formulieren Sie Ihren Algorithmus in „natürlicher Sprache“ nach Dr. Bürg.</LI>
+<LI>Formulieren Sie Ihren Algorithmus in Java.</LI>
+</OL>
+<P><EM>Tipp.</EM> Verwenden Sie für Teilaufgabe (b) folgende Methodensignatur:</P>
+<P><CODE>static boolean istSortiert (int[] array)</CODE></P>
+
+<H3 ID="zusatzaufgabe2-4">Zusatzaufgabe 2-4</H3>
+<P>Entwerfen Sie einen Algorithmus, der <EM>rekursiv</EM> feststellt, ob ein Array des Typs <CODE>int[]</CODE> aufsteigend sortiert ist.</P>
+<OL TYPE="a">
+<LI>Formulieren Sie Ihren Algorithmus in „natürlicher Sprache“ nach Dr. Bürg.</LI>
+<LI>Formulieren Sie Ihren Algorithmus in Java.</LI>
+</OL>
+<P><EM>Tipp.</EM> Für Teilaufgabe (b) ist möglicherweise folgende Methodensignatur geeignet; übergeben Sie beim Erstaufruf <ABBR>z. B.</ABBR> <CODE>0</CODE> für <CODE>testeAbIndex</CODE>:</P>
+<P><CODE>static boolean istSortiert (int[] array, int testeAbIndex)</CODE></P>
+
+<PRE ID="id">$Id: HEADER.html 2009-04-20 $</PRE>
+<DIV ID="dateien">

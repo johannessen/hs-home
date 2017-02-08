@@ -1,0 +1,74 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 0: Wiederholung und Einführung</H2>
+<P>Die Aufgaben dieses Übungsblatts zählen nicht für den Schein.</P>
+
+<H3 ID="aufgabe0-1">Aufgabe 0-1</H3>
+<P>Die Übungsaufgaben bauen auf dem Stoff der Semester 1 bis 3 auf. Ein gutes Java-Buch als Referenz wird zusätzlich <EM>dringend</EM> empfohlen.</P>
+<OL TYPE="a">
+<LI>Wiederholen Sie das Kapitel 4 „statische Datenstrukturen“ der Vorlesung „Algorithmen und Datenstrukturen 1.“</LI>
+<LI>Wiederholen Sie das Kapitel 2 „Algorithmen und Datenstrukturen“ der Vorlesung „Programmiersprachen 1.“</LI>
+<LI>Wiederholen Sie das Kapitel 3 „Grundelemente“ der Vorlesung „Programmiersprachen 1.“</LI>
+</OL>
+
+<H3 ID="aufgabe0-2">Aufgabe 0-2</H3>
+<P>Machen Sie sich mit Ihrer Entwicklungsumgebung vertraut.</P>
+<OL TYPE="a">
+<LI>Erstellen Sie eine möglichst einfache Java-Klasse, die beim Instanziieren den Text „Hello World.“ auf der Standard-Ausgabe ausgibt.</LI>
+<LI>Ergänzen Sie Ihre Klasse aus Teilaufgabe 0-2 (a) mit einer Methode <CODE>main</CODE>, die eine Instanz Ihrer Klasse erzeugt.</LI>
+</OL>
+
+<H3 ID="aufgabe0-3">Aufgabe 0-3</H3>
+<P>Finden Sie einen Weg, eine Instanz Ihrer Klasse zu erzeugen, ohne dabei die Methode <CODE>main</CODE> auszuführen. Machen Sie sich mit diesem Weg hinreichend vertraut.</P>
+
+<H3 ID="aufgabe0-4">Aufgabe 0-4</H3>
+<P>Schreiben Sie eine Klassenmethode, welche die durch die folgende Array-Initialisierung vorgegebene Zahlenfolge ausgibt. Der Array sei eine lokale Variable.</P>
+<P><CODE>int[] array = new int[] {5, -8, 12, 1, 42, -2, 2, 9};</CODE></P>
+<P><STRONG>Tipp.</STRONG> Verwenden Sie das <EM>Idiom der kanonischen for-Schleife:</EM></P>
+<P><CODE>for (int i = 0; i &lt; <VAR>n</VAR>; i++) &#8230;</CODE></P>
+
+<H3 ID="aufgabe0-5">Aufgabe 0-5</H3>
+<P>Ändern Sie Ihre Methode aus Aufgabe 0-4 derart, dass sie den auszugebenden Array nicht als lokale Variable fest eingebaut hat, sondern als Parameter übergeben bekommt. <!--Zusätzlich soll als Rückgabewert die Größe des Arrays zurückgegeben werden.--> Schreiben Sie eine Methode <CODE>main</CODE>, die Ihre Methode aufruft.</P>
+<P><STRONG>Tipp.</STRONG> Verwenden Sie folgende Methodensignatur:</P>
+<P><CODE>static void <VAR>methodenName</VAR> (int[] array)</CODE></P>
+
+
+<H3 ID="zusatzaufgabe0-6">Zusatzaufgabe 0-6</H3>
+<P>Sind folgende Java-Anweisungen fehlerfrei zu compilieren und auszuführen? Begründen Sie Ihre Antwort.</P>
+<OL TYPE="a">
+<LI><CODE>float a = 2,2;</CODE></LI>
+<LI><CODE>int b1,b2 = 2;</CODE></LI>
+<LI><CODE>float c = 2;</CODE></LI>
+<LI><CODE>double d1 = 2d; float d2 = d1;</CODE></LI>
+<LI><CODE>double e1 = 2e; float e2 = e1;</CODE></LI>
+<LI><CODE>double f1 = 2f; float f2 = f1;</CODE></LI>
+<LI><CODE>int g;g = 2;</CODE></LI>
+<LI><CODE>int h,h = 2;</CODE></LI>
+<LI><CODE>long i = 0.0;</CODE></LI>
+<LI><CODE>float j = 0.0;</CODE></LI>
+<LI><CODE>float k1 = 2f; double k2 = k1;</CODE></LI>
+<LI><CODE>double l = 0.0;</CODE></LI>
+<LI><CODE>long m = (short)Integer.MAX_VALUE;</CODE></LI>
+<LI><CODE>short n = (long)0;</CODE></LI>
+<LI><CODE>int o;o + 1 = 2;</CODE></LI>
+<LI><CODE>int p = 1 & 2;</CODE></LI>
+<LI><CODE>int q = 1 && 2;</CODE></LI>
+<LI><CODE>boolean r = true & false;</CODE></LI>
+<LI><CODE>boolean s = true && false;</CODE></LI>
+<LI><CODE>boolean t = true + false;</CODE></LI>
+<LI><CODE>int u = 2; int u = 'A';</CODE></LI>
+<LI><CODE>byte v = (byte)280;</CODE></LI>
+<LI><CODE>boolean w = (false == (10 >= 20));</CODE></LI>
+<LI><CODE>long x = (int)(char)(byte)-1;</CODE></LI>
+<LI><CODE>http://www.yahoo.com/</CODE></LI>
+<LI><CODE>char z = 0x000a; // Tipp: \u000a ist ein Zeilenumbruch (LF) in Unicode</CODE></LI>
+</OL>
+
+<PRE ID="id">$Id: HEADER.html 2009-03-31 $</PRE>
+<DIV ID="dateien">

@@ -1,0 +1,55 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 5: Sortieren</H2>
+
+<P>Abgabe bis <STRONG>Mittwoch, 27. Mai, 10:00 Uhr!</STRONG></P>
+<P>Diese Aufgaben bauen auf der Klasse <CODE>Menge</CODE> auf, die eine mathematische Menge mit Hilfe eines internen Arrays implementiert. Gehen Sie in diesem Übungsblatt davon aus, dass dieses Array <EM>nicht</EM> sortiert ist.</P>
+
+<H3 ID="aufgabe5-1">Aufgabe 5-1</H3>
+<P>Formulieren Sie folgende Algorithmen <EM>präzise</EM> in „natürlicher Sprache“ nach Dr. Bürg.</P>
+<OL TYPE="a">
+<LI>Bubble-Sort („sortieren durch Aufsteigen“)</LI>
+<LI>Insertion-Sort („sortieren durch Einfügen“)</LI>
+<LI>Selection-Sort („sortieren durch Auswählen“)</LI>
+</OL>
+
+<H3 ID="sternaufgabe5-2">Aufgabe 5-2 *</H3>
+<P>Bearbeiten Sie mindestens eine der folgenden Teilaufgaben.</P>
+<OL TYPE="a">
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> mit einer Objektmethode <CODE>void bubbleSort ()</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie den Bubble-Sort–Algorithmus.</LI>
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> mit einer Objektmethode <CODE>void insertSort ()</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie den Insertion-Sort–Algorithmus.</LI>
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> mit einer Objektmethode <CODE>void selectSort ()</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie den Selection-Sort–Algorithmus.</LI>
+</OL>
+
+<H3 ID="aufgabe5-3">Aufgabe 5-3</H3>
+<OL TYPE="a">
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> mit einer Objektmethode <CODE>void recursiveSort (int beginn)</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie den nachfolgend angegebenen rekursiven Algorithmus.</LI>
+<LI>Welchem der iterativen Algorithmen der vorangegangenen Aufgaben entspricht dieser Algorithmus konzeptuell?</LI>
+</OL>
+<DIV CLASS="natural-language">
+	<P>Gegeben: (Rest-)Array <VAR>A</VAR> (definiert durch das Array und den Index, an dem der Rest beginnt)</P>
+	<SPAN>Start</SPAN>
+	<DIV>
+		<SPAN>falls <VAR>A</VAR> nicht leer ist</SPAN>
+		<DIV>
+			<SPAN>bestimme das kleinste Element in <VAR>A</VAR></SPAN>
+			<SPAN>sortiere den Rest von <VAR>A</VAR></SPAN>
+		</DIV>
+	</DIV>
+	<SPAN>Stop</SPAN>
+</DIV>
+
+<H3 ID="zusatzaufgabe5-4">Zusatzaufgabe 5-4</H3>
+<OL TYPE="a">
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> mit einer Objektmethode <CODE>void collectionsSort ()</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie eine der Sortier-Methoden in <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/package-summary.html" HREFLANG="en">java.util</A>.</LI>
+<LI>Beurteilen Sie die Zeitkomplexität Ihrer Implementierung.</LI>
+</OL>
+
+<PRE ID="id">$Id: HEADER.html 2009-05-20 $</PRE>
+<DIV ID="dateien">

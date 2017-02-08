@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="http://www.home.hs-karlsruhe.de/~joar0011/" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/lehre/2009-ss/ad2/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 7-1 – Algorithmen und Datenstrukturen 2 – SS 2009</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ss09-ad2">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 7-1</H2>
+<P>(<A HREF="./">Übungsblatt 7</A>)</P>
+<P>Das naïve Lösungsverfahren zum Maximum–Sub-Array–Problem mit kubischem Laufzeitverhalten ( O(<VAR>n</VAR>³) ) hat eine sehr unbefriedigende Performance. Überlegen Sie, auf welche Weise sich dieses Verfahren geringfügig verändern lässt, um wenigstens quadratisches Laufzeitverhalten ( O(<VAR>n</VAR>²) ) zu erreichen. Formulieren Sie den sich ergebenden Algorithmus in „natürlicher Sprache“ nach Dr. Bürg.</P>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>Zunächst ist es unnötig, Sub-Arrays doppelt zu bestimmen, nämlich von <VAR>i</VAR> nach <VAR>j</VAR> und von <VAR>j</VAR> nach <VAR>i</VAR>. Aufgrund der Kommutativität der Addition sind diese Summen jeweils identisch für alle <VAR>i</VAR> und <VAR>j</VAR>. Folglich genügt es, die <VAR>j</VAR>-Schleife bei <VAR>i</VAR> zu beginnen. Dies halbiert den Rechenaufwand immerhin, was aber an dessen Größenordnung von O(<VAR>n</VAR>³) natürlich noch nichts ändert.</P>
+<P>Eine weitergehende Verbesserung erreicht man, indem nicht mehr für jeden der jetzt ca. (<VAR>n</VAR>² / 2) Sub-Arrays jeweils eine eigene Schleife mit O(<VAR>n</VAR>) laufen lässt, um dessen Summe zu ermitteln. Statt dessen kann man in einer der beiden ohnehin vorhandenen Zählschleifen für die Indizes <VAR>i</VAR> und <VAR>j</VAR> die Summe direkt mitzählen. Die innerste Schleife (<VAR>k</VAR>-Schleife) wird dadurch überflüssig, und Rechenaufwand so auf eine Größenordnung auf O(<VAR>n</VAR>²) verbessert.</P>
+</LI>
+<DIV CLASS="natural-language">
+	<P>Parameter: Array <VAR>A</VAR> (Länge <VAR>n</VAR>) <BR>Gesucht: Höhe der maximalen Teilsumme</P>
+	<SPAN>Start</SPAN>
+	<DIV>
+		<SPAN>setze <VAR>MTS</VAR> auf 0</SPAN>
+		<SPAN>für alle <VAR>i</VAR> von 1 bis <VAR>n</VAR></SPAN>
+		<DIV>
+			<SPAN>setze <VAR>TS</VAR> auf 0</SPAN>
+			<SPAN>für alle <VAR>j</VAR> von <VAR>i</VAR> bis <VAR>n</VAR></SPAN>
+			<DIV>
+				<SPAN>setze <VAR>TS</VAR> auf <VAR>TS</VAR> + <VAR>a</VAR><SUB><VAR>j</VAR></SUB?</SPAN>
+				<SPAN>setze <VAR>MTS</VAR> auf max(<VAR>MTS</VAR>, <VAR>TS</VAR>)</SPAN>
+			</DIV>
+		</DIV>
+		<SPAN>gib <VAR>MTS</VAR> als Ergebnis zurück</SPAN>
+	</DIV>
+	<SPAN>Stop</SPAN>
+</DIV>
+<P>Java-Quellcode: <A HREF="Loesung72.java" TYPE="text/plain">Loesung72.java</A></P>
+
+<ADDRESS ID="author">Arne Johannessen, 12. Juni 2009</ADDRESS>
+<!-- $Id: Loesung71.html 2009-06-12 aj3 $ -->
+
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt0/">Blatt 0</A></LI>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Blatt 4</A></LI>
+		<LI><A HREF="../blatt5/">Blatt 5</A></LI>
+		<LI><A HREF="../blatt6/">Blatt 6</A></LI>
+		<LI><A HREF="./">Blatt 7</A></LI>
+		<LI><A HREF="../blatt8/">Blatt 8</A></LI>
+		<LI><A HREF="../blatt9/">Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

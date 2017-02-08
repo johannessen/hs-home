@@ -1,0 +1,71 @@
+$Id: Loesung51.txt 2009-05-23 $
+Arne Johannessen
+
+UTF-8
+
+
+
+Formulieren Sie folgende Algorithmen präzise in „natürlicher Sprache“ nach Dr. Bürg.
+
+Aufgabe 5-1 (a): Bubble-Sort
+============================
+
+Gegeben: Array A mit n Schlüsseln
+Gesucht: A, aufsteigend sortiert
+
+Start
+    wiederhole…
+        setze t auf 'nein'
+        für i von 1 bis n - 1
+            falls A(i) > a(i + 1)
+                vertausche A(i) mit A(i + 1)
+                setze t auf 'ja'
+    …solange wie t auf 'ja' gesetzt wird
+Stop
+
+
+
+Aufgabe 5-1 (b): Insertion-Sort
+===============================
+
+Gegeben: Array A mit n Schlüsseln
+Gesucht: A, aufsteigend sortiert
+
+Start
+    für i von 2 bis n
+        für j abwärts von i - 1 bis 1
+            falls A(j) kleiner als A(j + 1)
+                breche die innere Schleife ab
+            vertausche A(j) mit A(j + 1)
+Stop
+
+
+
+Aufgabe 5-1 (c): Selection-Sort
+===============================
+
+Gegeben: Array A mit n Schlüsseln
+Gesucht: A, aufsteigend sortiert
+
+Start
+    für i von 1 bis n - 1
+        setze min auf i
+        für j von i + 1 bis n
+            falls A(j) < A(min)
+                setze min auf j
+        vertausche A(min) mit A(i)
+Stop
+
+
+
+Vertausche A(u) mit A(v)
+========================
+
+Gegeben: Array A, Indizes u und v in A
+Gesucht: A mit vertauschten Werten an den Stellen u und v
+
+Start
+    setze w auf A(u)
+    setze A(u) auf A(v)
+    setze A(v) auf w
+Stop

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<HTML LANG="de">
+<TITLE>Stilregeln fuer Java</TITLE>
+<META CHARSET="UTF-8">
+
+<STYLE>
+H1 { font-size: larger; }
+P { margin: 1.5em 0 .5em; }
+UL, LI { margin: .5em 0; }
+STRONG { text-decoration: underline; }
+CODE { color: #f70; }
+</STYLE>
+
+<H1>Regeln</H1>
+<P>Die folgenden Stilregeln müssen für im Rahmen dieser Veranstaltung geschriebenen Code beachtet werden:
+
+<UL>
+	<LI><EM>immer</EM> im Kopf jeder Datei Autor (voller Name) und Datum (wahlweise erste Erstellung oder letzte Bearbeitung) nennen
+	<LI>Groß-/Kleinschreibung von Bezeichnern: Klassen <EM>immer</EM> <CODE>CamelCaseNamesAbc</CODE>, alles andere <EM>immer</EM> <CODE>middleCaseNamesAbc</CODE> (Ausnahme: Konstanten, Packages)
+	<LI>keine Unterstriche verwenden (Ausnahme: Konstanten)
+	<LI>Bytewerte außerhalb des Bereichs von 32 bis 126 (<CODE>0x20</CODE> bis <CODE>0x7e</CODE>, <ABBR TITLE="jeweils einschließlich">einschl.</ABBR>) sind außerhalb von Kommentaren nur erlaubt <ABBR TITLE="genau dann, wenn">g. d. w.</ABBR> ihre Kodierung in jeder Datei einheitlich ist und im Kopf angegeben wird. (Diese Regel ist z. B. dann erfüllt, wenn in der Datei ausschließlich druckbare ASCII-Zeichen vorkommen.)
+	<LI>optionale Blöcke <EM>immer</EM> explizit verwenden (z. B. <CODE>if (true) <STRONG>{</STRONG> doSomething(); <STRONG>}</STRONG></CODE> )
+	<LI><EM>nirgendwo</EM> wird <CODE>public</CODE>, <CODE>private</CODE> oder <CODE>protected</CODE> verwendet
+		<BR>(Ausnahme: <CODE>public static void main (String[])</CODE> oder andere Fälle, wo es unbedingt notwendig ist)
+	<LI>Typen nicht auseinanderreißen (immer <CODE>String[] args</CODE> statt <CODE>String args[]</CODE> schreiben)
+</UL>
+
+<P>Diese Regeln gelten zwar nicht für die Prüfung, können jedoch auch dort hilfreich sein.

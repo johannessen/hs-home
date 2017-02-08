@@ -1,0 +1,61 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 4: Suchverfahren</H2>
+
+<H3 ID="sternaufgabe4-1">Aufgabe 4-1 *</H3>
+<P>Das Prinzip der binären Suche besteht darin, die Mitte des Suchraums zu betrachten und anschließend den Suchraum für die weitere Suche auf eine der beiden Hälften einzuschränken. Die Mitte des Suchraums ergibt sich aus folgender Formel: <BR>
+<VAR>m</VAR> = (<VAR>r</VAR> + <VAR>l</VAR>) / 2 = <VAR>l</VAR> + (<VAR>r</VAR> &minus; <VAR>l</VAR>) · ½ </P>
+<P>Anstatt ungezielt die Mitte zu nehmen, kann man auch schätzen, an welcher Position sich der gesuchte Schlüssel wahrscheinlich befindet. Anstelle der Mitte wird dann diese geschätzte Position betrachtet. Die folgende Formel ersetzt den Faktor ½ durch eine lineare Interpolation. <BR>
+<VAR>m</VAR> = <VAR>l</VAR> + (<VAR>r</VAR> &minus; <VAR>l</VAR>) · (<VAR>k</VAR> &minus; <VAR>A<SUB>l</SUB></VAR>) / (<VAR>A<SUB>r</SUB></VAR> &minus; <VAR>A<SUB>l</SUB></VAR>)</P>
+<OL TYPE="a">
+<LI>Implementieren Sie die Interpolationssuche in einer Methode <CODE>findeInterpoliert</CODE> analog zu Aufgabe 3-1.</LI>
+<LI>Nennen Sie die Vorbedingungen der Interpolationssuche.</LI>
+</OL>
+
+<H3 ID="sternaufgabe4-2">Aufgabe 4-2 *</H3>
+<P>Geben Sie die Zeitkomplexität der bisher behandelten Suchalgorithmen in der <A HREF="http://de.wikipedia.org/wiki/Landau-Symbole#Beispiele">Groß-O-Notation</A> an. Nennen Sie jeweils die Komplexität für den <I LANG="en">best case,</I> den <I LANG="en">average case</I> und den <I LANG="en">worst case.</I></P>
+<OL TYPE="a">
+<LI>sequentielle Suche (iterativ)</LI>
+<LI>sequentielle Suche (rekursiv)</LI>
+<LI>binäre Suche (rekursiv)</LI>
+<LI>Interpolationssuche (rekursiv)</LI>
+</OL>
+
+<H3 ID="aufgabe4-3">Aufgabe 4-3</H3>
+<P>Wandeln Sie die Rekursion im Algorithmus der binären Suche in eine Iteration um.</P>
+<OL TYPE="a">
+<LI>Formulieren Sie den <EM>iterativen</EM> Algorithmus der binären Suche. Verwenden Sie wahlweise „natürliche Sprache“ nach Dr. Bürg, eine Java-Implementierung oder eine andere geeignete Art und Weise.</LI>
+<LI>Geben Sie die Zeitkomplexität Ihrer Lösung aus Teilaufgabe (a) im <I LANG="en">average case</I> an.</LI>
+<LI>Messen Sie den tatsächlich benötigten Zeitaufwand. Begründen Sie den Unterschied zu Ihrem Ergebnis aus Teilaufgabe (b).</LI>
+</OL>
+
+<H3 ID="zusatzaufgabe4-4">Zusatzaufgabe 4-4</H3>
+<OL TYPE="a">
+<LI>Erweitern Sie die Klasse <CODE>Menge</CODE> aus Übungsblatt 3 mit einer Objektmethode <CODE>void bogoSort ()</CODE>, die den internen Array aufsteigend sortiert. Verwenden Sie den nachfolgend angegebenen Algorithmus.</LI>
+<LI>Begründen Sie, weshalb die Implementierung in Java iterativ erfolgen muss.</LI>
+</OL>
+<DIV CLASS="natural-language">
+	<P>Gegeben: Array <VAR>A</VAR></P>
+	<SPAN>Start</SPAN>
+	<DIV>
+		<SPAN>solange <VAR>A</VAR> nicht sortiert ist</SPAN>
+		<DIV>
+			<SPAN>mische <VAR>A</VAR> in eine zufällige Reihenfolge</SPAN>
+		</DIV>
+	</DIV>
+	<SPAN>Stop</SPAN>
+</DIV>
+
+<!--H3 ID="zusatzaufgabe5-5">Zusatzaufgabe 5-5</H3>
+<P>Beim Schritt von der binären Suche in Aufgabe 5-1 zur Interpolationssuche in 5-3 wurde die Effizienz der Suche verbessert, indem die Anzahl der nötigen Vergleiche deutlich minimiert wurde bei gleichzeitiger Inkaufnahme eines leicht erhöhten Rechenaufwands.</P>
+<P>Die Fibonacci-Suche verfolgt einen anderen Ansatz zur (theoretischen) Verbesserung der Effizienz der binären Suche: Sie benötigt in etwa gleich viele Vergleiche, hat dabei aber (theoretisch) einen noch geringeren Rechenaufwand als die binäre Suche.</P>
+<P>Implementieren Sie das Verfahren der Fibonacci-Suche in einer Methode analog zu Aufgabe 5-1.</P-->
+
+<PRE ID="id">$Id: HEADER.html 2009-05-11 $</PRE>
+<DIV ID="dateien">

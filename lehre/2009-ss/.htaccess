@@ -1,0 +1,32 @@
+# ~joar0011/lehre/2009-ss/ad2
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id: .htaccess $
+
+
+<IfModule mod_autoindex.c>
+	# create links
+	AddDescription 'Algorithmen und Datenstrukturen 2' ad2
+	AddDescription '<STRONG>inoffizieller Mitschrieb</STRONG> eines Kommilitonen' 'Vorlesungsmitschrieb'
+	AddDescription 'Dokumentation der Java-API 1.4' 'doc-api_1.4'
+	AddDescription 'BlueJ-Umgebung' 'BlueJ'
+	AddDescription 'ein Mac-Texteditor' 'TextWrangler'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'Vorlesungsmitschrieb' 'BlueJ' 'TextWrangler' 'doc-api_1.4'
+	
+	# Create descriptions
+	IndexOptions -SuppressDescription
+	AddDescription 'Klassendokumentation (Javadoc)' 'doc'
+</IfModule>
+
+<IfModule mod_alias.c>
+	Redirect permanent '/~joar0011/lehre/2009-ss/ad2/unterlagen/Vorlesungsmitschrieb' 'http://www.volkervonnathusius.de/#studium'
+	Redirect permanent '/~joar0011/lehre/2009-ss/ad2/unterlagen/BlueJ' http://www.bluej.org/
+	Redirect permanent '/~joar0011/lehre/2009-ss/ad2/unterlagen/TextWrangler' http://www.barebones.com/products/textwrangler/
+	Redirect permanent '/~joar0011/lehre/2009-ss/ad2/unterlagen/doc-api_1.4' http://java.sun.com/j2se/1.4.2/docs/api/overview-summary.html
+</IfModule>
+
+<IfModule mod_mime.c>
+	AddType application/x-java-archive .jar
+</IfModule>

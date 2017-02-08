@@ -1,0 +1,271 @@
+/* www.home.hs-karlsruhe.de/~joar0011/lehre/2009-ss/ad2
+ * Standard (Screen) Stylesheet
+ * Version 1.0.2
+ * CSS layer 2
+ *
+ * by Arne Johannessen
+ * mailto:joar0011@hs-karlsruhe.de
+ *
+ * $Id: screen.css $
+ */
+
+.hide {
+	display: none !important;
+}
+ABBR {
+	font-style: inherit;
+	font-variant: inherit;
+}
+
+#head {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 3em;
+	background-color: #eee;
+	font-family: "Trebuchet MS", "Arial", "Lucida", "Helvetica", sans-serif;
+	overflow: hidden;
+}
+#head H1 {
+	margin: 0;
+	padding: .5em;
+	height: 1em;
+	border-left: 6px solid #bbb;
+	font-size: 150%;
+}
+
+
+BODY {
+	margin: 3.5em 0 2em 7em;
+	padding: 0 .5em;
+	max-width: 50em;
+	font: normal 100% "Times", serif;
+	color: black;
+	background: white;
+}
+A, :link {
+	color: #06f;
+	background-color: inherit;
+	font-weight: bold;
+}
+A:hover, A:active {
+	color: white;
+	background-color: #06f;
+	font-weight: bold;
+}
+A:visited {
+	color: #618;
+	background-color: inherit;
+	font-weight: bold;
+}
+A:visited:hover, A:visited:active {
+	color: white;
+	background-color: #618;
+}
+A[type="application/pdf"]:after {
+	content: " [PDF]";
+	font-size: 93%;
+}
+
+
+#menu {
+	position: absolute;
+	left: 0;
+	top: 3em;
+	margin: 1px 0 0 0;  /* :BUG: IE:win screws this up */
+	width: 7em;
+	font-style: normal;
+	font-family: "Trebuchet MS", "Arial", "Lucida", "Helvetica", sans-serif;
+}
+#menu>* {
+	font-size: 89%;
+	border: none;
+}
+#menu UL {
+	margin: 0;
+	padding: 0;
+}
+#menu LI {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid white;  /* :BUG: IE:win screws this up */
+}
+#menu LI A, #menu LI A:hover, #menu LI STRONG {
+	display: block;
+	padding: 4px 4px 4px .5em;
+	border-left: 6px solid #bbb;
+	border-right: 6px solid #ddd;
+	text-decoration: none;
+	background-color: #eee;
+	color: #666;
+	font-weight: normal;
+}
+#menu LI A:link, #menu LI A:visited {
+	color: #06f;
+}
+#menu LI A:link:hover, #menu LI A:visited:hover, #menu LI STRONG:hover {
+	border-left-color: #06d;
+	border-right-color: #06e;
+	background-color: #06f;
+	color: #fff;
+}
+#menu LI STRONG {
+	border-right-color: #06f;
+	font-weight: normal;
+	color: #06f;
+	cursor: pointer;
+}
+#menu HR {  /* :BUG: IE:win screws this up */
+	display: block;
+	margin: 0 0 1px 0;
+	padding: 0;
+	height: 1em;
+	width: auto;
+	color: black;
+	background-color: #eee;
+	border: none;
+	border-left: 6px solid #bbb;
+}
+#menu LI UL {
+	font-size: .84em;
+	padding-bottom: 1ex;
+	background: #eee;
+}
+#menu LI UL A, #menu LI UL A:hover, #menu LI UL STRONG, #menu LI HR {
+	border-left-color: #eee;
+	border-left-width: 20px;
+	padding: 2px 2px 2px .5em;
+}
+#menu LI HR {
+	height: 0;
+	padding: 0;
+}
+
+
+H2 {
+	font-size: 1em;
+	margin: 2em 0 .5em;
+}
+H3, H4, ADDRESS, HR {
+	font-size: 1em;
+	margin: 2em 0 .5em;
+}
+P, UL, OL {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+DIV+UL {
+	margin-top: 0;
+}
+CODE {
+	color: inherit;
+	background-color: #ccc;
+	padding: 0 .5ex;
+	font-family: "Monaco", "Lucida Console", monospace;
+	font-size: .9em;
+	white-space: pre-wrap;
+}
+CODE .comment {
+	color: green !important;
+	background-color: inherit;
+}
+PRE CODE {
+	padding: 0;
+}
+BLOCKQUOTE {
+	margin: .5em 2em;
+}
+BLOCKQUOTE.code {
+	color: inherit;
+	background-color: #ccc;
+	padding: .5ex;
+}
+BLOCKQUOTE P, BLOCKQUOTE PRE {
+	margin: 0;
+	padding: 0;
+}
+SAMP, VAR, DFN {
+	font-style: italic;
+}
+DEL {
+	display: inline;
+	text-decoration: line-through;
+}
+LI DEL {
+	color: #900;
+	background-color: inherit;
+}
+LI INS {
+	text-decoration: none;
+	color: #090;
+	background-color: inherit;
+}
+CODE INS {
+	color: inherit;
+	background-color: inherit;
+	text-decoration: underline;
+}
+SUP, SUB {
+	font-size: .67em;
+}
+#achtung {
+	margin: 1em;
+	border: 1px solid red;
+}
+#achtung H2 {
+	margin: 0;
+	font-size: 1.67em;
+	font-weight: bold;
+	color: white;
+	background-color: red;
+	padding: .5ex 1ex;
+}
+#achtung P {
+	margin: .5em;
+}
+PRE#id {
+	margin: 2.5em 0 1ex;
+}
+DIV#dateien PRE {
+	margin: 0;
+	padding: 1ex 0;
+	border: 0 solid #bbb;
+	border-width: 1px 0;
+	background-color: #eee;
+}
+DIV#dateien PRE IMG:first-child {
+	height: 0;
+}
+#dateien HR {
+	display: none;
+}
+.natural-language DIV {
+	padding-left: 2em;
+}
+.natural-language SPAN {
+	display: block;
+}
+
+.aktuell {
+	margin: .5em .5ex;
+	padding: .2em .5em .1em;
+	border-style: none solid;
+	border-width: 0 3px;
+	border-width: 0 2px;
+}
+SPAN.aktuell {
+	margin: inherit;
+	padding: 0 .5ex;
+}
+.aktuell H3 {
+	margin: 0 0 .5em;
+}
+.aktuell {
+	border-color: #e11;
+	background: #fdd;
+	color: inherit;
+}

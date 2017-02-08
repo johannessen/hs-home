@@ -1,0 +1,39 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 1: Iteration und Rekursion</H2>
+
+<P><EM>Anmerkung.</EM> Aufgabe 1-2 konnte aufgrund ihres Schwierigkeitsgrads nicht erwartet werden und wurde daher nachträglich zur Zusatzaufgabe herabgestuft.</P>
+
+<!--P>Zur Erinnerung: Iterationen sind Schleifen, Rekursionen sind Selbstaufrufe von Methoden.</P-->
+
+<H3 ID="sternaufgabe1-1">Aufgabe 1-1 *</H3>
+<P>Implementieren Sie einen sequentiellen Suchalgorithmus in einer Methode. Die Methode soll als Parameter einen Array vom Typ <CODE>int[]</CODE> und einen Wert vom Typ <CODE>int</CODE> übergeben bekommen. Ihr Algorithmus soll diesen Wert in diesem Array iterativ suchen und bei Erfolg den Array-Index der Fundstelle zurückgeben.</P>
+
+<H3 ID="aufgabe1-2">Zusatzaufgabe 1-2</H3>
+<P>Implementieren Sie analog zu Aufgabe 1-1 einen sequentiellen Suchalgorithmus, der rekursiv arbeitet.</P>
+
+<H3 ID="aufgabe1-3">Aufgabe 1-3</H3>
+<P>Die Fibonacci-Folge <VAR>f</VAR><SUB><VAR>n</VAR></SUB> ist wie folgt definiert:</P>
+<BLOCKQUOTE CITE="http://de.wikipedia.org/wiki/Fibonacci-Folge#Definition_der_Fibonacci-Folge"><VAR>f</VAR><SUB><VAR>n</VAR></SUB> := <VAR>f</VAR><SUB><VAR>n</VAR> &#x2212; 1</SUB> + <VAR>f</VAR><SUB><VAR>n</VAR> &#x2212; 2</SUB> &#x2200; <VAR>n</VAR> &#x2208; &#x2115;, <VAR>n</VAR> &gt; 1 : <VAR>f</VAR><SUB>0</SUB> = 0, <VAR>f</VAR><SUB>1</SUB> = 1</BLOCKQUOTE>
+<P>Schreiben Sie eine Methode mit der Signatur <CODE>int fibonacci (int n)</CODE>, welche die Fibonacci-Zahl an der Stelle <CODE>n</CODE> entsprechend dieser Definition rekursiv berechnet und zurückgibt.</P>
+
+<H3 ID="aufgabe1-4">Aufgabe 1-4</H3>
+<P>Schreiben Sie eine Methode mit der Signatur <CODE>int[] fibonacciFolge (int length)</CODE>, welche einen Array mit <CODE>length</CODE> Elementen erzeugt, mit den Zahlen der Fibonacci-Folge entsprechend der Definition aus Aufgabe 1-3 füllt und zurückgibt. Verwenden Sie dazu einen iterativen Algorithmus.</P>
+
+<H3 ID="zusatzaufgabe1-5">Zusatzaufgabe 1-5</H3>
+<P>Vergleichen Sie die Algorithmen zu den Aufgaben 1-3 und 1-4.</P>
+<OL TYPE="a">
+<LI>Geben Sie die Zeitkomplexität beider Varianten in der <A HREF="http://de.wikipedia.org/wiki/Landau-Symbole#Beispiele">Groß-O-Notation</A> an.</LI>
+<LI>Beurteilen Sie die Ausführungsgeschwindigkeit beider Varianten unabhängig von deren Zeitkomplexität.</LI>
+<LI>Es existiert ein Lösungsalgorithmus für das Problem von Aufgabe 1-3, der deutlich schneller als jede der beiden Varianten arbeitet. Recherchieren Sie diesen Algorithmus mit Hilfe von Wikipedia oder anderer Literatur und geben Sie dessen Zeitkomplexität an.</LI>
+<LI>Implementieren Sie den Algorithmus aus Teilaufgabe (c) in einer Methode.</LI>
+</OL>
+
+<PRE ID="id">$Id: HEADER.html 2009-05-04 $</PRE>
+<DIV ID="dateien">

@@ -1,0 +1,27 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 7: Maximum–Sub-Array–Problem, naïve Verfahren</H2>
+
+<P>Abgabe bis Montag, 15. Juni, 15:50 Uhr.</P>
+
+<H3 ID="aufgabe7-1">Aufgabe 7-1</H3>
+<P>Das naïve Lösungsverfahren zum Maximum–Sub-Array–Problem mit kubischem Laufzeitverhalten ( O(<VAR>n</VAR>³) ) hat eine sehr unbefriedigende Performance. Überlegen Sie, auf welche Weise sich dieses Verfahren geringfügig verändern lässt, um wenigstens quadratisches Laufzeitverhalten ( O(<VAR>n</VAR>²) ) zu erreichen. Formulieren Sie den sich ergebenden Algorithmus in „natürlicher Sprache“ nach Dr. Bürg.</P>
+
+<H3 ID="sternaufgabe7-2">Aufgabe 7-2 *</H3>
+<P>Schreiben Sie eine Klassenmethode, die den Algorithmus aus Aufgabe 7-1 implementiert; sie soll auf einem Array des Typs <CODE>int[]</CODE> arbeiten, der als Parameter übergeben wird. Als Ergebnis genügt bei <EM>dieser</EM> Aufgabe die Rückgabe der Sub-Array–Summe.</P>
+
+<H3 ID="zusatzaufgabe7-3">Zusatzaufgabe 7-3</H3>
+<P>Die Rückgabe der Sub-Array–Summe reicht nicht aus, um den Sub-Array identifizieren zu können. Ein Sub-Array wird stattdessen üblicherweise definiert über eine Referenz zu dem Gesamt-Array, von dem er ein Teil ist, sowie den Start-Index und die Länge des Sub-Arrays als dessen Grenzen. Alternativ ist die Bezeichnung der Grenzen auch mit Beginn-Index und End-Index möglich.</P>
+<P>Implementieren Sie eine Klassenmethode analog zu Aufgabe 7-2, die anstatt der Summe des Sub-Arrays dessen Definition als Objekt vom Typ <CODE>TeilArray</CODE> zurückgibt! Benutzen Sie dazu die Klasse <CODE>TeilArray</CODE> aus Aufgabe 6-2.</P>
+<P><STRONG>Tipp.</STRONG> Ermitteln Sie zunächst die Grenzen des Sub-Arrays. Überprüfen Sie diese mit Hilfe von <CODE>System.out.println(int)</CODE> oder eines Debuggers, bevor Sie die Rückgabe des <CODE>TeilArray</CODE>-Objekts implementieren. Für die Rückgabe müssen Sie zunächst ein neues Objekt erzeugen, z. B. so:</P>
+<P><CODE>TeilArray subarray = new TeilArray();</CODE></P>
+
+
+<PRE ID="id">$Id: HEADER.html 2009-06-09 $</PRE>
+<DIV ID="dateien">

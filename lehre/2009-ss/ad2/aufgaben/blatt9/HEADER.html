@@ -1,0 +1,35 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 9: Maximum–Sub-Array–Problem, rekursive Algorithmen</H2>
+
+<P>Abgabe bis Montag, 29. Juni, <STRONG>16:30 Uhr.</STRONG></P>
+
+<H3 ID="sternaufgabe9-1">Aufgabe 9-1 *</H3>
+<P>Implementieren Sie den rekursiven, nach dem Prinzip <I LANG="en">divide and conquer</I> arbeitenden Lösungsalgorithmus des Maximum–Sub-Array–Problems. Verwenden Sie für die Bestimmung der Randmaxima Ihre Methoden aus den Aufgaben 8-1 und 8-2.</P>
+<P><STRONG>Tipp.</STRONG> Verwenden Sie folgende Methodensignatur:</P>
+<P><CODE>static int <VAR>methodenName</VAR> (int[] array, int linkeGrenze, int rechteGrenze)</CODE></P>
+<P><STRONG>Tipp.</STRONG> Die Methoden aus den Aufgaben 8-1 und 8-2 müssen leicht angepasst werden, um im Kontext dieses Algorithmus wie nötig funktionieren zu können.</P>
+
+<H3 ID="aufgabe9-2">Aufgabe 9-2</H3>
+<OL TYPE="a">
+<LI>Ist der Algorithmus aus Aufgabe 9-1 als <I LANG="en">hard split, easy join</I> oder als <I LANG="en">easy split, hard join</I> zu charakterisieren? Begründen Sie Ihre Antwort. Kennzeichnen Sie in Ihrem Quellcode zu Aufgabe 9-1 jeweils Beginn und Ende von <I LANG="en">split</I> und <I LANG="en">join!</I></LI>
+<LI>Nennen Sie weitere Beispiele für <I LANG="en">divide and conquer</I>–Algorithmen und teilen Sie diese als <I LANG="en">hard split, easy join</I> bzw. <I LANG="en">easy split, hard join</I> ein!</LI>
+</OL>
+
+<H3 ID="zusatzaufgabe9-3">Zusatzaufgabe 9-3</H3>
+<P>In dem Array <CODE>new int[] {1, -1, 1}</CODE> sind mehrere Maximum–Sub-Arrays mit derselben Summe 1 enthalten.</P>
+<OL TYPE="a">
+<LI>Schreiben Sie einen Algorithmus in „natürlicher Sprache“ nach Dr. Bürg, der nicht <EM>ein,</EM> sondern <EM>alle</EM> maximalen Sub-Arrays ermittelt und deren Grenzen ausgibt. Verwenden Sie ein Lösungsverfahren Ihrer Wahl.</LI>
+<LI>Schreiben Sie eine Java-Klasse, deren Objekte geeignet als Rückgabetyp für eine Methode wären, die Ihren Algorithmus aus Teilaufgabe (a) in Java implementiert.</LI>
+<LI>Kombinieren Sie Teilaufgaben (a) und (b) in einer Klassenmethode in Java.</LI>
+</OL>
+
+
+<PRE ID="id">$Id: HEADER.html 2009-06-22 $</PRE>
+<DIV ID="dateien">

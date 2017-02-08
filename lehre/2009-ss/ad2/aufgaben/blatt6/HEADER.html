@@ -1,0 +1,43 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 6: Objektorientierte Datenstrukturen</H2>
+
+<P>Abgabe bis <STRONG>Mittwoch, 10. Juni, 10:00 Uhr!</STRONG></P>
+
+<H3 ID="aufgabe6-1">Aufgabe 6-1</H3>
+<P>Wiederholen Sie das Vorlesungskapitel zu <A HREF="http://de.wikipedia.org/wiki/Dynamische_Datenstruktur">dynamischen Datenstrukturen</A>, insbesondere der <A HREF="http://de.wikipedia.org/wiki/Liste_(Datenstruktur)">linearen Liste</A>. Vergleichen Sie die Eigenschaften mit denen eines Arrays anhand folgender Teilaufgaben. Lösen Sie diese Teilaufgaben wahlweise in „natürlicher Sprache“ nach Dr. Bürg oder in Java.</P>
+<OL TYPE="a">
+<LI>Schreiben Sie eine Klassenmethode, die einen vorgegebenen Wert an vorgegebener Stelle in einen Array einfügt. (Gehen Sie in Java vereinfachend davon aus, dass der Array eine Klassenvariable des Typs <CODE>int[]</CODE> ist und nicht als Parameter übergeben wird.)</LI>
+<LI>Schreiben Sie eine Objektmethode in der Klasse <CODE>ListNode</CODE>, die es diesen Knoten einer Liste ermöglicht, vorgegebene Werte unmittelbar nach ihnen in die Liste einzufügen. (Gehen Sie in Java vereinfachend davon aus, dass der einzufügende Wert an Ihre Methode in Form eines Objekts vom Typ <CODE>ListNode</CODE> übergeben wird.)</LI>
+<LI>Nennen Sie die typischen Anwendungsfälle für Arrays bzw. lineare Listen.</LI>
+</OL>
+
+<H3 ID="aufgabe6-2">Aufgabe 6-2</H3>
+<P>Wiederholen Sie das Vorlesungskapitel zum Maximum–Sub-Array–Problem und zu statischen Datstrukturen. Schreiben Sie eine Klasse <CODE>TeilArray</CODE>, deren Objekte einen Sub-Array darstellen können (Array-Typ <CODE>int[]</CODE>).</P>
+
+<H3 ID="aufgabe6-3">Aufgabe 6-3</H3>
+<P>Erweitern Sie Ihre Klasse <CODE>TeilArray</CODE> um eine <STRONG>Objekt</STRONG>methode <CODE>int summe ()</CODE>, welche die Summe aller Elemente des Sub-Arrays liefert.</P>
+
+<H3 ID="sternaufgabe6-4">Aufgabe 6-4 *</H3>
+<P>Schreiben Sie eine Klassenmethode, die das naïve Lösungsverfahren (kubisches Laufzeitverhalten, O(<VAR>n</VAR>³) ) zum Maximum–Sub-Array–Problem implementiert; sie soll auf einem Array des Typs <CODE>int[]</CODE> arbeiten, der als Parameter übergeben wird. Als Ergebnis genügt bei <EM>dieser</EM> Aufgabe die Rückgabe der Sub-Array–Summe.</P>
+
+<H3 ID="sternaufgabe6-5">Aufgabe 6-5 *</H3>
+<P>Schreiben Sie eine Klasse <CODE>Werk</CODE>, deren Objekte Einträge eines einfachen Literaturverzeichnisses darstellen können; sie sollen jeweils Angaben wie Name des Autors, Jahr der Herausgabe, Titel etc. speichern.</P>
+<P><STRONG>Tipp.</STRONG> Jedes Objekt des Typs <CODE>Werk</CODE> stellt genau ein Werk dar. Die Gesamtheit des Literaturverzeichnisses könnte möglicherweise später als Array des Typs <CODE>Werk[]</CODE> implementiert werden, ist jedoch <EM>nicht</EM> Teil dieser Aufgabenstellung. Hier geht es nur um einzelne Werke!</P>
+
+<H3 ID="zusatzaufgabe6-6">Zusatzaufgabe 6-6</H3>
+<OL TYPE="a">
+<LI>Machen Sie sich mit der Datenstruktur <CODE>LinkedList</CODE> in <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/package-summary.html" HREFLANG="en">java.util</A> vertraut. Recherchieren Sie, wie Sie mit Hilfe eines <EM>Iterators</EM> mit linearem Zeitaufwand eine solche Datenstruktur sequentiell durchsuchen können.</LI>
+<LI>Schreiben Sie beispielhaft ein Programm, welches das Einfügen eines Elements in eine <CODE>LinkedList</CODE> analog zu Aufgabe 6-1 demonstriert.</LI>
+<LI>Schreiben Sie beispielhaft ein Programm, welches das sequentielle Suchen in einer <CODE>LinkedList</CODE> demonstriert.</LI>
+</OL>
+
+
+<PRE ID="id">$Id: HEADER.html 2009-06-28 $</PRE>
+<DIV ID="dateien">

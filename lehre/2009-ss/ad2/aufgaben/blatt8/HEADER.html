@@ -1,0 +1,34 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 8: Maximum–Sub-Array–Problem, lineare Algorithmen</H2>
+
+<P>Abgabe bis Montag, 22. Juni, 15:50 Uhr.</P>
+
+<H3 ID="sternaufgabe8-1">Aufgabe 8-1 *</H3>
+<P>Durch invariante Festlegung einer der beiden Sub-Array–Grenzen auf einen bestimmten Index lässt sich das derart eingeschränkte Maximum–Sub-Array–Problem leicht mit einer linearen Zeitkomplexität von O(<VAR>n</VAR>) lösen. Formulieren Sie einen Algorithmus, der das sog. linke <STRONG>Randmaximum</STRONG> ermittelt, dessen linke Grenze auf den Index <CODE>0</CODE> festgelegt ist.</P>
+<P>Schreiben Sie wahlweise <EM>präzise</EM> „natürliche Sprache“ nach Dr. Bürg oder eine Java-Klassenmethode! In Java wird lediglich der Gesamt-Array als Parameter übergeben; es genügt die Rückgabe der Sub-Array–Summe als Ergebnis.</P>
+
+<H3 ID="aufgabe8-2">Aufgabe 8-2</H3>
+<P>Formulieren Sie analog zu Aufgabe 8-1 einen Algorithmus, der das rechte Randmaximum ermittelt.</P>
+
+<H3 ID="aufgabe8-3">Aufgabe 8-3</H3>
+<P>Der auf dem sog. Scanline-Prinzip arbeitende Algorithmus von Kadane bestimmt den Maximum–Sub-Array <EM>frei</EM>, indem an jeder Position des Arrays dasjenige Maximum–Sub-Array ermittelt wird, das an dieser Position seinen rechten Rand hat. Weil dieses Sub-Array immer entweder leer ist oder gerade um das eine Element an dieser Position länger ist als das an der vorhergehenden Position endende Maximum–Sub-Array, lässt sich mit diesem Algorithmus das Maximum–Sub-Array auch ohne eine invariante Grenze in linearer Zeitkomplexität lösen.</P>
+<P>Implementieren Sie diesen Scanline-Algorithmus in Java in einer Klassenmethode! Es genügt die Rückgabe der Sub-Array–Summe als Ergebnis.</P>
+
+<H3 ID="zusatzaufgabe8-4">Zusatzaufgabe 8-4</H3>
+<P>Überlegen Sie, welche Angaben ein in Aufgabe 8-1 ermitteltes Randmaximum eindeutig identifizieren würden.</P>
+<OL TYPE="a">
+<LI>Schreiben Sie eine Java-Klasse, deren Instanzen alle benötigten Daten bzw. Referenzen darauf enthalten können.</LI>
+<LI>Passen Sie Ihren Algorithmus aus Aufgabe 8-1 derart an, dass Ihre Klasse aus Teilaufgabe (a) für das Ergebnis verwendet wird.</LI>
+<LI>Welche Auswirkungen auf die Effizienz hat die Änderung aus Teilaufgabe (b)?</LI>
+</OL>
+
+
+<PRE ID="id">$Id: HEADER.html 2009-06-14 $</PRE>
+<DIV ID="dateien">

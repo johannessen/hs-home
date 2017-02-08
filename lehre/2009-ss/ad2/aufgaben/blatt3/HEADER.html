@@ -1,0 +1,36 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 3: Algorithmen für eine Datenstruktur</H2>
+
+<P>Diese Aufgaben bauen auf der Klasse <CODE>Menge</CODE> auf, die eine mathematische Menge mit Hilfe eines internen Arrays implementiert. Gehen Sie in diesem Übungsblatt davon aus, dass dieses Array <EM>sortiert</EM> ist.</P>
+
+<H3 ID="sternaufgabe3-1">Aufgabe 3-1 *</H3>
+<P>Schreiben Sie eine Objektmethode <CODE>finde</CODE>, die eine Zahl im internen Array sucht und den Array-Index der Fundstelle zurückgibt. Verwenden Sie den Algorithmus der binären Suche.</P>
+
+<H3 ID="sternaufgabe3-2">Aufgabe 3-2 *</H3>
+<P>Schreiben Sie eine Objektmethode <CODE>enthaelt</CODE>, die feststellt, ob <CODE>zahl</CODE> in der Menge enthalten ist – egal wie!</P>
+
+<H3 ID="zusatzaufgabe3-3">Zusatzaufgabe 3-3</H3>
+<P>Entwerfen Sie Algorithmen für einige der folgenden Operationen auf einer <EM>sortierten</EM> Menge. Formulieren Sie die Algorithmen möglichst sowohl in Java als auch in „natürlicher Sprache“ nach Dr. Bürg.</P>
+<OL TYPE="a">
+<LI><CODE>int groesse ()</CODE> liefert die Anzahl der Elemente der Menge</LI>
+<LI><CODE>boolean istLeer ()</CODE> gibt an, ob die Menge leer ist</LI>
+<LI><CODE>int kleinstes ()</CODE> liefert den Wert des kleinsten Elements der Menge</LI>
+<LI><CODE>int groesstes ()</CODE> liefert den Wert des größten Elements der Menge</LI>
+<LI><CODE>boolean enthaeltAlle (int[] zahlen)</CODE> gibt an, ob die Menge alle in <CODE>zahlen</CODE> enthaltenen Werte enthält</LI>
+<LI><CODE>void leere ()</CODE> entfernt alle Elemente aus der Menge</LI>
+<LI><CODE>int entferne (int zahl)</CODE> entfernt den Wert <CODE>zahl</CODE> aus der Menge</LI>
+<LI><CODE>int[] teilmenge (int vonWert, int bisWert)</CODE> liefert eine Teilmenge zurück, die alle Werte von <CODE>vonWert</CODE> bis <CODE>bisWert</CODE> enthält</LI>
+<LI><CODE>Menge teilmenge (int vonWert, int bisWert)</CODE> liefert eine Teilmenge zurück, die alle Werte von <CODE>vonWert</CODE> bis <CODE>bisWert</CODE> enthält</LI>
+<LI><CODE>void fuegeEin (int zahl)</CODE> fügt den Wert <CODE>zahl</CODE> zur Menge hinzu</LI>
+</OL>
+<P><EM>Tipp.</EM> Die letzten fünf Teilaufgaben verlangen, dass ein neuer Array der passenden Länge erzeugt und der Objektvariable <CODE>menge</CODE>, welche die interne Array-Referenz hält, zugewiesen wird.</P>
+
+<PRE ID="id">$Id: HEADER.html 2009-04-20 $</PRE>
+<DIV ID="dateien">
