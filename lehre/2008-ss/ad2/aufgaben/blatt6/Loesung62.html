@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 6-2 (a), (b) – Tutorium Algorithmen und Datenstrukturen – SS 2008</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ss08-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium für Algorithmen und Datenstrukturen</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 6-2</H2>
+<P>(<A HREF="./">Übungsblatt 6</A>)</P>
+<P>Finden Sie einen „halb-naïven“ Lösungsalgorithmus, der ebenfalls im Brute-Force–Verfahren arbeitet, jedoch durch Einsparen einer Schleife eine Zeitkomplexität von O(<VAR>n</VAR>²) statt O(<VAR>n</VAR>³) erreicht.</P>
+<OL TYPE="a">
+<LI>Nennen Sie den entscheidenden Unterschied zum naïven Algorithmus aus Aufgabe 6-1.</LI>
+<LI>Implementieren Sie diesen Algorithmus in sog. „natürlicher Sprache“ entsprechend den Vorlesungsunterlagen der vergangenen Semester.</LI>
+<LI>Implementieren Sie diesen Algorithmus in Java.</LI>
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI>
+	<P>Statt für jedes der ca. <VAR>n</VAR>² Teilfelder jeweils eine eigene Schleife mit O(<VAR>n</VAR>) laufen zu lassen, um dessen Summe zu ermitteln, kann man in einer der beiden ohnehin vorhandenen Zählschleifen für die Indizes (<CODE>lower</CODE> und <CODE>upper</CODE>) die Summe direkt mitzählen. Die innerste Schleife (<VAR>k</VAR>-Schleife) wird dadurch überflüssig.</P>
+</LI>
+<LI CLASS="natural-language">
+	<P>Parameter: Array <VAR>A</VAR>, Arraylänge <VAR>n</VAR> <BR>Rückgabewert: Wert der maximalen Teilsumme</P>
+	<STRONG>Maximum–Sub-Array</STRONG>
+	<SPAN>Start</SPAN>
+	<DIV>
+		<SPAN><VAR>MTS</VAR> = -∞</SPAN>
+		<SPAN>für alle <VAR>i</VAR> von 1 bis <VAR>n</VAR></SPAN>
+		<DIV>
+			<SPAN><VAR>TS</VAR> = 0</SPAN>
+			<SPAN>für alle <VAR>j</VAR> von <VAR>i</VAR> bis <VAR>n</VAR></SPAN>
+			<DIV>
+				<SPAN><VAR>TS</VAR> = <VAR>TS</VAR> + <VAR>A</VAR><SUB><VAR>j</VAR></SUB></SPAN>
+				<SPAN><VAR>MTS</VAR> = max(<VAR>MTS</VAR>, <VAR>TS</VAR>)</SPAN>
+			</DIV>
+		</DIV>
+		<SPAN>gib <VAR>MTS</VAR> als Ergebnis zurück</SPAN>
+	</DIV>
+	<SPAN>Stop</SPAN>
+</LI>
+<LI>
+	<P>Siehe Quellcode: <A HREF="Loesung62c.java" TYPE="text/plain">Loesung62c.java</A></P>
+</LI>
+</OL>
+
+<ADDRESS ID="author">Arne Johannessen, 4. Juni 2008</ADDRESS>
+<!-- $Id: Loesung62.html 522 2008-06-04 14:32:42Z aj3 $ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Exkurs</A></LI>
+		<LI><A HREF="../blatt5/">Blatt 5</A></LI>
+		<LI><A HREF="./">Blatt 6</A></LI>
+		<LI><A HREF="../blatt7/">Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

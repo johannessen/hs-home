@@ -1,0 +1,28 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 8: Maximum–Sub-Array, Divide-and-Conquer</H2>
+
+<H3 ID="sternaufgabe8-1">Aufgabe 8-1*</H3>
+<P>Schreiben Sie eine Methode, die das Maximum&#8211;Sub-Array&#8211;Problem im Divide-and-Conquer–Verfahren löst. Die Rückgabe der maximalen Summe genügt, Indizes dafür brauchen nicht ermittelt zu werden. Das zu bearbeitende Array des Typs <CODE>int[]</CODE> soll dieser Methode als Parameter übergeben werden.</P>
+<P>Verwenden Sie beim „Join“ die Methoden <A HREF="../../unterlagen/doc/SubArray.html#findLeftEdgeMaximum(int[], int, int)">findLeftEdgeMaximum</A> und <A HREF="../../unterlagen/doc/SubArray.html#findRightEdgeMaximum(int[], int, int)">findRightEdgeMaximum</A> der Klasse <CODE>SubArray</CODE> zum Ermitteln der Randmaxima. Rufen Sie diese Klassenmethoden auf wie im folgenden Beispiel:</P>
+<BLOCKQUOTE>
+	<PRE><CODE>int <VAR>untergrenze</VAR>, <VAR>obergrenze</VAR>;
+int <VAR>linkesRandMaximum</VAR>;
+…
+<VAR>linkesRandMaximum</VAR> = SubArray.findLeftEdgeMaximum(<VAR>array</VAR>, <VAR>untergrenze</VAR>, <VAR>obergrenze</VAR>).getSum();</CODE></PRE>
+</BLOCKQUOTE>
+<P>Die Unter- und Obergrenze definieren denjenigen Teil des Arrays, von dem das Randmaximum gesucht werden soll; diese Grenzen gehen aus Ihrem Algorithmus hervor. Die Variable <VAR>linkesRandMaximum</VAR> hat nach Ausführung der obigen Anweisung dann genau den Wert der höchstmöglichen Summe aller Sub-Arrays, die in <VAR>array</VAR> bei <VAR>untergrenze</VAR> beginnen.</P>
+
+<H3 ID="aufgabe8-2">Aufgabe 8-2</H3>
+<P>Verwenden Sie die Java-Anwendung „MsaRacer“ zur Analyse des Laufzeitverhaltens der vier implementierten Lösungsverfahren des Maximum–Sub-Array–Problems. Die Anwendung besteht aus einem Java-Archiv, in dem alle <I>.class</I>- und <I>.java</I>-Dateien gebündelt sind. Starten Sie die Anwendung durch Doppelklick auf die <I><ABBR TITLE="Java-Archiv">.jar</ABBR></I>-Datei oder durch folgenden Kommandozeilen-Befehl: <BR><CODE><SPAN TITLE="Prompt">$</SPAN> <KBD>java -jar MsaRacer.jar</KBD></CODE></P>
+<P>Die Anwendung „MsaRacer“ finden Sie bei den <A HREF="../../unterlagen/MaximumSubArray">Maximum–Sub-Array–Unterlagen</A>.</P>
+<P>Ergänzend können Sie im Mac-Pool das Unix-Werkzeug „time“ auf der Kommandozeile wie folgt benutzen: <BR><CODE><SPAN TITLE="Prompt">$</SPAN> <KBD>time java <SAMP>Klassenname</SAMP></KBD></CODE></P>
+
+<PRE ID="id">$Id: HEADER.html,v 1.3 2008/06/04 18:24:12 aj3 Exp $</PRE>
+<DIV ID="dateien">

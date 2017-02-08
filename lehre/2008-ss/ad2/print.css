@@ -1,0 +1,80 @@
+/* www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t
+ * Print Stylesheet
+ * Version 0.1
+ * CSS layer 2
+ *
+ * by Arne Johannessen
+ * mailto:joar0011@hs-karlsruhe.de
+ *
+ * $Id: print.css,v 1.1 2008/04/03 16:12:58 aj3 Exp $
+ */
+
+BODY {
+	margin: 0;
+	padding: 1mm;
+	max-width: none;
+	font: normal 9.9pt "Times", serif;
+	line-height: 11pt;
+}
+* {
+	color: black !important;
+}
+
+#head, H2 {
+	position: static;
+	height: auto;
+	color: black;
+	background-color: white;
+	overflow: visible;
+}
+#head H1, PRE#id {
+	margin: 0;
+	padding: 0;
+	height: auto;
+	border-left-style: none;
+	font-size: 8pt;
+	font-weight: normal;
+}
+H2 {
+	margin-top: 1em;
+	font-size: 11pt;
+}
+H1, H2, H3, H4 {
+	page-break-after: avoid;
+}
+UL, OL, LI {
+	page-break-inside: avoid;
+}
+
+#menu, #dateien {
+	display: none;
+}
+
+LI P {
+	margin-bottom: 0 !important;
+}
+
+CODE, CODE * {
+	font-size: 7pt !important;
+	line-height: 8pt;
+}
+CODE VAR {
+	font-style: inherit;
+}
+
+/* blatt5 special
+OL>LI>UL>LI>P, OL>LI>UL>LI>UL {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+OL>LI>UL>LI {
+	margin-bottom: .5em;
+}
+OL>LI#annevk>UL>LI {
+	margin-bottom: 0;
+}
+PRE#id {
+	margin-top: 7pt;
+	font-size: 7pt;
+}
+*/

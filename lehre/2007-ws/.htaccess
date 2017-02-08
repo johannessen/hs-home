@@ -1,0 +1,75 @@
+# ~joar0011/ws07/ad2-t
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id: .htaccess $
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	AddDescription 'Algorithmen und Datenstrukturen 2' ad2
+	AddDescription 'Klassendokumentation (Javadoc)' 'doc'
+	
+	# create a link
+	AddDescription '-> http://www.volkervonnathusius.de/#studium' 'Manuskript'
+	AddDescription '-> http://www.bluej.org/' 'BlueJ'
+	AddDescription '-> http://www.codingmonkeys.de/subethaedit/old.de.html' 'SubEthaEdit 2.2'
+	AddDescription '-> http://www.barebones.com/products/textwrangler/download_2_1_3.shtml' 'TextWrangler 2.1'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'BlueJ' 'SubEthaEdit 2.2' 'TextWrangler 2.1'
+</IfModule>
+
+<IfModule mod_alias.c>
+	Redirect permanent '/~joar0011/lehre/2007-ws/ad2/unterlagen/Manuskript' 'http://www.volkervonnathusius.de/#studium'
+	Redirect permanent '/~joar0011/lehre/2007-ws/ad2/unterlagen/BlueJ' http://www.bluej.org/
+	Redirect permanent '/~joar0011/lehre/2007-ws/ad2/unterlagen/SubEthaEdit 2.2' http://www.codingmonkeys.de/subethaedit/old.de.html
+	Redirect permanent '/~joar0011/lehre/2007-ws/ad2/unterlagen/TextWrangler 2.1' http://www.barebones.com/products/textwrangler/download_2_1_3.shtml
+	
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt3/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt4/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt5/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt6/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt7/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt8/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt9/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/unterlagen/doc
+	
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt1 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt2 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt3 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt3
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt4 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt4
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt5 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt5
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt6 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt6
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt7 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt7
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt8 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt8
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.entwurf/blatt9 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt9
+	
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt1 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt2 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt3 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt3
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt4 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt4
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt5 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt5
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt6 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt6
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt7 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt7
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt8 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt8
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/.blatt9 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt9
+	
+	Redirect gone /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt10
+	
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/MaximumSubArraySolver.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/SubArray.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt2/Loesung13.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/Loesung13.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt3/ArraySum.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/ArraySum.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt3/Loesung12.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/Loesung12.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt4/MaximumSubArraySolver.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/MaximumSubArraySolver.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt4/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt1/SubArray.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt7/LinearList.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt6/Loesung61.java
+	Redirect permanent /~joar0011/lehre/2007-ws/ad2/aufgaben/blatt8/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2007-ws/ad2/aufgaben/blatt7/KeyNotFoundException.java
+</IfModule>
+
+<IfModule mod_mime.c>
+	AddType application/x-java-archive .jar
+</IfModule>

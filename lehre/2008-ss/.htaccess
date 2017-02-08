@@ -1,0 +1,76 @@
+# ~joar0011/ss08/ad2-t
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id: .htaccess $
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	AddDescription 'Algorithmen und Datenstrukturen 2' ad2
+	AddDescription 'Klassendokumentation (Javadoc)' 'doc'
+	
+	# create a link
+	AddDescription '<STRONG>inoffizieller Mitschrieb</STRONG> eines Kommilitonen' 'Vorlesungsmitschrieb'
+	AddDescription 'BlueJ-Umgebung' 'BlueJ'
+	AddDescription 'ein Mac-Texteditor' 'TextWrangler'
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Manuskript' 'Vorlesungsmitschrieb' 'BlueJ' 'TextWrangler'
+</IfModule>
+
+<IfModule mod_alias.c>
+	Redirect permanent '/~joar0011/lehre/2008-ss/ad2/unterlagen/Manuskript' http://www.home.hs-karlsruhe.de/~vovo0011/Web/Skripte/
+	Redirect permanent '/~joar0011/lehre/2008-ss/ad2/unterlagen/Vorlesungsmitschrieb' 'http://www.volkervonnathusius.de/#studium'
+	Redirect permanent '/~joar0011/lehre/2008-ss/ad2/unterlagen/BlueJ' http://www.bluej.org/
+	Redirect permanent '/~joar0011/lehre/2008-ss/ad2/unterlagen/TextWrangler' http://www.barebones.com/products/textwrangler/
+#	Redirect temp '/~joar0011/lehre/2008-ss/ad2/unterlagen/doc/' http://java.sun.com/j2se/1.4.2/docs/api/overview-summary.html
+	
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt1/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt2/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt4/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt5/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt6/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt7/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt8/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt9/doc http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc
+	
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt1 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt1
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt2 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt2
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt3 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt4 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt4
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt5 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt5
+#	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt6 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt6
+#	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt7 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt7
+#	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt8 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt8
+#	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.entwurf/blatt9 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt9
+	
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt1 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt1
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt2 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt2
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt3 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt4 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt4
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt5 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt5
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt6 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt6
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt7 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt7
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt8 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt8
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/.blatt9 http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt9
+	
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt4/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/KeyNotFoundException.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt5/KeyNotFoundException.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/KeyNotFoundException.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt4/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt5/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt6/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt7/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt8/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt9/RandomisedArrayFactory.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt3/RandomisedArrayFactory.java
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/aufgaben/blatt8/SubArray.java http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/aufgaben/blatt7/SubArray.java
+	
+	Redirect permanent /~joar0011/lehre/2008-ss/ad2/unterlagen/doc/Welcome.html http://www.home.hs-karlsruhe.de/~joar0011/lehre/2008-ss/ad2/unterlagen/doc/package-summary.html
+	
+</IfModule>
+
+<IfModule mod_mime.c>
+	AddType application/x-java-archive .jar
+</IfModule>

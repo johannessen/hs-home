@@ -1,0 +1,17 @@
+# ~joar0011/ss06/ps1-t/src
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-05-31 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Skript Kapitel 8 Folien 25 ff.' DrawFkt1.java
+	AddDescription '-> ../handzettel' handzettel
+	AddDescription 'Utils-Klassendatei; notwendig' Utils.class
+	AddDescription 'Utils-Quellcode; optional'  Utils.java
+</IfModule>

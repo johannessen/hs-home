@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe E-3 – Tutorium Algorithmen und Datenstrukturen 2 – SS 2008</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ss08-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorien für Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe E-3</H2>
+<P>(<A HREF="./">Exkurs</A>)</P>
+<P>Begründen Sie, warum die rekursive Lösung eines Problems besser oder schlechter als die iterative Lösung sein könnte.</P>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>Vorteile einer Rekursion:</P>
+<UL>
+	<LI>viele Probleme lassen sich auf sich selbst zurückführen; Computer-implementiert ergibt das automatisch eine Rekursion</LI>
+	<LI>Algorithmus ist folglich bei manchen Problemen <EM>sehr</EM> einfach zu formulieren</LI>
+	<LI>Algorithmus ist häufig kurz, elegant und damit leicht verständlich</LI>
+	<LI>Code ist daher häufig leicht wartbar</LI>
+	<LI>einige komplexere Probleme lassen sich nicht ohne weiteres in eine Iteration umformulieren</LI>
+</UL>
+<P>Nachteile einer Rekursion:</P>
+<UL>
+	<LI>Kontextwechsel beim Methodenaufruf benötigt Rechenzeit (früher bei einigen Großrechnern so viel, dass an Rekursion überhaupt gar nicht zu denken war – beim <A HREF="http://de.wikipedia.org/wiki/IBM_704">IBM 704</A> z. B. war’s besonders schlimm) <!--cf. M. L. Scott. Programming Language Pragmatics. Morgan Kaufmann Publishers, San Francisco, CA, Vereinigte Staaten. p. 110--></LI>
+	<LI>bei jedem Rekursionsschritt wird ein zusätzlicher Methoden-Kontext auf den Stack gelegt; aufgrund der begrenzten Stackgröße der gängigen Laufzeitumgebungen (Java: Stapel-Größe 2<SUP>10</SUP>) kommt es bei tieferer Rekursion schnell zum Stapelüberlauf (Java: <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/StackOverflowError.html" HREFLANG="en">StackOverflowError</A>) mit Programmabsturz</LI>
+	<LI>Laufzeitverhalten weniger leicht zu bestimmen als bei Iteration</LI>
+</UL>
+<P>Als Folge empfiehlt sich eine Rekursion in Java vor allem dann, wenn bekannt ist, dass die Rekursionstiefe nicht sehr groß ist. Dies ist bei allen Divide-and-Conquer–Algorithmen gegeben (logarithmische Baumtiefe!). Auch bei einigen anderen mathematischen Problemen ist dies der Fall, etwa bei Taylor-Entwicklungen.</P>
+<P>Auch in den Geowissenschaften gibt es Beispiele: Der Geodät Egon Dorrer zeigt eine Möglichkeit, die Länge eines Ellipsoid-Bogens mit Hilfe einer rekursiven Implementierung der <SPAN LANG="en">Descending Landen Transformation</SPAN> zu ermitteln [<CITE><ABBR LANG="la">cf.</ABBR> Grafarend <ABBR LANG="la">et al.</ABBR> 2003, <I STYLE="font-style: normal">Geodesy – the challenge of the 3rd millennium,</I> <ABBR LANG="la">pp.</ABBR> 293–298</CITE>].</P>
+
+<ADDRESS ID="author">Arne Johannessen, 28. Mai 2008</ADDRESS>
+<!-- $Id: LoesungE3.html,v 1.5 2008/05/28 19:59:10 aj3 Exp $ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="./">Exkurs</A></LI>
+		<LI><A HREF="../blatt5/">Blatt 5</A></LI>
+		<LI><A>Blatt 6</A></LI>
+		<LI><A>Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

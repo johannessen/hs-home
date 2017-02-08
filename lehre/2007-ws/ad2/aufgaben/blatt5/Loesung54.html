@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 5-4 – Tutorium Algorithmen und Datenstrukturen 2 – WS 2007/08</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ws07-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorien für Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 5-4</H2>
+<P>(<A HREF="./">Übungsblatt 5</A>)</P>
+<P>Betrachten Sie Ihre Klassenstruktur aus Aufgabe 5-3 und das folgende Code-Fragment.</P>
+<BLOCKQUOTE><PRE><CODE>GeographicPosition <VAR>p1</VAR>, <VAR>p2</VAR>;
+…  // Konstruktion der Objekte
+System.out.println(<VAR>p1</VAR>.distanceFrom(<VAR>p2</VAR>));</CODE></PRE>
+</BLOCKQUOTE>
+<OL TYPE="a">
+<LI>Ist dieses Code-Fragment syntaktisch korrekt? Begründen Sie Ihre Antwort.</LI>
+<LI>Ist dieses Code-Fragment semantisch korrekt? Begründen Sie Ihre Antwort.</LI>
+<LI>Was folgern Sie aus dieser Situation in Bezug auf das Prinzip der Vererbung in der objektorientierten Programmierung?</LI>
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI>
+	<P>Das Code-Fragment ist syntaktisch korrekt. Nachgewiesen werden kann dies am Einfachsten durch Compilieren; sofern diese Anweisungen dazu in eine Methode geschrieben werden (wo sie nämlich hingehören, wie alle Anweisungen) und die Klassen <CODE>GeographicPosition</CODE> und <CODE>Position</CODE> beide zur Verfügung stehen, treten keine Fehler zur Compile-Zeit auf.</P>
+	<P>Ein formaler Nachweis wäre mit Hilfe der <A HREF="http://java.sun.com/docs/books/jls/second_edition/html/jTOC.doc.html" HRAFLANG="en">Java Language Specification</A> möglich.</P>
+	<P>Für uns genügt sicherlich eine grobe Beschreibung der einzelnen Anweisungen. In der ersten Zeile werden zwei (lokale) Variablen vom Typ <CODE>GeographicPosition</CODE> deklariert. Die Variablen werden nicht gleichzeitig initialisiert; eine Zuweisung entsprechender Objekte erfolgt im zweiten (nicht dargestellten) Schritt. Die letzte Zeile ruft die Objektmethode <CODE>distanceFrom(Position)</CODE> auf und gibt den Rückgabewert auf der Standardausgabe aus.</P>
+	<P>Dieser Methodenaufruf ist erlaubt, weil <CODE>Position</CODE> eine Superklasse von <CODE>GeographicPosition</CODE> ist (<CODE>class GeographicPosition extends Position</CODE>). Anschaulich kann man dieses Verhältnis auch anders formulieren: <EM>Jede geographische Position ist gleichzeitig auch eine (allgemeine) Position.</EM></P>
+</LI>
+<LI>
+	<P>Wie die Entfernung zwischen zwei <EM>nicht näher spezifizierten</EM> Koordinatenpaaren ermittelt wird, hängt immer von der Art der Koordinaten ab. Kartesische Koordinaten werden zum Beispiel anders behandelt als Polarkoordinaten. Folglich ist es nicht möglich, eine Methode zur Entfernungsberechnung aus nichts weiter als zwei beliebigen Koordinatenpaaren <EM>allgemeingültig</EM> anzugeben.</P>
+	<P>Im Lösungsvorschlag zu Aufgabe 5-3 (c) wurde von kartesischen Koordinaten ausgegangen und folglich der Satz des Pythagoras verwendet. Dies ist für geographische Koordinaten offensichtlich unzulässig, weil es zu einem falschen Ergebnis führt. (Beispiel: <VAR>φ<SUB>1</SUB></VAR> = 60°, <VAR>λ<SUB>1</SUB></VAR> = 0°, <VAR>φ<SUB>2</SUB></VAR> = 60°, <VAR>λ<SUB>2</SUB></VAR> = 10° ergibt eine mit Pythagoras errechnete Distanz von 10° [≈ 1100 km auf der Erde], aber die tatsächliche Entfernung beträgt auf der Erde nur etwa 550 km [5°].)</P>
+	<P>Folglich ist dieser Code-Abschnitt <EM>nicht</EM> semantisch korrekt.</P>
+</LI>
+<LI>
+	<P>Offensichtlich ist das objektorientierte Prinzip der Erweiterung von Klassenstrukturen durch Vererbung nicht immer problemlos.</P>
+	<P>Das Problem war in dieser Klassenstruktur das Hinzufügen der Methode für die Entfernungsberechnung zur allgemeinen Oberklasse <CODE>Position</CODE>. Instanzen der Unterklassen erben solche neuen Methoden automatisch – selbst dann, wenn sie im Kontext der Unterklasse gar nicht sinnvoll sind.</P>
+	<P>Solche Probleme lassen sich umgehen, indem man Klassenstrukturen sorgfältig plant. In Fällen wie dem vorliegenden würde man für jede Art von Koordinaten eine eigene Unterklasse von <CODE>Position</CODE> erstellen und <CODE>Position</CODE> selbst dann so deklarieren, dass sie nicht instanziiert werden kann (also nur Objekte der verschiedenen Unterklassen konstruiert werden können). (Dazu setzt man entweder das Zugriffsrecht aller Konstruktoren auf <CODE>private</CODE> oder man deklariert die Klasse als abstrakt (<CODE>abstract class</CODE>).)</LI>
+	<P>(Eine moderne Lösung dieser Problematik stellt das <A HREF="http://en.wikipedia.org/wiki/Decorator_pattern" HREFLANF="en">Decorator-Pattern</A> dar.)</P>
+</OL>
+
+<ADDRESS ID="author">Arne Johannessen, 4. Dezember 2007</ADDRESS>
+<!-- $Id: Loesung54.html,v 1.5 2008/01/10 16:32:18 arne Exp $ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Blatt 4</A></LI>
+		<LI><A HREF="./">Blatt 5</A></LI>
+		<LI><A HREF="../blatt6/">Blatt 6</A></LI>
+		<LI><A HREF="../blatt7/">Blatt 7</A></LI>
+		<LI><A HREF="../blatt8/">Blatt 8</A></LI>
+		<LI><A HREF="../blatt9/">Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

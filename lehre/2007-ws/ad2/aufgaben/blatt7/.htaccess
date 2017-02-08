@@ -1,0 +1,3 @@
+<IfModule mod_autoindex.c>
+	AddIcon /~joar0011/images/GenericURLIcon.png 'LinearList.java'
+</IfModule>

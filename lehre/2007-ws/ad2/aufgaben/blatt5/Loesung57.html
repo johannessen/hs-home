@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ws07/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 5-7 – Tutorium Algorithmen und Datenstrukturen 2 – WS 2007/08</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ws07-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorien für Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 5-7</H2>
+<P>(<A HREF="./">Übungsblatt 5</A>)</P>
+<P>Sind folgende Java-Anweisungen syntaktisch korrekt (mit den Variablen <CODE><VAR>a</VAR></CODE> und <CODE><VAR>b</VAR></CODE> deklariert mit Typ <CODE>int</CODE>)? Begründen Sie Ihre Antwort.</P>
+<OL TYPE="a">
+<LI><CODE><VAR>a</VAR> + 1 = <VAR>b</VAR>;</CODE></LI>
+<LI><CODE>boolean <VAR>y</VAR> = true - false;</CODE></LI>
+<LI><CODE><VAR>b</VAR> = 1 & 2;</CODE></LI>
+<LI><CODE>int <VAR>a</VAR> = 'A';</CODE></LI>
+<LI><CODE>byte <VAR>x</VAR> = (byte)280;</CODE></LI>
+<LI><CODE>boolean <VAR>z</VAR> = (false == (10 >= 20));</CODE></LI>
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI>nicht korrekt: <CODE><VAR>a</VAR> + 1</CODE> ergibt einen Wert; auf der linken Seite einer Zuweisung (<CODE>=</CODE>) sind jedoch nur Variablen erlaubt</LI>
+<LI>nicht korrekt: der Subtraktions-Operator <CODE>-</CODE> kann nicht auf den Typ <CODE>boolean</CODE> angewandt werden</LI>
+<LI>korrekt: der „vollständige“ (Bit-weise) Und-Operator kann auf alle primitiven Typen angewandt werden (<CODE><VAR>b</VAR></CODE> erhält hier den Wert <CODE>3</CODE>)</LI>
+<LI>nicht korrekt: laut Aufgabenstellung ist bereits eine Variable <CODE><VAR>a</VAR></CODE> deklariert, Variablen müssen aber (nur) genau einmal deklariert werden <BR>(<EM>Anmerkung:</EM> wäre noch keine andere Variable <CODE><VAR>a</VAR></CODE> deklariert, würde diese Anweisung so korrekt sein und <CODE><VAR>a</VAR></CODE> den Wert <CODE>65</CODE> zuweisen)</LI>
+<LI>korrekt: obwohl der Wert <CODE>280</CODE> außerhalb des Wertebereichs des Typs <CODE>byte</CODE> liegt, ist diese Anweisung aufgrund des ausdrücklichen Type-Casts <code>(byte)</code> korrekt (<CODE><VAR>x</VAR></CODE> erhält hier den Wert <CODE>24</CODE> wegen des Bereichsüberlaufs)</LI>
+<LI>korrekt: Deklarierung und Initialisierung von <CODE><VAR>z</VAR></CODE> mit einem booleschen Wert, der Ausdruck <CODE>(10 >= 20)</CODE> ergibt false, <CODE>(false == false)</CODE> ergibt <CODE>true</CODE></LI>
+</OL>
+<P><STRONG>Anmerkung.</STRONG> Bei Problemen dieser Art ist das „Code Pad“ in BlueJ äußerst hilfreich. Siehe <A HREF="../../unterlagen/">Unterlagen</A>.</P>
+
+<ADDRESS ID="author">Arne Johannessen, 28. November 2007</ADDRESS>
+<!-- $Id: Loesung57.html,v 1.5 2007/12/12 06:42:23 arne Exp $ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Blatt 4</A></LI>
+		<LI><A HREF="./">Blatt 5</A></LI>
+		<LI><A HREF="../blatt6/">Blatt 6</A></LI>
+		<LI><A HREF="../blatt7/">Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>

@@ -1,0 +1,30 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 7: Maximum–Sub-Array, optimiert</H2>
+
+<H3 ID="sternaufgabe7-1">Aufgabe 7-1*</H3>
+<P>Schreiben Sie eine weitere Methode zur Lösung des Maximum&#8211;Sub-Array&#8211;Problems. Ihre Lösung soll die Effizienz O(<VAR>n</VAR>) haben.</P>
+
+<H3 ID="aufgabe7-2">Aufgabe 7-2</H3>
+<P>Erweitern Sie die Klasse, die Ihre Lösung zu Aufgabe 7-2 enthält, zu einem ausführbaren Programm. Schreiben Sie dazu eine Methode mit der Signatur <CODE>public static void main (String[])</CODE> zum Testen der Klasse. <!--Die <CODE>main</CODE>-Methode muss:--></P>
+<!--UL>
+	<LI>einen geeigneten Array vom Typ <CODE>int[]</CODE> erzeugen und mit Zahlen füllen,</LI>
+	<LI>eine neue Instanz (Objekt) Ihrer Klasse erstellen,</LI>
+	<LI>auf diesem Objekt Ihre Methode aus Aufgabe 6-1 aufrufen, und</LI>
+	<LI>das Ergebnis des Methodenaufrufs ausgeben.</LI>
+</UL-->
+
+<H3 ID="zusatzaufgabe7-3">Zusatzaufgabe 7-3</H3>
+<P>Bemerkenswert ist, dass die in der Vorlesung Algorithmen und Datenstrukturen 1 gezeigten Algorithmen zur Lösung des Maximum&#8211;Sub-Array&#8211;Problems allesamt lediglich die Summe des Ergebnisses berechnen. Das eigentlich benötigte Ergebnis ist aber natürlich der Sub-Array selbst.</P>
+<P>Ein Array ist definiert durch seine Elemente, ein <EM>Sub</EM>-Array durch seine Grenzen <EM>und</EM> den gesamten Array. Die Grenzen können wahlweise entweder durch Beginn und Ende oder durch Start und Länge angegeben werden. Der durch die Klasse <A HREF="doc/SubArray.html" TYPE="text/html">SubArray</A> definierte Datentyp <CODE>SubArray</CODE> ist zur eindeutigen Definition eines Sub-Arrays geeignet.</P>
+<P>Ändern Sie Ihre Lösung von Aufgabe 6-1 (naïves Verfahren) so ab, dass zusätzlich zur Summe die Grenzen des Sub-Arrays von der Methode zurückgegeben werden. Dazu muss statt der primitiven Datenstruktur <CODE>int</CODE> eine als Klasse definierte statische Datenstruktur der Rückgabetyp sein. Der Typ <CODE>SubArray</CODE> ist geeignet, andere Typen sind möglich.</P>
+</OL>
+
+<PRE ID="id">$Id: HEADER.html,v 1.1 2008/06/04 14:29:32 aj3 Exp $</PRE>
+<DIV ID="dateien">

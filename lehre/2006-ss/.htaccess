@@ -1,0 +1,14 @@
+# ~joar0011/ss06
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2006-11-13 by joar0011
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Tutorium Programmiersprachen 1' ps1
+</IfModule>

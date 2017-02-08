@@ -1,0 +1,14 @@
+# ~joar0011/ws06
+# server configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id: .htaccess,v 1.2 2008/03/01 20:24:40 aj3 Exp $
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Tutorium Programmiersprachen 2' ps2
+</IfModule>

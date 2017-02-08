@@ -1,0 +1,101 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 1: Statische Datenstrukturen</H2>
+
+<P><EM>Hinweis.</EM> Die Übungsaufgaben in diesem und in den folgenden Blättern wiederholen u. a. auch Stoff der Semester 1 bis 3. Ein gutes Java-Buch als Referenz wird dringend empfohlen. <EM>Zusätzlich</EM> sind folgende Vorlesungskapitel hilfreich:</P>
+<UL>
+<LI>Kapitel 4 „Statische Datenstrukturen“ der Vorlesung „Algorithmen und Datenstrukturen 1“</LI>
+<LI>Kapitel 5 „Dynamische Datenstrukturen“, Abschnitt 5.1 „Verkettete lineare Listen“ der Vorlesung „Algorithmen und Datenstrukturen 1“</LI>
+<LI>Kapitel 2 „Algorithmen und Datenstrukturen“ der Vorlesung „Programmiersprachen 1“</LI>
+<LI>Kapitel 3 „Grundelemente“ der Vorlesung „Programmiersprachen 1“</LI>
+</UL>
+
+<H3 ID="aufgabe1-1">Aufgabe 1-1</H3>
+<P>Sind folgende Java-Anweisungen fehlerfrei zu compilieren und auszuführen? Begründen Sie Ihre Antwort.</P>
+<OL TYPE="a">
+<LI><CODE>int <VAR>a</VAR>;<VAR>a</VAR> = 5;</CODE></LI>
+<LI><CODE>int <VAR>b</VAR> = 5;</CODE></LI>
+<LI><CODE>int <VAR>c</VAR>,<VAR>c</VAR> = 5;</CODE></LI>
+<LI><CODE>float <VAR>d</VAR> = 5,5;</CODE></LI>
+<LI><CODE>float <VAR>e</VAR> = 5;</CODE></LI>
+<LI><CODE>double <VAR>f1</VAR> = 5d; float <VAR>f2</VAR> = <VAR>f1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>g1</VAR> = 5e; float <VAR>g2</VAR> = <VAR>g1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>h1</VAR> = 5f; float <VAR>h2</VAR> = <VAR>h1</VAR>;</CODE></LI>
+<LI><CODE>long <VAR>i</VAR> = 0.0;</CODE></LI>
+<LI><CODE>float <VAR>j</VAR> = 0.0;</CODE></LI>
+<LI><CODE>float <VAR>k1</VAR> = 5f; double <VAR>k2</VAR> = <VAR>k1</VAR>;</CODE></LI>
+<LI><CODE>double <VAR>l</VAR> = 0.0;</CODE></LI>
+<LI><CODE>long <VAR>m</VAR> = (short)Integer.MAX_VALUE;</CODE></LI>
+<LI><CODE>short <VAR>n</VAR> = (long)0;</CODE></LI>
+</OL>
+
+<H3 ID="zusatzaufgabe1-2">Zusatzaufgabe 1-2</H3>
+<P>Sind folgende Java-Anweisungen syntaktisch korrekt (mit den Variablen <CODE><VAR>a</VAR></CODE> und <CODE><VAR>b</VAR></CODE> deklariert mit Typ <CODE>int</CODE>)? Begründen Sie Ihre Antwort.</P>
+<OL TYPE="a">
+<LI><CODE><VAR>a</VAR> + 1 = <VAR>b</VAR>;</CODE></LI>
+<LI><CODE>boolean <VAR>y</VAR> = true - false;</CODE></LI>
+<LI><CODE><VAR>b</VAR> = 1 & 2;</CODE></LI>
+<LI><CODE>int <VAR>a</VAR> = 'A';</CODE></LI>
+<LI><CODE>byte <VAR>x</VAR> = (byte)280;</CODE></LI>
+<LI><CODE>boolean <VAR>z</VAR> = (false == (10 >= 20));</CODE></LI>
+</OL>
+
+<H3 ID="aufgabe1-3">Aufgabe 1-3</H3>
+<P>Erstellen Sie eine möglichst einfache Java-Klasse, die beim Instanziieren den Text „Hello World.“ auf die Standard-Ausgabe schreibt.</P>
+
+<H3 ID="aufgabe1-4">Aufgabe 1-4</H3>
+<P>Ein kartographischer Verlag legt zur Verwaltung seiner Kartenprodukte eine Klassenstruktur mit folgenden Klassen und Attributen an. Setzen Sie diese Klassenstruktur entsprechend den folgenden Teilaufgaben in Java um!</P>
+<OL TYPE="a">
+<LI>
+	<P>Legen Sie eine Klasse <CODE>Karte</CODE> mit den folgenden Objektvariablen an:</P><UL>
+	<LI><CODE><VAR>lfdNummer</VAR></CODE> gebildet aus dem Jahr und einer 3-stelligen Ziffer (julianisches Datum)</LI>
+	<LI><CODE><VAR>titel</VAR></CODE></LI>
+	<LI><CODE><VAR>breite</VAR></CODE> des Formats in mm</LI>
+	<LI><CODE><VAR>hoehe</VAR></CODE> des Formats in mm</LI>
+	<LI><CODE><VAR>zustand</VAR></CODE> (Planung, KRE, KDH, Vertrieb, nicht mehr im Vertrieb)</LI>
+	<LI><CODE><VAR>ausgabe</VAR></CODE> als Datum mit Tag, Monat und Jahr</LI>
+	<LI><CODE><VAR>sparte</VAR></CODE> (Touristik, Straßen, Panorama, Spezial)</LI>
+	<LI><CODE><VAR>nettoPreis</VAR></CODE> in Euro mit Cent-Beträgen</LI>
+	<LI>mindestens ein weiteres Attribut Ihrer Wahl</LI>
+	</UL><P>(Vergleichen Sie diese Aufgabenstellung mit der Studienarbeit zur Vorlesung „Datenbanken und Informationssysteme 2“!)</P>
+</LI>
+<LI>
+	<P>Eine bereits im Verlag vorhandene Spezifikation einer relationalen Datenbank (Oracle SQL) enthält die folgenden Angaben zum Thema der Abteilungen und Mitarbeiter. Setzen Sie diesen Teil der Spezifikation in nur zwei Java-Klassen <CODE>Abteilung</CODE> und <CODE>Mitarbeiter</CODE> um! Beachten Sie dabei, dass dies sinnvollerweise nicht immer eins zu eins geschehen sollte.</P>
+	<UL><LI>
+		<P>Tabelle der <EM>Abteilungen</EM> mit den Spalten:</P><UL>
+		<LI>Name (Leitung und Planung, KRE, KDE, Vertrieb)</LI>
+		<LI>Budget in Euro</LI>
+		</UL>
+	</LI><LI>
+		<P>Tabelle der <EM>Mitarbeiter</EM> mit den Spalten:</P><UL>
+		<LI>Name</LI>
+		<LI>Vorname</LI>
+		<LI>Mitarbeiter-Stellennummer</LI>
+		<LI>Vorgesetzten-Stellennummer</LI>
+		<LI>Geburtsdatum</LI>
+		</UL>
+	</LI><LI>
+		<P>Tabelle der <VAR>n</VAR> : <VAR>m</VAR>–Relation <EM>Abteilung–Mitarbeiter</EM> mit den Spalten:</P><UL>
+		<LI>Name der Abteilung</LI>
+		<LI>Mitarbeiter-Stellennummer</LI>
+		<LI>Stunden in der Woche</LI>
+		</UL>
+		<P>(Einige Mitarbeiter arbeiten in mehreren Abteilungen.)</P>
+	</LI></UL>
+	<P>Verwenden Sie Namen mit kleinen Anfangsbuchstaben für alle Variablen! In Java sollten nur Klassen Namen mit großem Anfangsbuchstaben haben.</P>
+</LI>
+<LI><P>Schreiben Sie eine Klasse <CODE>Start</CODE> mit einer Methode <CODE>main</CODE>, in der jeweils mindestens zwei Objekte jeder der in den vorhergehenden Teilaufgaben deklarierten Klassen konstruiert und vollständig mit sinnvollen Werten gefüllt werden.</P></LI>
+<LI><P>Erstellen Sie ein Klassenstrukturdiagramm für alle Klassen dieser Aufgabe. Vergleichen Sie dieses Diagramm mit dem Entity-Relationship–Diagramm in der Studienarbeit zur Vorlesung „Datenbanken und Informationssysteme 2“.</P></LI>
+</OL>
+
+<H3 ID="aufgabe1-5">Aufgabe 1-5</H3>
+<P>Welches (mögliche) Problem haben Sie bei der Umsetzung der <VAR>n</VAR> : <VAR>m</VAR>–Relation in Java in Teilaufgabe 1-4 (b) festgestellt?</P>
+
+<PRE ID="id">$Id: HEADER.html,v 1.1 2008/04/30 01:13:45 aj3 Exp $</PRE>
+<DIV ID="dateien">

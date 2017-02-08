@@ -1,0 +1,58 @@
+# virtual directory ~/joar0011/work/ configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# $Id: .htaccess $
+
+
+
+<IfModule mod_autoindex.c>
+	# Create some descriptions
+	IndexOptions -SuppressDescription
+	
+	AddDescription 'Diplomarbeit' DA
+	AddDescription 'Datenbanken und Informationssysteme (Praktikum)' dbis-p
+	AddDescription 'Geographische Informationssysteme I (Praktikum)' gis1-p
+	AddDescription 'Geographische Informationssysteme II (Praktikum)' gis2-p
+	AddDescription 'Geographische Informationssysteme III (Praktikum)' gis3-p
+	AddDescription 'Integrale Kartographie' ik
+	AddDescription 'Kartenverwandte Darstellungen' kvd
+	AddDescription 'Thematische Kartographie I' tk1
+	AddDescription 'Thematische Kartographie III' tk3
+	AddDescription 'Skriptsprachen / Objektorientierte Programmierung' oop
+	AddDescription 'Photogrammetrie (Praktikum)' photo-p
+	AddDescription 'Photogrammetrie' photo
+</IfModule>
+
+
+
+# ex ~joar0011/ws05
+
+<IfModule mod_autoindex.c>
+	AddDescription 'Digitale Bildverarbeitung' dbv
+	AddDescription 'Grafikprogramme' gp
+	AddDescription 'Mediendesign und -integration I' mdi1
+	AddDescription 'Programmiersprachen I (&Uuml;bungen)' ps1-ue
+</IfModule>
+
+
+
+# ex ~joar0011/ss05
+
+<IfModule mod_autoindex.c>
+	AddDescription 'Kartenkunde' kk
+	AddDescription 'Klimatologie und Hydrologie' klima
+	AddDescription 'Topographie' topo
+	AddDescription 'Vermessungskunde' verm
+</IfModule>
+
+
+
+# ex ~joar0011/ss06
+
+<IfModule mod_autoindex.c>
+	AddDescription 'Betriebssysteme' bs
+	AddDescription 'Mediendesign und -integration II' mdi2
+	AddDescription 'Kartendesign und -herstellung II' kdh2
+	AddDescription 'Kartennetzlehre' knl
+</IfModule>

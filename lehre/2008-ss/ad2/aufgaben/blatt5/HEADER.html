@@ -1,0 +1,43 @@
+<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+</STYLE>
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium Algorithmen und Datenstrukturen 2</H1></DIV>
+
+<H2 ID="blatt">Übungsblatt 5: Fortgeschrittene Suchverfahren</H2>
+
+<H3 ID="sternaufgabe5-1">Aufgabe 5-1*</H3>
+<P>Implementieren Sie einen binären Suchalgorithmus für Arrays vom Typ <code>int[]</code>.</P>
+<P><STRONG>Tipp.</STRONG> Verwenden Sie folgende Methodensignatur: <BR><CODE>int find (int[] array, int key, int leftIndex, int rightIndex)</CODE></P>
+<P>Zur Erinnerung: Das Prinzip der binären Suche besteht darin, die Mitte des (sortierten) Suchraums zu betrachten und anschließend den Suchraum für die weitere Suche auf eine der beiden Hälften einzuschränken. Die Mitte des Suchraums ergibt sich aus folgender Formel: <BR>
+<VAR>m</VAR> = (<VAR>r</VAR> + <VAR>l</VAR>) / 2 </P>
+
+<H3 ID="aufgabe5-2">Aufgabe 5-2</H3>
+<P>Schätzen Sie grob das Laufzeitverhalten des Algorithmus zur binären Suche auf einer linearen Liste ab.</P>
+
+<H3 ID="sternaufgabe5-3">Aufgabe 5-3*</H3>
+<P>Das Prinzip der binären Suche besteht darin, die Mitte des Suchraums zu betrachten und anschließend den Suchraum für die weitere Suche auf eine der beiden Hälften einzuschränken. Die Mitte des Suchraums ergibt sich aus folgender Formel: <BR>
+<VAR>m</VAR> = (<VAR>r</VAR> + <VAR>l</VAR>) / 2 = <VAR>l</VAR> + (<VAR>r</VAR> &minus; <VAR>l</VAR>) · ½ </P>
+<P>Anstatt ungezielt die Mitte zu nehmen, kann man auch schätzen, an welcher Position sich der gesuchte Schlüssel wahrscheinlich befindet. Anstelle der Mitte wird dann diese geschätzte Position betrachtet. Die folgende Formel ersetzt den Faktor ½ durch eine lineare Interpolation. <BR>
+<VAR>m</VAR> = <VAR>l</VAR> + (<VAR>r</VAR> &minus; <VAR>l</VAR>) · (<VAR>k</VAR> &minus; <VAR>A<SUB>l</SUB></VAR>) / (<VAR>A<SUB>r</SUB></VAR> &minus; <VAR>A<SUB>l</SUB></VAR>)</P>
+<P>Implementieren Sie das Verfahren der Interpolationssuche in einer Methode analog zu Aufgabe 5-1.</P>
+
+<H3 ID="aufgabe5-4">Aufgabe 5-4</H3>
+<P>Die folgenden Teilaufgaben beziehen sich allgemein auf die in der Vorlesung behandelten Verfahren zum Suchen und Finden von Daten; es können beliebige Bedingungen an die Speicherung der Daten gestellt werden (etwa, dass sie sortiert sein müssen). Begründen Sie jeweils Ihre Antwort, z. B. durch Nennung des Namens eines geeigneten Verfahrens.</P>
+<OL TYPE="a">
+<LI>Gibt es ein Suchverfahren, das regelmäßig (also im <I LANG="en">average case</I>) mit konstantem Zeitaufwand O(1) zum Ergebnis führt?</LI>
+<LI>Gibt es ein Suchverfahren, das im <I LANG="en">average case</I> einen höheren als linearen Zeitaufwand O(<VAR>n</VAR>) hat?</LI>
+<LI>Gibt es ein Suchverfahren, das im <I LANG="en">worst case</I> einen geringeren als linearen Zeitaufwand O(<VAR>n</VAR>) hat?</LI>
+<LI>Welche(s) Verfahren sollten Sie selbst bevorzugt einsetzen? Weshalb?</LI>
+</OL>
+
+<H3 ID="zusatzsternaufgabe5-5">Zusatzaufgabe 5-5*</H3>
+<P>Beim Schritt von der binären Suche in Aufgabe 5-1 zur Interpolationssuche in 5-3 wurde die Effizienz der Suche verbessert, indem die Anzahl der nötigen Vergleiche deutlich minimiert wurde bei gleichzeitiger Inkaufnahme eines leicht erhöhten Rechenaufwands.</P>
+<P>Die Fibonacci-Suche verfolgt einen anderen Ansatz zur (theoretischen) Verbesserung der Effizienz der binären Suche: Sie benötigt in etwa gleich viele Vergleiche, hat dabei aber (theoretisch) einen noch geringeren Rechenaufwand als die binäre Suche.</P>
+<P>Implementieren Sie das Verfahren der Fibonacci-Suche in einer Methode analog zu Aufgabe 5-1.</P>
+
+
+<PRE ID="id">$Id: HEADER.html,v 1.1 2008/05/21 01:39:58 aj3 Exp $</PRE>
+<DIV ID="dateien">

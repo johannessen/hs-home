@@ -1,0 +1,3 @@
+<IfModule mod_autoindex.c>
+	AddIcon /~joar0011/images/GenericURLIcon.png 'Loesung13.java' 'Loesung13a.java' 'MaximumSubArraySolver.java' 'SubArray.java'
+</IfModule>

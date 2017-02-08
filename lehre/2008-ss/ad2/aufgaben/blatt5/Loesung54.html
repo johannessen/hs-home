@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de"><HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+	<LINK REV="made" HREF="mailto:joar0011&#64;hs-karlsruhe.de" TITLE="E-Mail an Arne Johannessen">
+	<LINK REL="contents" HREF="../../" TITLE="Arne Johannessen an der Hochschule Karlsruhe">
+	<LINK REL="start" REV="start" HREF="http://www.home.hs-karlsruhe.de/~joar0011/ss08/ad2-t/">
+	<TITLE>Lösungsvorschlag zu Aufgabe 5-4 – Tutorium Algorithmen und Datenstrukturen – SS 2008</TITLE>
+	<STYLE TYPE="text/css">
+@import url("../../screen.css");
+@import url("../../print.css") print;
+	</STYLE>
+</HEAD><BODY ID="www-home-hs-karlsruhe-de-joar0011-ss08-ad2-t">
+
+<DIV CLASS="hide">Zum <A HREF="#menu" ACCESSKEY="2">Menü</A> springen.</DIV>
+<DIV ID="head"><H1>Tutorium für Algorithmen und Datenstrukturen</H1></DIV>
+
+<H2 ID="aufgabe">Aufgabe 5-4</H2>
+<P>(<A HREF="./">Übungsblatt 5</A>)</P>
+<P>Die folgenden Teilaufgaben beziehen sich allgemein auf die in der Vorlesung behandelten Verfahren zum Suchen und Finden von Daten; es können beliebige Bedingungen an die Speicherung der Daten gestellt werden (etwa, dass sie sortiert sein müssen). Begründen Sie jeweils Ihre Antwort, z. B. durch Nennung des Namens eines geeigneten Verfahrens.</P>
+<OL TYPE="a">
+<LI>Gibt es ein Suchverfahren, das regelmäßig (also im <I LANG="en">average case</I>) mit konstantem Zeitaufwand O(1) zum Ergebnis führt?</LI>
+<LI>Gibt es ein Suchverfahren, das im <I LANG="en">average case</I> einen höheren als linearen Zeitaufwand O(<VAR>n</VAR>) hat?</LI>
+<LI>Gibt es ein Suchverfahren, das im <I LANG="en">worst case</I> einen geringeren als linearen Zeitaufwand O(<VAR>n</VAR>) hat?</LI>
+<LI>Welche(s) Verfahren sollten Sie selbst bevorzugt einsetzen? Weshalb?</LI>
+</OL>
+
+<H3 ID="vorschlag">Lösungsvorschlag</H3>
+<P>zu den Teilaufgaben:</P>
+<OL TYPE="a">
+<LI>
+	<P>Ja: Der Zugriff auf eine gute Hash-Tabelle liefert in der deutlichen Mehrzahl der Fälle das gewünschte Element beim ersten Zugriff zurück.</P>
+	<P>Eine Hash-Table ist eine Datenstruktur, in der Elemente möglichst an vorausberechneten Positionen abgelegt sind. Diese Positionen lassen sich beim Zugriff sehr schnell aus dem Schlüssel erneut berechnen und sollen so den direkten Zugriff ermöglichen. Nur dann, wenn für mehrere Elemente dieselbe Position berechnet wird, kommt es zu etwas längeren Laufzeiten. Siehe Kapitel 6 „Hash-Verfahren“ der Vorlesung „Algorithmen und Datenstrukturen 1.“</P>
+	<P>Der Zugriff auf eine Hash-Table hat im <I LANG="en">best case</I> O(1), im <I LANG="en">average case</I> ebenfalls O(1) und im <I LANG="en">worst case</I> O(<VAR>n</VAR>). Dieses traumhafte Laufzeitverhalten erkauft man sich mit einem vergleichsweise hohen Speicherbedarf.</P>
+	<P>In Java implementieren mehrere Klassen im Package <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/package-summary.html" HREFLANG="en">java.util</A> Hash-Tabellen, beispielsweise <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/LinkedHashMap.html" HREFLANG="en">LinkedHashMap</A>.</P>
+</LI>
+<LI>
+	<P>Nein: Bei <VAR>n</VAR> Elementen kann ich natürlich <EM>immer</EM> das gesuchte finden, indem ich jedes Element genau einmal anschaue. Dies entspricht aber gerade der sequentiellen Suche, so dass man besser die nehmen könnte.</P>
+	<P>(Praktisch gesehen kann man natürlich jeden lahmen Schrott programmieren, und einige Entwickler tun das auch regelmäßig. Die Frage bezog sich aber selbstverständlich auf <EM>sinnvolle</EM> Suchverfahren.)</P>
+	<!--P>Die sequentielle Suche hat im <I LANG="en">best case</I> O(1), im <I LANG="en">average case</I> O(<VAR>n</VAR>) und im <I LANG="en">worst case</I> ebenfalls O(<VAR>n</VAR>).</P-->
+</LI>
+<LI>
+	<P>Ja: Die binäre Suche hat sowohl im <I LANG="en">average case</I> als auch im <I LANG="en">worst case</I> O(log <VAR>n</VAR>).
+	<!--P>Die binäre Suche hat im <I LANG="en">best case</I> O(1), im <I LANG="en">average case</I> O(log <VAR>n</VAR>) und im <I LANG="en">worst case</I> ebenfalls O(log <VAR>n</VAR>).</P-->
+</LI>
+<LI>
+	<P>Der Hauptsatz der Software-Entwicklung lautet: <STRONG>Gar kein Code ist der beste Code.</STRONG></P>
+	<P>Demzufolge sollte von allen existierenden Algorithmen immer derjenige gewählt werden, der so einfach wie möglich und so schnell wie nötig ist. Dies ergibt sich auch aus der Überlegung, dass es bei den heutigen schnellen Computern wenig bringt, für nur ein paar Dutzend Elemente optimale Suchalgorithmen zu implementieren, aber im Gegensatz dazu die Wartbarkeit von Software immer mehr zum Problem wird.</P>
+	<UL>
+		<LI><P>In Java bietet die Klasse <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Arrays.html" HREFLANG="en">java.util.Arrays</A> eine Methode <CODE>binarySearch</CODE> zur binären Suche an. Zum Suchen in <STRONG>sortierten Arrays</STRONG> sollte <EM>immer</EM> diese Methode benutzt werden.</P></LI>
+		<LI><P>Zum Suchen in <STRONG>linearen Listen</STRONG> (z. B. Instanzen von <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/LinkedList.html" HREFLANG="en">LinkedList</A>) sollte eine sequentielle Suche bevorzugt werden. Das geht am besten mit einem Iterator über die Methode <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/util/Collection.html#iterator()" HREFLANG="en">iterator()</A>.</P></LI>
+		<LI><P>Ergebnisse einer <STRONG>SQL-Abfrage</STRONG> über <A HREF="http://de.wikipedia.org/wiki/Java_Database_Connectivity">JDBC</A> können mit Hilfe der Methode <A HREF="http://java.sun.com/j2se/1.4.2/docs/api/java/sql/ResultSet.html#next()" HREFLANF="en">next()</A> sequentiell durchsucht oder durchlaufen werden.</P></LI>
+		<LI><P>Andere Datenstrukturen erfordern meist eine eigene Implementierung. Im Zweifel sollten Sie zunächst mit einer <STRONG>sequentiellen Suche</STRONG> beginnen.</P></LI>
+	</UL>
+	<P>Nach Fertigstellung der Implementierung sollte die Geschwindigkeit ausgiebig getestet werden. Nur, wenn sie dann nicht ausreicht, sollte über trickreiche Optimierungen wie Interpolations- oder Fibonaccisuche nachgedacht werden.</P>
+	<!--P>Die Interpolationssuche hat im <I LANG="en">best case</I> O(1), im <I LANG="en">average case</I> O(log log<VAR>n</VAR>) und im <I LANG="en">worst case</I> O(<VAR>n</VAR>).</P-->
+</LI>
+</OL>
+
+<ADDRESS ID="author">Arne Johannessen, 4. Juni 2008</ADDRESS>
+<!-- $Id: Loesung54.html,v 1.5 2008/06/04 14:32:25 aj3 Exp $ -->
+
+<DIV ID="menu"><HR CLASS="hide"><STRONG CLASS="hide">Menü:</STRONG><UL>
+	<LI><A HREF="../../">Übersicht</A></LI>
+	<LI><A HREF="../../termine.html">Termine</A></LI>
+</UL><HR><UL>
+	<LI><A>Aufgaben:</A></LI>
+	<LI><UL>
+		<LI><A HREF="../blatt1/">Blatt 1</A></LI>
+		<LI><A HREF="../blatt2/">Blatt 2</A></LI>
+		<LI><A HREF="../blatt3/">Blatt 3</A></LI>
+		<LI><A HREF="../blatt4/">Exkurs</A></LI>
+		<LI><A HREF="./">Blatt 5</A></LI>
+		<LI><A HREF="../blatt6/">Blatt 6</A></LI>
+		<LI><A HREF="../blatt7/">Blatt 7</A></LI>
+		<LI><A>Blatt 8</A></LI>
+		<LI><A>Blatt 9</A></LI>
+	</UL></LI>
+	<LI><A HREF="../../unterlagen/">Unterlagen</A></LI>
+</UL><HR><UL>
+	<LI><A HREF="../../kontakt.html">Kontakt</A></LI>
+	<LI><A HREF="../../impressum.html">Datenschutz<BR>Impressum</A></LI>
+</UL><HR></DIV>
+
+</BODY></HTML>
