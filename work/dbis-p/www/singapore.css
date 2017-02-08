@@ -1,0 +1,308 @@
+/* $Id: singapore.css 2008-07-13 aj3 $
+ * @charset us-ascii;
+ * 
+ * Cascading Style Sheet for the Singapore DBIS Project,
+ * University of Applied Sciences, Karlsruhe.
+ * 
+ * Copyright (c) 2008 Arne Johannessen, Volker von Nathusius
+ * All rights reserved. See LICENSE for details.
+ */
+
+
+
+/* ===== document-wide defaults ===== */
+BODY {
+	margin: 0 .5em 1em 0;
+	padding: 0;
+	max-width: 50em;  /* avoid excessively long lines (those are hard to read) */
+	color: black;
+	background: white;
+	font-size: 91%;  /* Trebuchet has a fairly large x-height, thus it's okay to decrease the user's default a bit */
+	font-family: "Trebuchet MS", "Arial", "Lucida", sans-serif;
+	line-height: 1.15;
+}
+#skiplink, #menuheader {  /* accessiblity aids */
+	display: block;  /* keep rendering these so screen readers can pick 'em up */
+	position: absolute;
+	left: -1000px;  /* but move them some place where they can't be seen */
+	/* :KLUDGE: we're trading some accessibility for better usablity here; see Clark01 ch. 8 */
+}
+ABBR {
+	font-variant: inherit;
+	font-style: inherit;
+}
+
+
+
+/* ===== page layout ===== */
+
+/* BODY and H1 take their normal positions in the flow, but leave space
+ * on the left for the menu. */
+BODY {
+	margin-left: 19em;  /* space for the menu */
+}
+H1 {
+	height: 59px;  /* background image has pixel height */
+	margin: 0 0 .5em;  /* margin to main content */
+}
+
+/* The menu we want at the top-left corner of the document. The best way to
+ * achieve this is to use absolute positioning, which merely takes the element
+ * completely out of the normal flow (a desired side-effect in this case),
+ * enabling positioning with the 'top' and 'left' properties. */
+#sitemenu {
+	position: absolute;  /* enable 'top' and 'left' properties */
+	top: 0;
+	left: 0;
+	width: 19em;
+	height: 59px;  /* background image has pixel height */
+}
+
+/* Ditto for the query menu in the left-hand column. */
+#menu {
+	position: absolute;  /* enable 'top' and 'left' properties */
+	top: 59px;  /* background images have pixel height */
+	left: 0;
+	width: 17.5em;  /* leave 1.5em of margin to the right */
+}
+
+
+
+/* ===== masthead ===== */
+H1 {
+	margin-right: -.5em;
+	padding: 8px 100px 0 0;  /* background image has pixel dimensions */
+	height: 51px;  /* background image has pixel dimensions */
+	overflow: hidden;
+	color: #fc3;
+	background: #060 url("images/NS_logo.png") no-repeat right center;
+	font-size: 1em;
+	font-weight: normal;
+	font-style: italic;
+	line-height: .9;
+}
+H1 ABBR {
+	float: left;
+	margin: -.1ex 1em 0 0;
+	font-size: 2em;
+	letter-spacing: 0.1ex;
+}
+
+
+
+/* ===== site menu ===== */
+H1, #sitemenu {
+	border-bottom: solid #fc3 5px;
+}
+#sitemenu {
+	color: #060;
+	background: #fc3 url("images/header_breakline_green_59.png") no-repeat right top;
+}
+#sitemenu, #sitemenu LI {  /* get rid of default list presentation */
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#sitemenu LI A {
+	display: block;
+	margin: .5em;
+	color: #060;
+	background-color: transparent;
+	font-weight: bold;
+}
+
+
+
+/* ===== query menu ===== */
+
+/* sane indentation and vertical spacing */
+#menu UL {
+	display: inline-block;  /* gain layout in IE */
+}
+#menu, #menu UL, #menu LI {  /* get rid of default list presentation */
+	display: block;  /* make sure to un-do inline-block */
+	padding: 0;
+	margin: 0;
+}
+#menu {
+	padding: .5em 0;
+}
+#menu LI {
+	margin: .2em 0 .2em .5em;
+}
+
+/* nice-looking list bullets */
+#menu, #menu UL, #menu LI {
+	list-style-type: none;
+}
+#menu LI LI {
+	margin-left: 0;
+	padding-left: 5px;  /* width of list-bullet image */
+	background: url("images/list-dot.png") no-repeat 0 .6em;
+}
+
+/* menu items */
+#menu LI A, #menu LI STRONG, #menu LI.current A {  /* normal presentation  */
+	display: block;
+	margin: 0 0 0 .4em;
+	padding: .2em;
+	color: #060;
+	background-color: inherit;
+	text-decoration: none;  /* no underlines in the menu */
+}
+#menu LI A:link:hover, #menu LI A:visited:hover {  /* "mouse-over" state */
+	color: #060;
+	background-color: #feb;
+}
+#menu LI STRONG, #menu LI#current A {  /* "current item" state */
+	background: url("images/arrow.png") no-repeat right center;
+	font-weight: bold;
+	cursor: pointer;
+}
+#menu .disabled A {  /* "disabled/unavailable" state */
+	color: #9b9;
+	background: transparent;
+	cursor: default;
+}
+
+/* section headlines */
+#menu LI.subsection-header {
+	margin-top: 1.5em;
+	padding-bottom: .5ex;
+	border-bottom: solid #fc3 1px;
+	color: #060;
+	background: inherit;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .75em;
+	letter-spacing: 0.2ex;
+}
+
+
+
+/* ===== main content ===== */
+H2 {
+	margin: 0 0 1em;
+	font-size: 1em;
+}
+P {
+	margin: 1ex 0;
+}
+FORM {
+	margin: 0;
+}
+INPUT.numericvalue {
+	width: 2em;
+}
+IMG.fullwidth {
+	width: 100%;
+}
+.tip {
+	font-size: small;
+}
+.license {
+	clear: left;
+	font-size: small;
+}
+.license IMG {
+	float: left;
+	margin: .5ex 1ex 1ex 0;
+}
+
+/* table presentation */
+TABLE, THEAD, TBODY, TR, TH, TD {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+TABLE {
+	border-collapse: collapse;  /* we take care of cell spacing ourselves */
+}
+TD, TH {
+	padding: .1em .4em;  /* acceptable fall-back for horizontal spacing */
+	border-bottom: solid #060 1px;
+}
+TD:first-child, TH:first-child {
+	padding-left: 0;  /* no horizontal spacing before first column */
+}
+TD+TD, TH+TH {
+	padding-left: .8em;  /* have horizontal spacing between columns */
+	padding-right: 0;  /* no horizontal spacing after last column */
+}
+TH {
+	text-align: left;
+	padding-bottom: .3em;
+}
+TBODY .numericvalue {  /* $columnClass */
+	text-align: right;
+}
+TBODY .linename SPAN, LABEL.linename {  /* $columnClass */
+	padding: 0 .15em;
+	color: white;
+	background-color: #555;  /* fall-back value: white text needs dark background */
+	font-weight: bold;  /* improved readability of inverted text */
+}
+TBODY A.maplink, TBODY A.maplink IMG {
+	display: block;
+	margin: 0 auto;  /* center image in table cell */
+}
+TBODY A.maplink IMG {
+	width: 25px;  /* image has pixel dimensions */
+	height: 18px;  /* image has pixel dimensions */
+}
+
+/* styles for Google Maps */
+DIV#selectionmap {
+	width: 100%;
+	height: 350px;  /* Google Maps requires pixels here */
+	margin: .5em 0;
+}
+DIV#selectionmap.maponly {
+	height: 500px;  /* Google Maps requires pixels here */
+}
+#standbymsg IMG {
+	width: 16px;  /* image has pixel dimensions */
+	height: 16px;  /* image has pixel dimensions */
+}
+.stoplegend {
+	letter-spacing: 0.2ex;
+}
+IMG.stoplegend, .stoplegend IMG {
+	width: 14px;  /* image has pixel dimensions */
+	height: 14px;  /* image has pixel dimensions */
+	padding: 0 .5ex .2em;
+	vertical-align: middle;
+}
+
+
+
+/* ===== modal map dialog ===== */
+#mapdialog {  /* this is the grey overlay in the background */
+	visibility: hidden;  /* initially hidden, made visible dynamically */
+	position: fixed;  /* don't scroll the dialog (the user'd be able to break out) */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;  /* make sure the dialog covers the rest of the page */
+	background: url("images/overlay.png") repeat;
+}
+#mapdialog #dialogcontent {  /* this is the actual dialog */
+	margin: 5% auto 0%;  /* the dialog shall be horizontally centered */
+	padding: .6em 1em;
+	width: 600px;  /* Google Maps requires pixels here */
+	color: black;
+	background: white;
+	border: 1px solid black;
+}
+BUTTON {  /* we only use BUTTONs to open this dialog */
+	padding: 2px 1px;  /* these values give best browser interoperability */
+	vertical-align: middle;
+}
+BUTTON IMG {
+	display: block;  /* a BUTTON is treated as inline-block by browsers */
+	margin: 0;
+	padding: 0;
+	width: 25px;  /* image has pixel dimensions */
+	height: 18px;  /* image has pixel dimensions */
+}

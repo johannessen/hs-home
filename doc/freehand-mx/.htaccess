@@ -1,0 +1,18 @@
+# virtual directory ~/joar0011/freehand-mx configuration file
+# by Arne Johannessen
+# mailto:joar0011@hs-karlsruhe.de
+
+# last modified 2011-12-18 by joar0011
+
+
+#<IfModule mod_access.c>
+	Order Deny,Allow
+	Deny from all
+	Allow from 193.196.0.0/15
+	Satisfy all
+#</IfModule>
+
+
+<IfModule mod_alias.c>
+	Redirect permanent /~joar0011/doc/freehand-mx/Welcome.html "http://www.home.hs-karlsruhe.de/~joar0011/doc/freehand-mx/Using FreeHand MX.htm"
+</IfModule>

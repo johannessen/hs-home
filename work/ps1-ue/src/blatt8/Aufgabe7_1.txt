@@ -1,0 +1,18 @@
+Arne Johannessen
+zu Blatt 8, Aufgabe 1:
+
+
+> Wie heisst die vom Programm durchgefuehrte mathematische Operation?
+
+Fakultaet
+
+
+> In welcher Variablen steht das Ergebnis der Operation?
+
+t [in T.c(int)]
+y [in T.main(String[])]
+
+
+> Wie lautet das Ergebnis fuer den Startwert 10?
+
+3628800

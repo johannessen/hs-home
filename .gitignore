@@ -1,0 +1,13 @@
+# not checked in because of lack of copyright *and* lack of relevancy
+/doc/freehand-mx/*.htm
+/doc/freehand-mx/images/
+
+# not yet checked in because of large file size (to be revisited)
+/work/3dv/
+/work/gis1-p/
+/work/gis2-p/
+/work/gis3-p/
+/work/klima/
+/work/kvd/
+/work/photo-p/
+/work/tk3/

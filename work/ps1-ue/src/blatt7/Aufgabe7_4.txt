@@ -1,0 +1,9 @@
+zu Blatt 7, Aufgabe 4:
+
+Ein fehlendes "private" ist in der Regel nicht sehr schlimm, weil Java dann auf "package private" zurueckfaellt, und innerhalb eines Paktes erfahrungsgemaess meist noch etwas Uebersicht herrscht. Problematisch wird es aber vor allem, wenn "public" statt "private" gesetzt wird. Dadurch wird die Kapselung komplett aufgehoben.
+
+Fehlende Kapselung kann potentiell schwere Wartbarkeits-Alptraeume ausloesen.
+
+Selbst erlebtes Beispiel:
+
+Entwickler A arbeitet am HI, Entwickler B an der DB-Schnittstelle. A will ploetzlich die Low-Level DB-IDs vergleichen, weil er irrigerweise glaubt, damit Objekte besser auf Identitaet pruefen zu koennen als mit Javas ==-Operator. Also geht er kurzerhand in den Code von B und wrift die Kapselung weg (setzt also die Methode "getId()" in der Klasse "DatenBankObjekt" von "private" auf "public"). Kurz darauf aendert A die Implementierung der Datenbank so, dass die in den DatenBankObjekten gespeicherten IDs nicht mehr immer einmalig sind. Einige Tage (!) spaeter wundern sich alle, warum irgendwie nichts mehr richtig funktioniert, und verbringen fast drei Manntage mit der Fehlersuche. Das dauert so lange, weil A nichts von den Aenderungen am DatenBankObjekt weiss, und B nichts von den Aenderungen an den DatenBank-IDs weiss. Beibehaltung der kapselung haette das Problem vermieden.

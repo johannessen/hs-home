@@ -1,0 +1,56 @@
+Loesung zu Aufgabe 2 auf Uebungsblatt 7, Vorlesung Programmiersprachen I
+Arne Johannessen
+Index: Programm.java
+===============================================================================
+--- http://www.christophweser.de/java/aufgaben/WS2005/Programm.java	2005-12-01 12:45:45 +0000
++++ file:././././././Programm.java	2005-12-04 05:37:41 +0100
+@@ -1,38 +1,39 @@
+ public class Programm
+ {
+-    private int [] zahlen = { 1, 8, 4, 6, 2, 20, 30, 3, 17, 15, 19, 9, 12, 13, 0 }
++    private int [] zahlen = { 1, 8, 4, 6, 2, 20, 30, 3, 17, 15, 19, 9, 12, 13, 0 };
+ 
+-    public TestProgramm()
++    public Programm()
+     {
+     }
+ 
+     private void sortieren()
+     {
+         //der BubbleSort
+-        for (int i = 0; i < zahlen.length; i++);
++        for (int i = 0; i < zahlen.length; i++)
+         {
+             for (int j = zahlen.length-1; j > i; j--)
+             {
+                 if (zahlen[j] < zahlen[i])
+                 {
+                     int temp = zahlen[j];
+                     zahlen[j] = zahlen[i];
+                     zahlen[i] = temp;
+                 }
+             }
+         }
+ 
+         //Ausgabe!
+# Ausgabe von Index 0 zwecks vernuenftigen Formats aus Schleife herausgezogen 
+-        for (int i = zahlen.length; --i >= 0; )
++        for (int i = zahlen.length; --i > 0; )
+         {
+-            System.out.print(zahlen[i] + "->);
+# "->" deutet eher eine Aenderung an; besser waere der Vergleichsoperator ">" 
++            System.out.print(zahlen[i] + " > ");
+         }
+# Ausgabe von Index 0 zwecks vernuenftigen Formats aus Schleife herausgezogen 
++        System.out.println(zahlen[0]);
+     }
+ 
+-    public static void main(String args)
++    public static void main(String[] args)
+     {
+         Programm blatt = new Programm();
+-        blatt.sortiere();
++        blatt.sortieren();
+     }
+ 
+ }

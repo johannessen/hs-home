@@ -1,0 +1,9 @@
+<IfModule mod_autoindex.c>
+	AddDescription 'Source Code auf GitHub' src
+	IndexOptions -SuppressDescription
+</IfModule>
+
+<IfModule mod_alias.c>
+	Redirect permanent '/~joar0011/work/dbis-p/src' https://github.com/johannessen/hs-home/work/dbis-p/www
+	Redirect permanent '/~joar0011/work/dbis-p/src.tar.gz' https://github.com/johannessen/hs-home/work/dbis-p/www
+</IfModule>

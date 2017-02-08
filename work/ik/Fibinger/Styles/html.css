@@ -1,0 +1,72 @@
+/* 
+ * by Arne Johannessen
+ * last modified 2009-07-03
+ */
+
+
+BODY {
+	color: black;
+	background-color: #ccc;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+}
+#mapContainer {
+	top: 50%;
+	left: 50%;
+	margin-left: -350px;
+	margin-top: -261px;
+}
+#mapContainer, #svgMap {
+	width: 700px;
+	height: 495px;
+}
+#mapContainer {
+	position: absolute;
+	padding: 1.4em 0 0;
+}
+#mapContainer H1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	font-size: 1em;
+	text-align: center;
+}
+#svgMap {
+	margin: 0;
+	background-color: white;
+}
+
+.CH, .BEV, .SPR, .ARB, .BDG, .POL {
+	border-width: 2px;
+	border-style: solid;
+}
+.BEV, .CH {
+	border-color: red;
+	background-color: red;
+	color: black;
+}
+.SPR {
+	border-color: red;
+	background-color: orange;
+	color: white;
+}
+.ARB {
+	border-color: green;
+	background-color: green;
+	color: black;
+}
+.BDG {
+	border-color: yellow;
+	background-color: yellow;
+	color: black;
+}
+.POL {
+	border-color: blue;
+	background-color: blue;
+	color: white;
+}
+.POL A {
+	color: white;
+}

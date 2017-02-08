@@ -1,0 +1,12 @@
+svg { font-family:Arial; }
+.CHGrBand { stroke:#CCCCCC; stroke-width:5px; stroke-linejoin:round; }
+.CHSeen  { fill:#97DBF2; fill-rule:evenodd;  stroke:#4065EB; stroke-width:0.4px; stroke-miterlimit:10; }
+.CHBezirke { fill-rule:evenodd; stroke:#666666; stroke-width:0.36003; stroke-miterlimit:10; stroke-linecap:round; stroke-linejoin:round; }
+.LegendeUeberschrift { font-size:8pt; font-weight:bold; }
+.LegendeBeschriftung { font-size:8pt; }
+.MassstabText {  font-size:8pt; fill:#999999; text-anchor:middle; }
+#copyright { font-size:8pt;}
+.autor { font-size:8pt; text-anchor:end;}
+
+.mapTextOutline{ font-size:11pt; stroke:#FFFFFF; stroke-width:1pt; text-anchor:middle; }
+.mapText{ font-size:11pt; text-anchor:middle; }

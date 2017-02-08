@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML LANG="de">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+
+<TITLE>Volksabstimmung zur neuen Bundesverfassung von 1999 (Schweiz-Statistik)</TITLE>
+<LINK REL="author" TITLE="Arne Johannessen" HREF="http://www.home.hs-karlsruhe.de/~joar0011/" TYPE="text/html">
+<!-- last modified 2009-07-03 -->
+
+<STYLE TYPE="text/css">
+@import url(Styles/html.css);
+</STYLE>
+<SCRIPT TYPE="text/javascript" SRC="Bundesverfassung.js">
+</SCRIPT>
+
+<DIV ID="mapContainer" CLASS="POL">
+	<H1>Volksabstimmung zur neuen Bundesverfassung von 1999</H1>
+	
+	<OBJECT ID="svgMap" DATA="SVG/CHKantone.svg" TYPE="image/svg+xml">
+		<PARAM NAME="src" VALUE="SVG/CHKantone.svg">
+		<P>
+			<!-- degrade as gracefully as possible if SVG is unavailable -->
+			In SVG-fähigen Browsern erscheint an dieser Stelle eine dynamisch erstellte
+			Karte. Diese wird mittels JavaScript aus der Grafikdatei
+			<A HREF="SVG/CHKantone.svg" TYPE="image/svg+xml">CHKantone.svg</A>
+			und der Datendatei <A HREF="XML/data.xml" TYPE="text/xml">data.xml</A>
+			automatisch generiert; eine alternative Darstellung an dieser Stelle ist
+			daher leider nicht ohne Weiteres möglich.
+		</P>
+	</OBJECT>
+</DIV>
+
+<!--
+	Instead of the <embed> element (which is invalid in HTML 4), the <object> element has
+	been chosen for inclusion of the map vector graphic (as recommended by the W3C HTML
+	working group). Unfortunately, this is not supported in some versions of Internet
+	Explorer with Adobe SVG plug-in unless an additional <param name=src> element is added.
+	This <param> element has no defined semantics, is thusly ignored by all other User Agents
+	and may therefore be included safely with no downside other than a few superfluous bytes.
+-->
+
+<!--
+	Instead of the Microsoft-proprietary <xml> element, an XMLHttpRequest (perhaps better
+	known as'Ajax') is used. As a result, this document works just fine in *any* browser or
+	User Agent as long as it complies with W3C Recommendations. In particular, this document
+	has been successfully tested with these browsers:
+	- Firefox 3.5, Firefox 3.0.11, Firefox 2.0.0.16
+	- Internet Explorer 8.0 with Adobe SVG Viewer 3.03 (tested in IE8 as well as IE7 mode)
+	- Opera 9.64
+	- Safari 4.0.1
+-->
+
+<!--
+	To achieve optimal separation of content, behaviour and design,
+	- the CSS style sheet for this HTML page has been moved out to a separate .css file,
+	- the JavaScript is included from an external .js file, and
+	- this HTML page has been minimised as far as possible.
+	These measures' result is that content (HTML+SVG), behaviour (JS) and design (CSS)
+	can all be varied independently.
+-->
+
+<!--
+	This is HTML (not XHTML), thus many elements have optional tags, including the <html>,
+	<head> and <body> elements. Some of these optional tags have been omitted here.
+-->
+
+<!--
+	Valid HTML 4 Strict!
+	<http://validator.w3.org/#validate_by_upload>
+-->

@@ -1,0 +1,7 @@
+<IfModule mod_alias.c>
+Redirect 403 /~joar0011/work/dbis-p/www/constants.setup.php
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php
+</IfModule>

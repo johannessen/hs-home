@@ -1,0 +1,5 @@
+zu Blatt 7, Aufgabe 3, Ziffer 5:
+
+Naja, das haengt halt davon ab, was die Klasse Blutsbruder denn so speichern oder machen soll. An fuer sich ist nicht besonders viel noetig:
+
+class Blutsbruder { }

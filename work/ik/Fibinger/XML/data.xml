@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<data>
+	<dataset name='Aargau' id='AG' key='19' centerX='338.36498' centerY='117.35735' chX='654191' chY='251394' yayVotes='57779' validVotes='117795' yayRatio='49.0504690351883' />
+	<dataset name='Appenzell A.Rh.' id='AR' key='15' centerX='511.41775' centerY='123.8372' chX='745796' chY='247954' yayVotes='7946' validVotes='17696' yayRatio='44.9028028933092' />
+	<dataset name='Appenzell I.Rh.' id='AI' key='16' centerX='518.61829' centerY='133.91697' chX='749556' chY='242626' yayVotes='1355' validVotes='4275' yayRatio='31.6959064327485' />
+	<dataset name='Basel-Landschaft' id='BL' key='13' centerX='273.44019' centerY='109.19753' chX='619850' chY='255718' yayVotes='36998' validVotes='56085' yayRatio='65.9677275563876' />
+	<dataset name='Basel-Stadt' id='BS' key='12' centerX='261.4393' centerY='85.31807' chX='613511' chY='268336' yayVotes='38672' validVotes='50680' yayRatio='76.3062352012628' />
+	<dataset name='Bern' id='BE' key='2' centerX='262.87941' centerY='241.67454' chX='614284' chY='185633' yayVotes='131661' validVotes='212752' yayRatio='61.8847296382643' />
+	<dataset name='Fribourg' id='FR' key='10' centerX='184.2736' centerY='264.71402' chX='572658' chY='173422' yayVotes='27564' validVotes='37861' yayRatio='72.8031483584691' />
+	<dataset name='Geneve' id='GE' key='25' centerX='44.22326' centerY='367.91168' chX='498599' chY='118802' yayVotes='45185' validVotes='52802' yayRatio='85.574410060225' />
+	<dataset name='Glarus' id='GL' key='8' centerX='469.89469' centerY='205.67535' chX='723787' chY='204639' yayVotes='2934' validVotes='9753' yayRatio='30.0830513688096' />
+	<dataset name='Graubuenden' id='GR' key='18' centerX='552.58079' centerY='271.91385' chX='767538' chY='169633' yayVotes='20083' validVotes='38780' yayRatio='51.7870036101083' />
+	<dataset name='Jura' id='JU' key='26' centerX='195.67445' centerY='130.43705' chX='578685' chY='244480' yayVotes='6674' validVotes='8760' yayRatio='76.1872146118722' />
+	<dataset name='Luzern' id='LU' key='3' centerX='331.04444' centerY='189.71571' chX='650324' chY='213132' yayVotes='66721' validVotes='117428' yayRatio='56.8186463194468' />
+	<dataset name='Neuchatel' id='NE' key='24' centerX='139.27028' centerY='203.3954' chX='548864' chY='205886' yayVotes='17907' validVotes='25465' yayRatio='70.3200471235028' />
+	<dataset name='Nidwalden' id='NW' key='7' centerX='374.48765' centerY='220.19502' chX='673293' chY='196979' yayVotes='4641' validVotes='11343' yayRatio='40.915101824914' />
+	<dataset name='Obwalden' id='OW' key='6' centerX='352.04599' centerY='234.95469' chX='661475' chY='189192' yayVotes='4892' validVotes='10355' yayRatio='47.2428778367938' />
+	<dataset name='Schaffhausen' id='SH' key='14' centerX='399.32948' centerY='53.0388' chX='686490' chY='285456' yayVotes='12098' validVotes='28842' yayRatio='41.9457735247209' />
+	<dataset name='Schwyz' id='SZ' key='5' centerX='426.09146' centerY='190.1957' chX='700610' chY='212861' yayVotes='12036' validVotes='35527' yayRatio='33.8784586370929' />
+	<dataset name='Solothurn' id='SO' key='11' centerX='264.43952' centerY='140.27683' chX='615124' chY='239266' yayVotes='40172' validVotes='76285' yayRatio='52.6604181687094' />
+	<dataset name='St. Gallen' id='SG' key='17' centerX='498.21678' centerY='153.11654' chX='738790' chY='232482' yayVotes='49210' validVotes='102280' yayRatio='48.1130230739147' />
+	<dataset name='Thurgau' id='TG' key='20' centerX='466.17441' centerY='83.27812' chX='721820' chY='269440' yayVotes='24522' validVotes='61111' yayRatio='40.1269820490583' />
+	<dataset name='Ticino' id='TI' key='21' centerX='435.21213' centerY='349.3121' chX='705473' chY='128656' yayVotes='82443' validVotes='114538' yayRatio='71.9787319492221' />
+	<dataset name='Uri' id='UR' key='4' centerX='407.85011' centerY='251.27432' chX='690990' chY='180522' yayVotes='3490' validVotes='8748' yayRatio='39.8948331047096' />
+	<dataset name='Valais/Wallis' id='VS' key='23' centerX='260.47923' centerY='370.43163' chX='612992' chY='117501' yayVotes='18905' validVotes='37978' yayRatio='49.7788193164464' />
+	<dataset name='Vaud' id='VD' key='22' centerX='123.42911' centerY='293.27337' chX='540506' chY='158284' yayVotes='47750' validVotes='62956' yayRatio='75.8466230383125' />
+	<dataset name='Zuerich' id='ZH' key='1' centerX='409.41022' centerY='114.9574' chX='691786' chY='252643' yayVotes='189439' validVotes='307234' yayRatio='61.6595168503486' />
+	<dataset name='Zug' id='ZG' key='9' centerX='393.68906' centerY='169.55617' chX='683479' chY='223784' yayVotes='14693' validVotes='27239' yayRatio='53.9410404199861' />
+</data>
+<!-- Quelle: Bundesamt fuer Statistik (Schweiz) -->

@@ -1,0 +1,13 @@
+zu Blatt 7, Aufgabe 1:
+
+
+Ziffer 1:
+
+Die Instanzvariable ist nicht "static" (in Java) und existiert folglich fuer jede Instanz der Klasse einmal. Existiert gar keine Instanz, gibt es auch keine Instanzvariable.
+
+Die Klassenvariable ist "static" (in Java) und existiert folglich immer (dann, wenn die Klasse in die VM geladen wurde) *genau* einmal -- voellig unabhaengig von eventuellen Instanzen der Klasse.
+
+
+Ziffer 2:
+
+Analog zu den "static"-Variablen sit eine "static"-Methode in Java eine Klassenmethode, die immer zur Verfuegung steht und aus jedem beliebigen Kontext heraus aufgerufen werden kann. Andersherum kann aber aufgrund der Klassenorientierung nicht auf Objektmethoden und Objektvariablen zugegriffen werden, ohne dass eine Instanz der entsprechenden Klasse zusaetzlich zur Verfuegung steht.
