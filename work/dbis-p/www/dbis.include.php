@@ -57,7 +57,7 @@ function dbisHttpGet ($name) {
 		return stripslashes($_GET[$name]);
 	}
 	else {
-		return $_GET[$name];
+		return array_key_exists($name, $_GET) ? $_GET[$name] : NULL;
 	}
 }
 

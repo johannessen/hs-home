@@ -26,6 +26,8 @@ $isAllValuesPresent = array_key_exists('from', $_GET) && array_key_exists('to', 
 $safeChangeTime = array_key_exists('change-minutes', $_GET) ? (int)dbisHttpGet('change-minutes') : 5;
 $safeFilter = (array_key_exists('filter', $_GET) || ! (array_key_exists('change-minutes', $_GET) && array_key_exists('from', $_GET) && array_key_exists('to', $_GET))) && @dbisHttpGet('filter') != '0';
 
+$safeFromStopName = "";
+$safeToStopName = "";
 if ($isAllValuesPresent) {
 	
 	// input processing

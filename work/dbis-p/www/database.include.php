@@ -38,21 +38,12 @@ require_once('constants.include.php');
 
 
 
-$dbisConnection = @mysql_connect(DBIS_HOST, DBIS_USER, DBIS_PASSWORD)
+$connectionUri = 'mysql:host=' . DBIS_HOST . ';dbname=' . DBIS_DATABASE;
+$dbisPdo = new PDO($connectionUri, DBIS_USER, DBIS_PASSWORD)
 		or trigger_error('Failed to establish a connection to the database server', E_USER_ERROR);
 $dbisLastResult = NULL;
 
-// ensure that the connection is closed on script termination
-// this is really only necessary for persistent connections
-// we do it anyway, just to be safe
-register_shutdown_function('dbisDisconnect');
-function dbisDisconnect () {
-	global $dbisConnection;
-	mysql_close($dbisConnection);
-}
-
-mysql_select_db(DBIS_DATABASE)
-		or trigger_error('Failed to select database "'.DBIS_DATABASE.'"', E_USER_ERROR);
+$dbisPdo->query("SET CHARACTER SET 'utf8';");
 
 // at this point the database link is properly established
 
@@ -70,12 +61,11 @@ mysql_select_db(DBIS_DATABASE)
  * @see <http://www.webappsec.org/projects/articles/091007.shtml>
  */
 function databaseEscape ($text, $likeOperatorRhs = FALSE) {
-	global $dbisConnection;
 	if ($likeOperatorRhs) {
-		return addcslashes(mysql_real_escape_string($text, $dbisConnection), "%_");
+		return addcslashes(preg_replace("/[^a-zA-Z0-9 ]+/", "", $text), "%_");
 	}
 	else {
-		return mysql_real_escape_string($text, $dbisConnection);
+		return preg_replace("/[^a-zA-Z0-9 ]+/", "", $text);
 	}
 }
 
@@ -88,8 +78,9 @@ function databaseEscape ($text, $likeOperatorRhs = FALSE) {
  * @return resource the MySQL result
  */
 function databaseQuery ($query) {
+	global $dbisPdo;
 	global $dbisLastResult;
-	$dbisLastResult = mysql_query($query)
+	$dbisLastResult = $dbisPdo->query($query)
 			or trigger_error('Execution of query "'.htmlspecialchars($query, ENT_NOQUOTES).'" failed', E_USER_ERROR);
 	return $dbisLastResult;
 }
@@ -112,7 +103,7 @@ function databaseNextRow ($result = NULL) {
 		}
 		$result = $dbisLastResult;
 	}
-	return mysql_fetch_assoc($result);
+	return $result->fetch(PDO::FETCH_ASSOC);
 }
 
 
@@ -125,20 +116,12 @@ function databaseNumRows ($result = NULL) {
 		}
 		$result = $dbisLastResult;
 	}
-	return mysql_num_rows($result);
+	return $result->rowCount($result);
 }
 
 
 
 function databaseFreeResult ($result = NULL) {
-	global $dbisLastResult;
-	if ($result === NULL) {
-		if ($dbisLastResult === NULL) {
-			trigger_error('query result is NULL', E_USER_ERROR);  // :TODO: proper error handling
-		}
-		$result = $dbisLastResult;
-	}
-	return mysql_free_result($result);
 }
 
 ?>

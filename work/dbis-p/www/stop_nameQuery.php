@@ -28,7 +28,7 @@ else {
 
 <FORM METHOD="GET" ACTION="">
 	<LABEL>Type in the beginning letters of the searched stop:</LABEL><BR>
-	<INPUT TYPE="text" NAME="stop" VALUE="<?php echo @$_GET['stop']; ?>">
+	<INPUT TYPE="text" NAME="stop" VALUE="<?php echo $safeStop; ?>">
 	<INPUT TYPE="submit" VALUE="Go!">
 </FORM>
 
