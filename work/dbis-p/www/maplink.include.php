@@ -50,7 +50,7 @@ function convertCoordinatesToMapLink (&$array, $eastingKey, $northingKey) {
 	$geographic = $calculator->toGeographic($array[$eastingKey], $array[$northingKey], DBIS_UTM_ZONE);
 	
 	// create HTML for the link
-	$uri = sprintf('http://maps.google.com/maps?ll=%08.6f,%08.6f&t=h&z=17', $geographic['latitude'], $geographic['longitude']);
+	$uri = sprintf('//maps.google.com/maps?ll=%08.6f,%08.6f&t=h&z=17', $geographic['latitude'], $geographic['longitude']);
 	$locationName = array_key_exists('name', $array) ? $array['name'] : 'this location';
 	$linkHtml = '<A HREF="'.htmlspecialchars($uri).'" TITLE="Show the area surrounding '.htmlspecialchars($locationName).' on Google Maps" CLASS="maplink"><IMG SRC="images/map.png" ALT="Show map"></A>';
 	

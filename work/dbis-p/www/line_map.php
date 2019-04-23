@@ -52,7 +52,7 @@ function lineSelected (button) {
 	<P>The latest versions of <A HREF="http://www.mozilla.com/firefox/">Firefox</A>, <A HREF="http://www.opera.com/">Opera</A>, <A HREF="http://www.apple.com/safari/">Safari</A> and <A HREF="http://www.microsoft.com/windows/products/winfamily/ie/default.mspx">Internet Explorer</A> have all been tested and found to support the Web standards used by this page's query.</P>
 </DIV>
 
-<FORM ACTION="http://none.invalid/">
+<FORM ACTION="//none.invalid/">
 	<P>Select the line you want to see:</P>
 	<P>
 <?php

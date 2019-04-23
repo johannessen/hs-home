@@ -82,7 +82,7 @@ function dbisPrintHead ($title, $headline = NULL) {
 function dbisPrintHeadGoogleMaps ($title) {
 	templatePrintHeadElement($title);
 ?>
-<SCRIPT TYPE="text/javascript" SRC="http://maps.google.com/maps?file=api&amp;v=2&amp;key=<?php echo DBIS_GOOGLE_KEY; ?>"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="//maps.google.com/maps?file=api&amp;v=2&amp;key=<?php echo DBIS_GOOGLE_KEY; ?>"></SCRIPT>
 <SCRIPT TYPE="text/javascript" SRC="stop-selection.js"></SCRIPT>
 <BODY ID="<?php echo DBIS_CSS_ID; ?>" onLoad="load()" onUnload="GUnload()">
 <?php
