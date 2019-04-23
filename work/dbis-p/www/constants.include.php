@@ -10,7 +10,7 @@
 // database access
 define('DBIS_HOST', 'localhost');
 define('DBIS_USER', 'singapore-dbis');
-define('DBIS_PASSWORD', 'vBg3F:QxpA-[');
+define('DBIS_PASSWORD', '');
 define('DBIS_DATABASE', 'singapore');
 
 // Google Maps API key
@@ -20,7 +20,7 @@ define('DBIS_GOOGLE_KEY', 'ABQIAAAAGghKHlLH5E9h0quV7JoykxRcPJHppFiQ-MBXrOI2zKSkX
 
 // menu automation
 define('DBIS_BASE_URI', '/~joar0011/work/dbis-p/www/');
-define('DBIS_BASE_PATH', '/srv/j.arne/~joar0011/work/dbis-p/www/');
+define('DBIS_BASE_PATH', '/srv/arne/~joar0011/work/dbis-p/www/');
 
 // :TODO: verify that windows backslashes work here
 

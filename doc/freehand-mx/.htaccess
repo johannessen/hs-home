@@ -14,5 +14,6 @@
 
 
 <IfModule mod_alias.c>
-	Redirect permanent /~joar0011/doc/freehand-mx/Welcome.html "http://www.home.hs-karlsruhe.de/~joar0011/doc/freehand-mx/Using FreeHand MX.htm"
+	Redirect permanent /~joar0011/doc/freehand-mx/Welcome.html "https://arne.johannessen.de/~joar0011/doc/freehand-mx/Using FreeHand MX.htm"
+	Redirect 410 "/~joar0011/doc/freehand-mx/Using FreeHand MX.htm"
 </IfModule>
