@@ -45,7 +45,7 @@ if (! $isAllValuesPresent) {
 /****** database query ******/
 
 // input processing
-$stop = dbisEscape($unsafeStop, TRUE);
+$stop = dbisEscape($unsafeStop);
 dbisQuery("SET @input = '$stop' '%';");
 
 // run the query

@@ -60,8 +60,9 @@ if (! $isAllValuesPresent) {
 
 /****** database query ******/
 
+$dataset = dbisEscape($unsafeDataset);
 dbisQuery("
-		SELECT * FROM `$unsafeDataset`;
+		SELECT * FROM `$dataset`;
 		");
 
 

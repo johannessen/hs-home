@@ -36,11 +36,13 @@ if ($isAllValuesPresent) {
 	$unsafeToStopName = dbisHttpGet('to');
 	$safeToStopName = htmlspecialchars($unsafeToStopName, ENT_NOQUOTES);
 	
-	dbisQuery("SELECT id FROM stop WHERE name = '$unsafeFromStopName';");
+	$fromStopName = dbisEscape($unsafeFromStopName);
+	dbisQuery("SELECT id FROM stop WHERE name = '$fromStopName';");
 	if ($row = dbisNextRow()) {
 		$fromStopId = $row['id'];
 	}
-	dbisQuery("SELECT id FROM stop WHERE name = '$unsafeToStopName';");
+	$toStopName = dbisEscape($unsafeToStopName);
+	dbisQuery("SELECT id FROM stop WHERE name = '$toStopName';");
 	if ($row = dbisNextRow()) {
 		$toStopId = $row['id'];
 	}
