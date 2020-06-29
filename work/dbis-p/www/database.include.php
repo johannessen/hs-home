@@ -65,7 +65,7 @@ function databaseEscape ($text, $likeOperatorRhs = FALSE) {
 		return addcslashes(preg_replace("/[^a-zA-Z0-9 ]+/", "", $text), "%_");
 	}
 	else {
-		return preg_replace("/[^a-zA-Z0-9 ]+/", "", $text);
+		return preg_replace("/[^a-zA-Z0-9 _]+/", "", $text);
 	}
 }
 

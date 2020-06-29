@@ -441,7 +441,7 @@ foreach ($resultRoutes as &$route) {
 	
 ?>
 		</TABLE>
-		<P><?php echo 'Total journey time ', $route['duration'], ' minute', (count($route['duration']) == 2 ) ? ', ' : 's, ', count($route['legs']) - 1, ' change', (count($route['legs']) == 2 ) ? '.' : 's.'; ?></P>
+		<P><?php echo 'Total journey time ', $route['duration'], ' minute', ($route['duration'] == 1) ? ', ' : 's, ', count($route['legs']) - 1, ' change', (count($route['legs']) == 2) ? '.' : 's.'; ?></P>
 	</LI>
 <?php
 }
