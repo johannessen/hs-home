@@ -53,12 +53,7 @@ require_once('database.include.php');
 
 
 function dbisHttpGet ($name) {
-	if(get_magic_quotes_gpc()) {
-		return stripslashes($_GET[$name]);
-	}
-	else {
-		return array_key_exists($name, $_GET) ? $_GET[$name] : NULL;
-	}
+	return array_key_exists($name, $_GET) ? $_GET[$name] : NULL;
 }
 
 
