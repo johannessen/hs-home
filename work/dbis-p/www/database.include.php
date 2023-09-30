@@ -116,7 +116,7 @@ function databaseNumRows ($result = NULL) {
 		}
 		$result = $dbisLastResult;
 	}
-	return $result->rowCount($result);
+	return $result->rowCount();
 }
 
 

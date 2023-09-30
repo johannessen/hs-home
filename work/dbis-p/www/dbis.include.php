@@ -53,7 +53,7 @@ require_once('database.include.php');
 
 
 function dbisHttpGet ($name) {
-	return array_key_exists($name, $_GET) ? $_GET[$name] : NULL;
+	return array_key_exists($name, $_GET) ? $_GET[$name] : '';
 }
 
 

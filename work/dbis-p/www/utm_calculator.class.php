@@ -103,7 +103,7 @@ class UtmCalculator {
 	 * This constructor initialises all instances for the WGS84 ellispoid
 	 * and a northern-hemisphere UTM projection.
 	 */
-	function UtmCalculator () {
+	function __construct () {
 		// values for WGS84 as per NIMA TR 8350.2, 3rd ed., p. 3-2
 		$this->ellipsoidSemiMajorAxis = 6378137;
 		$flattening = 1 / 298.257223563;

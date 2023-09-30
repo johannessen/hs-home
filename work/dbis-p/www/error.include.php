@@ -83,7 +83,7 @@ function errorTypeName ($type) {
 function errorFileName ($filePath) {
 	if (strpos($filePath, DBIS_BASE_PATH) === 0) {
 		$filePath = substr($filePath, strlen(DBIS_BASE_PATH));
-		while ($filePath{0} == '/') {
+		while ($filePath[0] == '/') {
 			$filePath = substr($filePath, 1);
 		}
 	}
@@ -101,7 +101,7 @@ function printErrorPageAndDie ($httpStatus = '500 Internal Server Error', $debug
 	$stacktrace = debug_backtrace();
 	foreach ($stacktrace as $level) {
 		if ($level['function'] == 'errorHandler') {
-			list($type, $message, $file, $line, $vars) = $level['args'];
+			list($type, $message, $file, $line) = $level['args'];
 			break;
 		}
 	}
